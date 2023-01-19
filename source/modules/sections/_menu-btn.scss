@@ -1,0 +1,73 @@
+.menu-btn {
+    position: relative;
+    display: block;
+    width: 62px;
+    height: 62px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border-width: 0;
+
+    &__lay,
+    &__lay::before,
+    &__lay::after {
+        position: absolute;
+        width: 2.4rem;
+        height: 0.2rem;
+        display: block;
+        // background-color: $color-blue-light;
+        border-radius: 0.2rem;
+        transition-timing-function: ease-in-out;
+
+        @media (min-width: $tablets) {
+            width: 3.2rem;
+            height: 0.3rem;
+        }
+    }
+
+    &:focus-visible &__lay,
+    &:focus-visible &__lay::before,
+    &:focus-visible &__lay::after,
+    &:hover &__lay,
+    &:hover &__lay::before,
+    &:hover &__lay::after {
+        // background-color: $color;
+    }
+
+    &__lay {
+        top: calc(100% / 3 - 0.1rem);
+        left: calc(50% - 1.2rem);
+        transition: background-color 0.3s, transform 0.1s, top 0.1s 0.1s;
+    }
+
+    &__lay::before {
+        content: "";
+        top: 0.7rem;
+        opacity: 1;
+        transition: background-color 0.3s, transform 0.1s, opacity 0.1s 0.1s;
+    }
+
+    &__lay::after {
+        content: "";
+        top: 1.4rem;
+        transition: background-color 0.3s, transform 0.1s, top 0.1s 0.1s;
+    }
+
+    &--active &__lay {
+        top: calc(50% - 1.5px);
+        transform: rotate(-45deg);
+        transition: background-color 0.3s, transform 0.1s 0.2s, top 0.1s 0.1s;
+    }
+
+    &--active &__lay::before {
+        opacity: 0;
+        transform: rotate(45deg);
+        transition: background-color 0.3s, transform 0.1s 0.2s, opacity 0.1s 0.1s;
+    }
+
+    &--active &__lay::after {
+        top: 0;
+        transform: rotate(90deg);
+        transition: background-color 0.3s, transform 0.1s 0.2s, top 0.1s 0.1s;
+    }
+}

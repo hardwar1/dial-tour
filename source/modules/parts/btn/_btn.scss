@@ -1,0 +1,16 @@
+.btn {
+  border-radius: 50px;
+  background-color: $orange;
+  padding: 8px 30px 9px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  border: 1px solid $orange;
+  color: $white;
+
+  &--white {
+    background-color: transparent;
+    color: $orange;
+  }
+}

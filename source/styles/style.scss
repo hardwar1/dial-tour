@@ -1,0 +1,32 @@
+@import "_service/variables";
+@import "_service/mixins";
+@import "_service/media";
+@import "_service/_01_normalize";
+
+@import "_service/fonts";
+@import "_global/reset";
+@import "_global/content";
+
+
+/* plugins */
+@import "../plugins/swiper/swiper";
+
+@import "../plugins/swiper/pagination";
+// @import "../plugins/swiper/scrollbar";
+
+
+/* modules */
+@import "../modules/footer/footer";
+@import "../modules/header/header";
+
+@import "../modules/parts/menu-btn/menu-btn.scss";
+@import "../modules/parts/btn/btn";
+@import "../modules/parts/tour-card/tour-card";
+
+
+@import "../modules/sections/hero/hero";
+@import "../modules/sections/tours/tours";
+@import "../modules/sections/application/application";
+@import "../modules/sections/bonus/bonus";
+
+

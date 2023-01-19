@@ -1,0 +1,15 @@
+<div class="gallery {{mod}}">
+    <div class="gallery__wrap container">
+        <div class="gallery__inner">
+            <div class="gallery__slider swiper">
+                <div class="gallery__slider-inner swiper-wrapper">
+                    {{#each gallery.summary}}
+                    <div class="gallery__slide swiper-slide">
+                        {{> img-card }}
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

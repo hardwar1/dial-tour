@@ -1,0 +1,137 @@
+<section class="tours">
+  <div class="container">
+    <div class="tours__filter filter">
+      <button class="filter__open arrow-down arrow-down--white" type="button">Фильтр по турам</button>
+
+      <div class="filter__item">
+        <button class="filter__btn arrow-down" type="button">
+          Все типы лагерей
+        </button>
+
+        <ul class="filter__drop-menu drop-menu reset">
+          <li class="drop-menu__item">
+            <button class="drop-menu__button" type="button">
+              Оздоровительный
+            </button>
+          </li>
+          <li class="drop-menu__item">
+            <button class="drop-menu__button" type="button">
+              Спортивный
+            </button>
+          </li>
+          <li class="drop-menu__item">
+            <button class="drop-menu__button" type="button">
+              Языковой
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="filter__item">
+        <button class="filter__btn arrow-down" type="button">
+          Все регионы
+        </button>
+
+        <ul class="filter__drop-menu drop-menu reset">
+          <li class="drop-menu__item">
+            <button class="drop-menu__button" type="button">
+              Болгария
+            </button>
+          </li>
+          <li class="drop-menu__item">
+            <button class="drop-menu__button drop-menu__button--right" type="button">
+              Несебр
+            </button>
+          </li>
+          <li class="drop-menu__item">
+            <button class="drop-menu__button drop-menu__button--right" type="button">
+              Солнечный берег
+            </button>
+          </li>
+          <li class="drop-menu__item">
+            <button class="drop-menu__button" type="button">
+              Россия
+            </button>
+          </li>
+          <li class="drop-menu__item">
+            <button class="drop-menu__button drop-menu__button--right" type="button">
+              Крым
+            </button>
+          </li>
+          <li class="drop-menu__item">
+            <button class="drop-menu__button drop-menu__button--right" type="button">
+              Нижний Новгород
+            </button>
+          </li>
+          <li class="drop-menu__item">
+            <button class="drop-menu__button drop-menu__button--right" type="button">
+              Подпосковье
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="filter__item">
+        <button class="filter__btn arrow-down" type="button">
+          Любой сезон
+        </button>
+
+        <ul class="filter__drop-menu drop-menu  reset">
+          <li class="drop-menu__item">
+            <button class="drop-menu__button" type="button">
+              Оздоровительный
+            </button>
+          </li>
+          <li class="drop-menu__item">
+            <button class="drop-menu__button" type="button">
+              Спортивный
+            </button>
+          </li>
+          <li class="drop-menu__item">
+            <button class="drop-menu__button" type="button">
+              Языковой
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="filter__item">
+        <button class="filter__btn arrow-down" type="button">
+          Все возраста
+        </button>
+
+        <ul class="filter__drop-menu drop-menu reset">
+          <li class="drop-menu__item">
+            <button class="drop-menu__button" type="button">
+              Оздоровительный
+            </button>
+          </li>
+          <li class="drop-menu__item">
+            <button class="drop-menu__button" type="button">
+              Спортивный
+            </button>
+          </li>
+          <li class="drop-menu__item">
+            <button class="drop-menu__button" type="button">
+              Языковой
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="tours__list reset">
+      {{#each tour-card}}
+
+      <li class="tours__item">
+        {{> tour-card parent-mod="tours__tour-card"}}
+      </li>
+
+      {{/each}}
+    </ul>
+
+    <button class="tours__btn ico ico--refresh" type="button">
+      Показать ещё
+    </button>
+  </div>
+</section>

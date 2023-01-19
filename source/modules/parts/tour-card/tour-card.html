@@ -1,0 +1,69 @@
+<article class="{{parent-mod}} tour-card {{mod}}">
+  <div class="tour-card__badges">
+    <span class="tour-card__badge badge badge--red">кэшбек</span>
+    <span class="tour-card__badge badge badge--blue">кэшбек</span>
+    <span class="tour-card__badge badge badge--orange">кэшбек</span>
+  </div>
+
+  <img class="tour-card__img" src="images/content/{{src}}" height="208" width="435" alt="{{alt}}">
+
+  <div class="tour-card__info">
+    <span class="tour-card__label">
+      {{label}}
+    </span>
+    <h3 class="tour-card__title">
+      {{title}}
+    </h3>
+    <div class="tour-card__text">
+      {{text}}
+    </div>
+
+    <div class="tour-card__place-row">
+      <span class="tour-card__place ico ico--marker">{{place}}</span>
+      <span class="tour-card__place ico ico--people">{{age}}</span>
+    </div>
+
+    <div class="tour-card__season-row">
+      <span class="tour-card__season ico ico--sun">
+        Лето
+      </span>
+      <span class="tour-card__season ico ico--sheet">
+        Весна
+      </span>
+      <span class="tour-card__season ico ico--maple">
+        Осень
+      </span>
+      <span class="tour-card__season ico ico--snow">
+        Зима
+      </span>
+      <span class="tour-card__season ico ico--all">
+        Все сезоны
+      </span>
+    </div>
+
+    <div class="tour-card__type-row">
+      <span class="tour-card__season">
+        #Оздоровительный
+      </span>
+      <span class="tour-card__season">
+        #Языковой
+      </span>
+      <span class="tour-card__season">
+        #Спортивный
+      </span>
+    </div>
+
+    <div class="tour-card__bottom">
+      <span class="tour-card__price">
+        от {{price}}<span> ₽</span>
+      </span>
+
+      <button class="tour-card__btn btn btn--white" type="button">
+        <span class="tour-card__btn-text"> Подробнее</span>
+        <svg width="14" height="9">
+          <use xlink:href="#arrow-big"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</article>

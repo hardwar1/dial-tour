@@ -1,0 +1,46 @@
+<section class="application">
+  <div class="container">
+    <form class="application__inner">
+      <h2 class="application__title title ico">
+        Оставьте заявку!
+      </h2>
+      <div class="application__text">
+        <p>
+          И мы подберём программу c учётом индивидуальности вашего ребёнка
+        </p>
+      </div>
+      <div class="application__relative">
+        <div class="application__row">
+          <label class="application__label">
+            <span class="visually-hidden">Ваше имя</span>
+            <input class="application__input input" type="text" placeholder="Ваше имя" name="name" required>
+          </label>
+          <label class="application__label">
+            <span class="visually-hidden">Телефон</span>
+            <input class="application__input input" type="tel" placeholder="Телефон" name="tel" required>
+          </label>
+          <label class="application__label">
+            <span class="visually-hidden">Введите ваш email</span>
+            <input class="application__input input" type="email" placeholder="Email" name="email" required>
+          </label>
+        </div>
+
+        <div class="application__check-row">
+          <label class="application__check-label">
+            <input class="application__checkbox checkbox visually-hidden" type="checkbox" checked>
+            <span class="checkbox__fake">
+              <svg width="9" height="6">
+                <use xlink:href="#check"></use>
+              </svg>
+            </span>
+            Я даю согласие на обработку моих персональных данных
+          </label>
+
+          <button class="application__btn btn" type="submit">
+            Отправить
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

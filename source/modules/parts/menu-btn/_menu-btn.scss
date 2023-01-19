@@ -1,0 +1,100 @@
+.menu-btn {
+  position: relative;
+  display: block;
+  margin: 0;
+  border: 0;
+  width: 83px;
+  height: 50px;
+  background-color: $orange;
+  border-radius: 8px;
+
+  @include min-w($md) {
+    width: 145px;
+    padding-left: 50px;
+  }
+
+  @include min-w($xl) {
+    display: none;
+  }
+
+  &__lay,
+  &__lay::before,
+  &__lay::after {
+    position: absolute;
+    width: 23px;
+    height: 3px;
+    display: block;
+    background-color: $white;
+    border-radius: 0.2rem;
+    transition-timing-function: ease-in-out;
+  }
+
+  &:focus-visible &__lay,
+  &:focus-visible &__lay::before,
+  &:focus-visible &__lay::after,
+  &:hover &__lay,
+  &:hover &__lay::before,
+  &:hover &__lay::after {
+    // background-color: $color;
+  }
+
+  &__lay {
+    top: 14px;
+    left: 50%;
+
+    transform: translateX(-50%);
+    transition: background-color 0.3s, transform 0.1s, top 0.1s 0.1s;
+    @include min-w($md) {
+      left: 30px;
+      transform: translateX(0);
+    }
+  }
+
+  &__lay::before {
+    content: "";
+    top: 8px;
+    opacity: 1;
+    transition: background-color 0.3s, transform 0.1s, opacity 0.1s 0.1s;
+  }
+
+  &__lay::after {
+    content: "";
+    top: 16px;
+    transition: background-color 0.3s, transform 0.1s, top 0.1s 0.1s;
+  }
+
+  &--active &__lay {
+    top: calc(50% - 1.5px);
+    transform: translateX(-50%) rotate(-45deg);
+    transition: background-color 0.3s, transform 0.1s 0.2s, top 0.1s 0.1s;
+
+    @include min-w($md) {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--active &__lay::before {
+    opacity: 0;
+    transform: rotate(45deg);
+    transition: background-color 0.3s, transform 0.1s 0.2s, opacity 0.1s 0.1s;
+  }
+
+  &--active &__lay::after {
+    top: 0;
+    transform: rotate(90deg);
+    transition: background-color 0.3s, transform 0.1s 0.2s, top 0.1s 0.1s;
+  }
+
+  &__text {
+    @include min-w($md) {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: $white;
+    }
+
+    @include max-w($md) {
+      @include visually-hidden;
+    }
+  }
+}

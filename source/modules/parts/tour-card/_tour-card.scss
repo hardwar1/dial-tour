@@ -1,0 +1,203 @@
+.tour-card {
+  background-color: $white;
+  border-radius: 15px;
+  padding-top: 10px;
+  height: 100%;
+
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+
+  &__badges {
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__badge {
+    margin-bottom: 8px;
+    &:nth-child(2n) {
+      transform: rotate(4deg);
+    }
+    &:nth-child(2n - 1) {
+      transform: rotate(-4deg);
+    }
+  }
+
+  &__img {
+    border-radius: 10px;
+    margin: 0 10px 15px;
+    width: calc(100% - 20px);
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 222px);
+    padding: 0 20px 20px;
+    color: $black25;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  &__label {
+    color: $grey;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0 0 30px;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+    p {
+      margin: 0;
+    }
+    @include min-w($lg) {
+      font-size: 16px;
+    }
+  }
+
+  &__place-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__place {
+    padding-left: 25px;
+    font-size: 16px;
+    &::after {
+      left: 0;
+    }
+  }
+
+  &__season-row {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 10px;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__season {
+    display: inline-block;
+    width: fit-content;
+    margin-right: 10px;
+    background-color: $whitef5;
+    border-radius: 5px;
+    padding: 4px 8px;
+    white-space: nowrap;
+
+    &.ico {
+      padding-left: 35px;
+    }
+
+    &::after {
+      left: 10px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__type-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 15px;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid $whitef2;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 20px;
+
+    @include min-w($lg) {
+      font-size: 17px;
+    }
+
+    @include min-w($xl) {
+      font-size: 20px;
+    }
+  }
+
+  &__btn {
+    @include max-w($lg) {
+      background-color: $orange;
+      width: 74px;
+      height: 39px;
+      padding-top: 5px;
+    }
+
+    @include min-w($lg) {
+      background-color: transparent;
+    }
+
+    svg {
+      fill: $white;
+      @include min-w($lg) {
+        display: none;
+      }
+    }
+  }
+
+  &__btn-text {
+    display: none;
+    @include min-w($lg) {
+      display: inline;
+    }
+  }
+}
+
+.badge {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $red;
+  padding: 5px 9px;
+  border-radius: 5px;
+
+  &--red {
+    background-color: $red;
+  }
+
+  &--blue {
+    background-color: $blue;
+  }
+
+  &--orange {
+    background-color: $orange;
+  }
+}
+
+

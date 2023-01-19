@@ -1,0 +1,166 @@
+.tours {
+  padding-top: 30px;
+  padding-bottom: 90px;
+  &__filter {
+    margin-bottom: 20px;
+    @include min-w($lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include min-w($lg) {
+      margin: 0 -15px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    @include min-w($lg) {
+      margin: 0 15px 30px;
+      width: calc(50% - 30px);
+    }
+
+    @include min-w($xxl) {
+      margin: 0 15px 30px;
+      width: calc(33.33% - 30px);
+    }
+  }
+
+  &__btn {
+    @include no-btn;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: $orange;
+    padding: 10px 0 10px 30px;
+    &::after {
+      left: 0;
+    }
+  }
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  height: 49px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-image: linear-gradient(90.35deg, #aa429e -3%, #8c2380 102.9%);
+  padding: 0 30px 30px;
+  transition: height 0.3s;
+
+  &--active {
+    height: 300px;
+    animation: visible 0.4s forwards;
+  }
+
+  @include min-w($xl) {
+    flex-direction: row;
+    align-items: center;
+    height: unset;
+    padding: 20px 30px;
+    overflow: visible;
+  }
+
+  &__open {
+    @include no-btn;
+    width: calc(100% + 60px);
+    padding: 14px 12px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    color: $white;
+    margin: 0 -30px;
+
+    &::after {
+      right: unset;
+      left: 50%;
+      transform: translate(90px, -50%);
+    }
+
+    &.active::after {
+      transform: translate(90px, -50%) rotate(180deg);
+    }
+
+    @include min-w($xl) {
+      display: none;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include min-w($xl) {
+      margin: 0 30px 0 0;
+      width: calc(25% - 22.5px);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: $black25;
+    border-radius: 8px;
+    background-color: $white;
+    padding: 9px 40px 9px 20px;
+    text-align: left;
+    border: 0;
+
+    transition: border-radius 0.3s;
+
+    &::after {
+      right: 20px;
+    }
+
+    @include min-w($xl) {
+      @include line-clamp;
+    }
+
+    &.active {
+      border-radius: 8px 8px 0 0;
+    }
+  }
+
+  &__drop-menu {
+    top: 100%;
+    width: 100%;
+    left: 0;
+    padding: 0;
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+@keyframes visible {
+  0% {
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}

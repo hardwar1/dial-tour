@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  {{> head title=title }}
+</head>
+
+<body>
+
+  {{> header parent-mod="app__header" }}
+
+  <main class=" main">
+
+    {{> body }}
+
+  </main>
+
+  {{> footer parent-mod="app__footer" }}
+
+
+  <!-- svg sprite start -->
+  {{> icons }}
+  <!-- svg sprite end -->
+
+  <script src="./js/plugins.min.js"></script>
+  <script src="./js/scripts.js"></script>
+</body>
+
+</html>

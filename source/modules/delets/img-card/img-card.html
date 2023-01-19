@@ -1,0 +1,75 @@
+<{{#if tag}}{{tag}}{{else}}div{{/if}} class="{{parent-mod}} img-card {{mod}}">
+    <a class="img-card__inner" href="{{link}}">
+        <span class="img-card__img-part">
+            <img class="img-card__img" src="{{root}}images/content/{{img}}" alt="{{img-alt}}">
+            {{#if video}}
+            <span class="img-card__play-wrap">
+                <svg class="img-card__play-icon" width="20" height="24">
+                    <use xlink:href="#icon-play-simple"></use>
+                </svg>
+            </span>
+            {{/if}}
+        </span>
+
+        {{#if label}}
+        <span class="img-card__label-part">
+            <span class="img-card__label">
+                {{label}}
+            </span>
+        </span>
+        {{/if}}
+
+        {{#if title}}
+        <span class="img-card__content-part">
+            <span class="img-card__content-main">
+                {{#if stars}}
+                <span class="img-card__stars-wrap">
+                    {{> stars
+                    parent-mod="img-card__stars"
+                    stars=stars
+                    }}
+                </span>
+                {{/if}}
+
+                <span class="img-card__title">
+                    {{title}}
+                </span>
+
+                {{#if text-md}}
+                <span class="img-card__text img-card__text--md">
+                    {{text-md}}
+                </span>
+                {{/if}}
+                {{#if text}}
+                <span class="img-card__text">
+                    {{text}}
+                </span>
+                {{/if}}
+            </span>
+
+            {{#if price}}
+            <span class="img-card__content-footer">
+                <span class="img-card__price-container">
+                    <span class="img-card__price">
+                        {{price}}
+                    </span>
+
+                    {{#if price-desc}}
+                    <span class="img-card__price-descs">
+                        <span class="img-card__price-desc">
+                            {{price-desc}}
+                        </span>
+                        {{#if price-desc-2}}
+                        <span class="img-card__price-desc">
+                            {{price-desc-2}}
+                        </span>
+                        {{/if}}
+                    </span>
+                    {{/if}}
+                </span>
+            </span>
+            {{/if}}
+        </span>
+        {{/if}}
+    </a>
+</{{#if tag}}{{tag}}{{else}}div{{/if}}>

@@ -1,0 +1,12 @@
+---
+layout: 1
+title: svg иконки как img
+---
+<div style="display: flex; flex-wrap: wrap; align-content: center;">
+    {{#each svg-icons}}
+    <figure style="display: flex; flex-direction: column; align-items: center; margin: 10px; padding: 10px; background-color: #f0f1e1; border: 1px solid #dcdcdc;">
+        <img style="margin-top: auto; margin-bottom: auto;" src="{{root}}images/icons/{{img}}.svg" alt="">
+        <figcaption style="margin-top: 24px;">{{img}}</figcaption>
+    </figure>
+    {{/each}}
+</div>

@@ -1,0 +1,271 @@
+.header {
+  position: relative;
+  z-index: 50;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $grey;
+    margin-bottom: 20px;
+
+    @include min-w($xl) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include min-w($xxl) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__tel-text {
+    @include min-w($xxl) {
+      margin-right: 8px;
+    }
+  }
+
+  &__tel-number {
+    color: $black25;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+
+    @include min-w($xxl) {
+      padding: 10px 0;
+    }
+  }
+
+  &__social {
+    display: none;
+  }
+
+  &__call {
+    display: none;
+    @include min-w($md) {
+      @include no-btn;
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      background-image: linear-gradient(
+        68.66deg,
+        #ff6c54 1.71%,
+        #ff4e79 24.05%,
+        #ff4288 36.01%,
+        #f2428b 46.98%,
+        #cf4294 67.28%,
+        #aa429e 85.91%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @include min-w($lg) {
+      font-size: 16px;
+    }
+  }
+
+  &__call-text {
+    background-color: $whitef5;
+    padding: 7px 0;
+  }
+
+  &__button {
+    display: none;
+    @include min-w($lg) {
+      @include no-btn;
+      display: block;
+      width: 44px;
+      height: 44px;
+      background-image: url(../images/icons/lk.svg);
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 24px 24px;
+    }
+
+    @include min-w($xl) {
+      background-image: unset;
+      width: unset;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: $red79;
+    }
+  }
+
+  &__button-text {
+    display: none;
+
+    @include min-w($xl) {
+      display: block;
+      padding: 8px 20px 10px;
+      border: 1px solid #ff4e79;
+      border-radius: 8px;
+    }
+  }
+
+  &__bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include min-w($sm) {
+      margin-bottom: 35px;
+    }
+
+    @include min-w($xl) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__logo {
+  }
+
+  &__menu {
+    display: none;
+
+    @include min-w($xl) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__menu-btn {
+  }
+}
+
+.social {
+  align-items: center;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+  }
+}
+
+.logo {
+  &__img {
+    object-fit: contain;
+
+    @include min-w($xl) {
+      width: 193px;
+      height: 52px;
+    }
+  }
+}
+
+.menu {
+  &__item:not(:last-child) {
+    margin-right: 30px;
+    position: relative;
+
+    @include min-w($xxl) {
+      margin-right: 70px;
+    }
+  }
+
+  &__link {
+  }
+
+  &__btn {
+    @include no-btn;
+  }
+}
+
+.arrow-down {
+  position: relative;
+  padding-right: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 10px;
+    height: 6px;
+    transform: translateY(-50%);
+    background-image: url(../images/icons/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: transform 0.3s;
+  }
+
+  &.active::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  &--white::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 1.5L5 5.5L1 1.5' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  }
+}
+
+.drop-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  z-index: 40;
+  left: -20px;
+  padding: 10px 0;
+  background-color: $white;
+  box-shadow: 0 2px 10px rgba(4, 13, 39, 0.04), 0px 10px 40px rgba(4, 13, 39, 0.1);
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.4;
+  color: $black25;
+  width: 300px;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.2s;
+
+  &--active {
+    transform: scale(1);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    padding: 5px 20px;
+    display: block;
+    transition: color 0.3s;
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__button {
+    @include no-btn;
+    display: block;
+    width: 100%;
+    border-top: 1px solid $whitef2;
+    transition: background-color 0.3, color 0.3s;
+    padding: 9px 20px;
+    text-align: left;
+
+    &--right {
+      padding-left: 35px;
+    }
+
+    &:hover {
+      color: $orange;
+      background-color: rgba(255, 108, 84, 0.05);
+    }
+  }
+}
