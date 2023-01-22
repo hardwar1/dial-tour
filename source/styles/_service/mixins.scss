@@ -1,32 +1,50 @@
 @mixin visually-hidden() {
   position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
   margin: -1px;
   padding: 0;
   border: 0;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@mixin noScroll() {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+}
+
+@mixin responsive-ratio($x, $y) {
+  $padding: calc(($y / $x) * 100);
+
+  padding-top: calc(($y / $x) * 100) + "%";
 }
 
 @mixin no-btn() {
-  padding: 0;
   margin: 0;
+  padding: 0;
   border: 0;
-  background-color: transparent;
   border-radius: 0;
+  background-color: transparent;
   appearance: none;
 }
 
 @mixin line-clamp($lines: 1) {
   @if $lines <=1 {
-    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-  } @else {
     overflow: hidden;
-    text-overflow: ellipsis;
+  } @else {
     display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
     -webkit-line-clamp: $lines;
     -webkit-box-orient: vertical;
   }
@@ -40,8 +58,8 @@
 
 @mixin clearfix() {
   &::after {
-    display: block;
     content: "";
+    display: block;
     clear: both;
   }
 }
@@ -53,9 +71,9 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(140, 147, 158, 0.24);
-    background-clip: content-box;
     border: 6px solid transparent;
     border-radius: 8px;
+    background-color: rgba(140, 147, 158, 0.24);
+    background-clip: content-box;
   }
 }

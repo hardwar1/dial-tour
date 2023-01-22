@@ -4,109 +4,109 @@
 
       <a class="header__tel" href="tel:+74951083585">
         <span class="header__tel-text">Москва:</span>
-        <span class="header__tel-number">+7 495 108-35-85</span>
+        <span class="header__tel-number link">+7 495 108-35-85</span>
       </a>
       <a class="header__tel" href="tel:+78123099411">
         <span class="header__tel-text">Санкт-Петербург:</span>
-        <span class="header__tel-number">+7 812 309-94-11</span>
+        <span class="header__tel-number link">+7 812 309-94-11</span>
       </a>
 
 
       <ul class="header__social reset social">
         <li class="social__item">
           <a class="social__link" href="#" target="_blank">
-            <svg width="30" height="30">
-              <use xlink:href="#tg"></use>
+            <svg width="20" height="20">
+              <use xlink:href="../images/sprite.svg#tg"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="#" target="_blank">
-            <svg width="30" height="30">
-              <use xlink:href="#wa"></use>
+            <svg width="20" height="20">
+              <use xlink:href="../images/sprite.svg#wa"></use>
             </svg>
           </a>
         </li>
       </ul>
 
-      <button class="header__call" type="button">
-        Перезвоните мне</button>
+      <button class="header__call grad-link js-call-back" type="button">
+        Перезвоните мне
+      </button>
 
-      <button class="header__button" type="button">
-       <span class="header__button-text">Вход/Регистрация</span>
-
+      <button class="header__enter-btn enter-btn" type="button">
+        <span class="header__enter-btn-text">Вход/Регистрация</span>
       </button>
     </div>
 
-    <div class="header__bot">
+    <nav class="header__bot">
       <a class="header__logo logo" href="">
         <img class="logo__img" src="images/content/logo.png" width="170" height="46" alt="Логотип Диал-тур">
       </a>
 
-      <nav>
-        <ul class="header__menu menu reset">
+
+      <ul class="header__menu menu reset">
 
 
-          <li class="menu__item">
-            <button class="menu__btn arrow-down" type="button">Каталог туров</button>
-            <ul class="header__drop-menu drop-menu reset">
-              <li class="drop-menu__item">
-                <a class="drop-menu__link" href="">
-                  Зимние каникулы
-                </a>
-              </li>
-              <li class="drop-menu__item">
-                <a class="drop-menu__link" href="">
-                  Весенние каникулы
-                </a>
-              </li>
-              <li class="drop-menu__item">
-                <a class="drop-menu__link" href="">
-                  Летние каникулы
-                </a>
-              </li>
-              <li class="drop-menu__item">
-                <a class="drop-menu__link" href="">
-                  Спортивные сборы
-                </a>
-              </li>
-              <li class="drop-menu__item">
-                <a class="drop-menu__link" href="">
-                  Однодневные школьные экскурсии
-                </a>
-              </li>
-            </ul>
-          </li>
+        <li class="menu__item">
+          <button class="menu__btn arrow-down link" type="button">Каталог туров</button>
+          <ul class="header__drop-menu drop-menu reset">
+            <li class="drop-menu__item">
+              <a class="drop-menu__link link" href="">
+                Зимние каникулы
+              </a>
+            </li>
+            <li class="drop-menu__item">
+              <a class="drop-menu__link link" href="">
+                Весенние каникулы
+              </a>
+            </li>
+            <li class="drop-menu__item">
+              <a class="drop-menu__link link" href="">
+                Летние каникулы
+              </a>
+            </li>
+            <li class="drop-menu__item">
+              <a class="drop-menu__link link" href="">
+                Спортивные сборы
+              </a>
+            </li>
+            <li class="drop-menu__item">
+              <a class="drop-menu__link link" href="">
+                Однодневные школьные экскурсии
+              </a>
+            </li>
+          </ul>
+        </li>
 
-          <li class="menu__item">
-            <a class="menu__link" href="">
-              Услуги
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="">
-              О нас
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="">
-              Партнёрам
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="">
-              Родителям
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="">
-              Контакты
-            </a>
-          </li>
-        </ul>
+        <li class="menu__item">
+          <a class="menu__link link" href="">
+            Услуги
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link link" href="">
+            О нас
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link link" href="">
+            Партнёрам
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link link" href="">
+            Родителям
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link link" href="">
+            Контакты
+          </a>
+        </li>
+      </ul>
 
-        {{> menu-btn parent-mod="header__menu-btn" }}
-      </nav>
-    </div>
+      {{> menu-btn parent-mod="header__menu-btn" }}
+
+    </nav>
   </div>
 </header>

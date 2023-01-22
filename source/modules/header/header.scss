@@ -1,6 +1,42 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+
+  &__item:not(:last-child) {
+    position: relative;
+
+    &:hover {
+      .drop-menu {
+        transform: scale(1);
+        transition: transform 0.1s;
+      }
+
+      .menu__btn {
+        &::after {
+          transform: rotate(180deg) translateY(50%);
+        }
+      }
+    }
+  }
+
+  &__link {
+    padding: 10px 0;
+  }
+
+  &__btn {
+    @include no-btn;
+    padding: 10px 0;
+  }
+}
+
 .header {
   position: relative;
   z-index: 50;
+  padding-bottom: 30px;
+  background-color: $whitef5;
+  color: $black25;
 
   &__top {
     display: flex;
@@ -11,17 +47,20 @@
     font-size: 14px;
     line-height: 17px;
     color: $grey;
-    margin-bottom: 20px;
 
     @include min-w($xl) {
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
   }
 
   &__tel {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+
+    @include min-w($lg) {
+      align-items: flex-end;
+    }
 
     @include min-w($xxl) {
       flex-direction: row;
@@ -30,6 +69,7 @@
   }
 
   &__tel-text {
+    margin-bottom: 5px;
     @include min-w($xxl) {
       margin-right: 8px;
     }
@@ -48,31 +88,24 @@
 
   &__social {
     display: none;
+
+    @include min-w($lg) {
+      display: flex;
+    }
+
+    .social__item:not(:last-child) {
+      margin-right: 5px;
+    }
   }
 
   &__call {
     display: none;
     @include min-w($md) {
-      @include no-btn;
       display: block;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 20px;
-      background-image: linear-gradient(
-        68.66deg,
-        #ff6c54 1.71%,
-        #ff4e79 24.05%,
-        #ff4288 36.01%,
-        #f2428b 46.98%,
-        #cf4294 67.28%,
-        #aa429e 85.91%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
 
-    @include min-w($lg) {
-      font-size: 16px;
+    @include min-w($xl) {
+      width: unset;
     }
   }
 
@@ -81,39 +114,40 @@
     padding: 7px 0;
   }
 
-  &__button {
+  &__enter-btn {
     display: none;
     @include min-w($lg) {
-      @include no-btn;
       display: block;
       width: 44px;
       height: 44px;
-      background-image: url(../images/icons/lk.svg);
-      background-repeat: no-repeat;
       background-position: right center;
-      background-size: 24px 24px;
+      border: 0;
     }
 
     @include min-w($xl) {
-      background-image: unset;
       width: unset;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 17px;
-      text-align: center;
-      color: $red79;
+      height: unset;
+      background-image: unset;
+      border: 1px solid $red79;
+      transition: border-color 0.3s, color 0.3s;
+
+      &:hover {
+        border-color: $red-hover;
+        color: $red-hover;
+      }
+
+      &:active {
+        border-color: $red-active;
+        color: $red-active;
+      }
     }
   }
 
-  &__button-text {
+  &__enter-btn-text {
     display: none;
 
     @include min-w($xl) {
       display: block;
-      padding: 8px 20px 10px;
-      border: 1px solid #ff4e79;
-      border-radius: 8px;
     }
   }
 
@@ -121,18 +155,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
-
-    @include min-w($sm) {
-      margin-bottom: 35px;
-    }
-
-    @include min-w($xl) {
-      margin-bottom: 20px;
-    }
   }
 
   &__logo {
+    width: 170px;
+    height: 46px;
+
+    @include min-w($xl) {
+      width: 193px;
+      height: 52px;
+      margin-right: 100px;
+    }
   }
 
   &__menu {
@@ -140,51 +173,12 @@
 
     @include min-w($xl) {
       display: flex;
-      align-items: center;
+      max-width: calc(100% - 310px);
+      width: 100%;
     }
   }
 
   &__menu-btn {
-  }
-}
-
-.social {
-  align-items: center;
-
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
-
-  &__link {
-  }
-}
-
-.logo {
-  &__img {
-    object-fit: contain;
-
-    @include min-w($xl) {
-      width: 193px;
-      height: 52px;
-    }
-  }
-}
-
-.menu {
-  &__item:not(:last-child) {
-    margin-right: 30px;
-    position: relative;
-
-    @include min-w($xxl) {
-      margin-right: 70px;
-    }
-  }
-
-  &__link {
-  }
-
-  &__btn {
-    @include no-btn;
   }
 }
 
@@ -218,7 +212,7 @@
 
 .drop-menu {
   position: absolute;
-  top: calc(100% + 4px);
+  top: 100%;
   z-index: 40;
   left: -20px;
   padding: 10px 0;

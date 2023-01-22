@@ -23,7 +23,9 @@ export const iconsToHtml = () => {
         .pipe(app.plugins.replace('&gt;', '>'))
         .pipe(svgSprite({
             mode: {
-                symbol: {
+                spriteHtml: {
+                    dest: 'sprite/',
+                    mode: 'symbol',
                     sprite: `../icons.html`,
                     inline: true,
                     example: true,
@@ -33,6 +35,33 @@ export const iconsToHtml = () => {
         .pipe(app.plugins.beautify.html({
             editorconfig: true,
             wrap_attributes: 'preserve',
+        }))
+        .pipe(app.gulp.dest(app.dev.modules));
+}
+
+export const iconsToSvg = () => {
+    return app.gulp.src(app.path.source.icons)
+        .pipe(app.plugins.plumber(
+            app.plugins.notify.onError({
+                title: "IconsSVG",
+                message: "Error: <%= error.message %>"
+            })
+        ))
+        .pipe(cheerio({
+            run: function ($) {},
+            parserOptions: {
+                xmlMode: true
+            }
+        }))
+        .pipe(svgSprite({
+            mode: {
+                spriteStack: {
+                    dest: 'sprite/',
+                    mode: 'stack',
+                    sprite: `../../images/sprite.svg`,
+                    example: true,
+                }
+            }
         }))
         .pipe(app.gulp.dest(app.dev.modules));
 }

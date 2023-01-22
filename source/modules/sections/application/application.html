@@ -9,6 +9,7 @@
           И мы подберём программу c учётом индивидуальности вашего ребёнка
         </p>
       </div>
+
       <div class="application__relative">
         <div class="application__row">
           <label class="application__label">
@@ -21,13 +22,16 @@
           </label>
           <label class="application__label">
             <span class="visually-hidden">Введите ваш email</span>
-            <input class="application__input input" type="email" placeholder="Email" name="email" required>
+            <input class="application__input input invalid" type="email" placeholder="Email" name="email" required>
+            <div class="invalid-hover">
+              <span class="invalid-hover__text">Хм, здесь допущена ошибка!</span>
+            </div>
           </label>
         </div>
 
         <div class="application__check-row">
-          <label class="application__check-label">
-            <input class="application__checkbox checkbox visually-hidden" type="checkbox" checked>
+          <label class="application__check-label checkbox">
+            <input class="checkbox__input visually-hidden" type="checkbox" checked>
             <span class="checkbox__fake">
               <svg width="9" height="6">
                 <use xlink:href="#check"></use>

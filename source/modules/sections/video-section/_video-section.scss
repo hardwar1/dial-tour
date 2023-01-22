@@ -1,0 +1,164 @@
+.video-section {
+  color: $black25;
+
+  &__inner {
+    margin: 0 -15px -30px;
+    @include min-w($sm) {
+      margin: 0 -30px -30px;
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__slide {
+    padding: 30px 15px 0;
+    margin-top: -30px;
+
+    @include min-w($sm) {
+      padding: 30px 30px 0;
+    }
+
+    @include min-w($xxl) {
+      display: flex;
+      padding: 50px 30px 60px;
+      margin-top: -50px;
+    }
+  }
+
+  &__responsive {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 650px;
+
+    @include min-w($xxl) {
+      margin: 0 50px 0 0;
+    }
+  }
+
+  &__video-wrapper {
+    position: relative;
+    display: block;
+    padding-top: 58.5714%;
+    border-radius: 30px;
+    background-color: $black25;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 2px 10px rgba(4, 13, 39, 0.04), 0 10px 40px rgba(4, 13, 39, 0.1);
+    overflow: hidden;
+  }
+
+  &__info {
+    @include min-w($xxl) {
+      padding-top: 20px;
+      max-width: 490px;
+    }
+  }
+
+  &__caption {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    @include min-w($xxl) {
+      font-size: 28px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    @include min-w($lg) {
+      font-size: 17px;
+    }
+
+    p {
+      margin: 0 0 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    padding-right: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+
+    &::after {
+      right: 0;
+      width: 7px;
+      height: 14px;
+    }
+  }
+
+  &__pagination {
+    display: none;
+    @include min-w($xxl) {
+      display: block;
+      margin-right: 25px;
+      width: fit-content;
+    }
+  }
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+}
+
+.video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  background-color: rgba($white, 0.25);
+  transition: transform 0.3s;
+  transform: translate(-50%, -50%);
+  @include no-btn;
+
+  &.hide {
+    transform: scale(0);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    outline: 14px solid rgba(255, 255, 255, 0.3);
+    width: 70px;
+    height: 70px;
+    background-color: $white;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    border-style: solid;
+    border-color: transparent transparent transparent $orange;
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    border-width: 7px 0 7px 14px;
+  }
+}
+
+.swiper-pagination2 {
+}

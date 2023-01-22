@@ -8,9 +8,59 @@
   line-height: 22px;
   border: 1px solid $orange;
   color: $white;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, background-image 0.3s;
+
+  &:hover {
+    background-color: $orange-hover;
+  }
+
+  &:active {
+    background-color: $orange-active;
+  }
+
+  @include min-w($lg) {
+    padding: 8px 40px;
+  }
 
   &--white {
     background-color: transparent;
     color: $orange;
+    // &:focus {
+    //   outline: 1px solid $orange; один фиг все одинаково выглядит
+    // }
+
+    &:hover {
+      background-color: transparent;
+      border-color: $orange-hover;
+      outline: 1px solid $orange-hover;
+      color: $orange-hover;
+    }
+
+    &:active {
+      outline: 1px solid $orange-active;
+      background-color: transparent;
+      color: $orange-active;
+      border-color: $orange-active;
+    }
+  }
+
+  &--grad {
+    background-image: linear-gradient(
+      68.66deg,
+      #ff6c54 1.71%,
+      #ff4e79 24.05%,
+      #ff4288 36.01%,
+      #f2428b 46.98%,
+      #cf4294 67.28%,
+      #aa429e 85.91%
+    );
+
+    &:hover {
+      background-image: linear-gradient(68.66deg, #FF6C54 1.71%, #FF4E79 24.05%, #FF4288 36.01%, #F2428B 46.98%, #CF4294 67.28%, #AA429E 85.91%);
+    }
+
+    &:active {
+      background-image: linear-gradient(68.66deg, #E64E35 1.71%, #E62E5B 24.05%, #E3246B 36.01%, #D9256F 46.98%, #B5287A 67.28%, #912A85 85.91%);
+    }
   }
 }

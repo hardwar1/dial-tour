@@ -1,6 +1,6 @@
 {
   "name": "toursite2023",
-  "version": "2.6.0",
+  "version": "2.6.2",
   "type": "module",
   "description": "Основа сайта",
   "author": "Telemark",
@@ -28,6 +28,7 @@
     "gulp-svg-sprite": "2.0.1",
     "gulp-ttf2woff2": "4.0.1",
     "gulp-uglify": "3.0.2",
+    "gulp-webp": "4.0.1",
     "panini": "1.7.2",
     "postcss": "8.4.19",
     "sass": "1.56.1",
@@ -62,6 +63,10 @@
     "node": "18.12.1"
   },
   "dependencies": {
+    "daterangepicker": "3.1.0",
+    "jquery": "3.6.3",
+    "moment": "2.29.4",
+    "rellax": "1.12.1",
     "swiper": "8.4.5"
   }
 }

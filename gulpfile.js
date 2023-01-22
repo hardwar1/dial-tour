@@ -23,7 +23,7 @@ import { js, jsPlugins } from './gulp/tasks/js.js';
 import { server } from './gulp/tasks/server.js';
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 import { images } from "./gulp/tasks/images.js";
-import { iconsToHtml } from "./gulp/tasks/icons.js";
+import { iconsToHtml, iconsToSvg } from "./gulp/tasks/icons.js";
 
 // Watcher
 export const watch = () => {
@@ -31,11 +31,11 @@ export const watch = () => {
     gulp.watch([app.path.watch.html, app.path.watch.data], gulp.series(html));
     gulp.watch(app.path.watch.js, gulp.series(js, jsPlugins));
     gulp.watch(app.path.watch.images, gulp.series(images));
-    gulp.watch(app.path.watch.icons, gulp.series(iconsToHtml));
+    gulp.watch(app.path.watch.icons, gulp.series(iconsToHtml, iconsToSvg));
 };
 
 // Main tasks
-const mainTasks = gulp.parallel(copy, copyFonts, style, html, js, jsPlugins, images, iconsToHtml);
+const mainTasks = gulp.parallel(copy, copyFonts, style, html, js, jsPlugins, images, iconsToHtml, iconsToSvg);
 
 // Scenarios
 export default gulp.series(clean, mainTasks, gulp.parallel(watch, server));

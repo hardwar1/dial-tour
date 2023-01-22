@@ -1,0 +1,23 @@
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__pagination {
+    width: fit-content;
+    margin-right: 25px;
+    font-weight: 500;
+    font-size: 20px;
+    color: $purple;
+  }
+
+  .swiper-pagination-total {
+    color: #a0a2a8;
+  }
+
+  .slider-btn--prev {
+    margin-right: 25px;
+  }
+
+
+}

@@ -1,0 +1,278 @@
+.footer {
+  color: $grey;
+  padding-bottom: 100px;
+  position: relative;
+
+  @include min-w($lg) {
+    padding-bottom: 20px;
+  }
+
+  &__top {
+    background-color: $purple;
+  }
+
+  &__tel-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 25px;
+    color: $white;
+    font-size: 17px;
+
+    @include min-w($lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px 0 25px;
+    }
+  }
+
+  &__tel-item {
+    text-align: center;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include min-w($lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__tel-text {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+
+    @include min-w($xl) {
+      font-size: 24px;
+    }
+
+    @include min-w($xxl) {
+      font-size: 28px;
+    }
+  }
+
+  &__body {
+    padding: 40px 0 35px;
+    display: flex;
+    flex-direction: column;
+
+    @include min-w($xl) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 30px;
+    }
+
+    @include min-w($xxl) {
+      padding-top: 100px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__info {
+    order: -2;
+    @include min-w($xl) {
+      max-width: 386px;
+    }
+  }
+
+  &__logo {
+    margin: 0 auto 30px;
+    display: block;
+    width: fit-content;
+
+    @include min-w($xl) {
+      margin-left: 0;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+
+    @include min-w($xxl) {
+      font-size: 16px;
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__social {
+    margin: 0 auto 30px;
+    width: fit-content;
+
+    .social__item:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    @include min-w($xl) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    transition: height 0.2s;
+    height: 43px;
+    @include min-w($xl) {
+      height: unset !important;
+    }
+  }
+
+  &__btn {
+    @include no-btn;
+    padding: 9px 0;
+    text-align: left;
+    position: relative;
+    width: 100%;
+    font-weight: 800;
+    color: $purple;
+    font-size: 17px;
+
+    @include min-w($xl) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__list-item {
+  }
+
+  &__link {
+    padding: 6px 0;
+    display: block;
+  }
+
+  &__menu {
+    order: -1;
+    column-count: 2;
+    font-weight: 800;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include min-w($lg) {
+      font-size: 20px;
+    }
+
+    @include min-w($xl) {
+      margin-bottom: 0;
+      order: unset;
+      column-count: unset;
+      font-size: 17px;
+      text-align: left;
+    }
+  }
+
+  &__menu-item {
+  }
+
+  &__menu-link {
+    display: inline-block;
+    padding: 6px 0;
+    @include min-w($xl) {
+      padding: 9px 0;
+    }
+  }
+
+  &__copy-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    @include min-w($lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+
+    @include min-w($xl) {
+      margin-bottom: 30px;
+    }
+    @include min-w($xxl) {
+      position: relative;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__copy {
+    padding: 10px 0;
+    display: inline-block;
+    font-size: 17px;
+    position: absolute;
+    bottom: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    max-width: 255px;
+
+    @include min-w($lg) {
+      position: static;
+      width: unset;
+      margin-bottom: -10px;
+      transform: translateX(0);
+      max-width: unset;
+    }
+  }
+
+  &__registry-wrapper {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+
+    @include min-w($lg) {
+      text-align: right;
+    }
+
+    @include min-w($xxl) {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 62px);
+    }
+  }
+
+  &__registry-row {
+    margin-top: 6px;
+  }
+
+  &__registry:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include min-w($lg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include min-w($xxl) {
+      max-width: 905px;
+    }
+  }
+
+  &__bottom-link {
+    padding: 10px 0;
+  }
+
+  &__orange-text {
+    color: $orange;
+  }
+}

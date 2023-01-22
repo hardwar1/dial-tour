@@ -21,6 +21,8 @@
 
 @import "../modules/parts/menu-btn/menu-btn.scss";
 @import "../modules/parts/btn/btn";
+@import "../modules/parts/slider-btn/slider-btn";
+@import "../modules/parts/slider-nav/slider-nav";
 @import "../modules/parts/tour-card/tour-card";
 
 
@@ -28,5 +30,12 @@
 @import "../modules/sections/tours/tours";
 @import "../modules/sections/application/application";
 @import "../modules/sections/bonus/bonus";
+
+@import "../modules/sections/video-section/video-section";
+@import "../modules/sections/top/top";
+@import "../modules/sections/reviews/reviews";
+@import "../modules/sections/mobile-menu/mobile-menu";
+
+@import "../modules/popaps/popaps";
 
 

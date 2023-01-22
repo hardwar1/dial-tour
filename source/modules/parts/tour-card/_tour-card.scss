@@ -16,6 +16,7 @@
 
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   &__badge {
@@ -90,10 +91,8 @@
     width: 100%;
     overflow: auto;
     margin-bottom: 10px;
-    &::-webkit-scrollbar {
-      width: 0;
-    }
-  }
+    @include noScroll;
+}
 
   &__season {
     display: inline-block;
@@ -103,6 +102,11 @@
     border-radius: 5px;
     padding: 4px 8px;
     white-space: nowrap;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $purple;
+    }
 
     &.ico {
       padding-left: 35px;
@@ -123,9 +127,7 @@
     width: 100%;
     overflow: auto;
     margin-bottom: 15px;
-    &::-webkit-scrollbar {
-      width: 0;
-    }
+    @include noScroll;
   }
 
   &__bottom {
@@ -150,15 +152,17 @@
   }
 
   &__btn {
-    @include max-w($lg) {
-      background-color: $orange;
-      width: 74px;
-      height: 39px;
-      padding-top: 5px;
-    }
+    background-color: $orange;
+    width: 74px;
+    height: 39px;
+    padding-top: 5px;
 
     @include min-w($lg) {
       background-color: transparent;
+      width: unset;
+      height: unset;
+      padding: 8px 30px;
+
     }
 
     svg {
@@ -197,6 +201,10 @@
 
   &--orange {
     background-color: $orange;
+  }
+
+  &--blueb4 {
+    background-color: $blueb4;
   }
 }
 
