@@ -1,0 +1,56 @@
+<form class="{{parent-mod}} to-book">
+  <div class="to-book__body">
+
+    <div class="to-book__badges badges">
+      <span class="to-book__badge badge badge--blue">Компенсация <br> за путёвку!</span>
+    </div>
+
+    <span class="to-book__top-text">
+      Стоимость
+    </span>
+
+    <div class="to-book__price">
+      от 288 880 <span>₽</span>
+    </div>
+
+    {{> dropdown3 parent-mod="to-book__dropdown"}}
+
+    <div class="to-book__hide-box">
+
+      <label class=" to-book__label">
+        <span class="visually-hidden"></span>
+        <input class="input input--corner" type="text" name="name" placeholder="Ваше имя" required>
+      </label>
+
+      <label class=" to-book__label">
+        <span class="visually-hidden"></span>
+        <input class="input input--corner" type="tel" name="tel" placeholder="Телефон" required>
+      </label>
+
+      <label class=" to-book__label">
+        <span class="visually-hidden"></span>
+        <input class="input input--corner" type="email" name="email" placeholder="Email" required>
+      </label>
+
+      <label class="to-book__check-label checkbox">
+        <input class="checkbox__input visually-hidden" type="checkbox" checked required>
+        <span class="checkbox__fake">
+          <svg width="9" height="6">
+            <use xlink:href="#check"></use>
+          </svg>
+        </span>
+        Я&nbsp;даю&nbsp;согласие на&nbsp;обработку моих персональных данных
+      </label>
+    </div>
+
+    <button class="to-book__btn btn btn--grad" type="button">
+      <span>Забронировать</span>
+    </button>
+
+    <div class="to-book__text">
+      <p>
+        Есть свободные места.<br> Бесплатная отмена бронирования
+      </p>
+    </div>
+  </div>
+</form>

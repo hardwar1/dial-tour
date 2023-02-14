@@ -7,11 +7,24 @@
   background-color: rgba(170, 66, 158, 0.3);
   backdrop-filter: blur(69px);
   z-index: 75;
-  transition: transform 0.3s;
+  transition: transform 0.3s, background-color 2.3s, backdrop-filter 2.3s;
   transform: scale(0);
 
   &.active {
     transform: scale(1);
+  }
+
+  &.black-active {
+    background-color: rgba(0,0,0, 0.5);
+    backdrop-filter: unset;
+    transform: scale(1);
+    transition: transform 0.3s;
+  }
+
+  &--invisible {
+    transition: background-color 0s, backdrop-filter 0s;
+    backdrop-filter: unset;
+    background-color: transparent;
   }
 }
 
@@ -54,8 +67,9 @@
   left: 50%;
   z-index: 80;
   width: 100%;
+  max-width: 700px;
   transition: transform 0.2s;
-  transform: translate(-50%, -50%) scale(0);
+  transform: scale(0) translate(-50%, -50%);
 
   &.active {
     transform: scale(1) translate(-50%, -50%);
@@ -95,6 +109,11 @@
 
   p {
     margin: 0;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: inherit;
   }
 }
 

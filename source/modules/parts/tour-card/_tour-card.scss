@@ -1,37 +1,18 @@
 .tour-card {
-  background-color: $white;
-  border-radius: 15px;
-  padding-top: 10px;
-  height: 100%;
-
   position: relative;
+  padding-top: 10px;
+  border-radius: 15px;
   width: 100%;
   max-width: 500px;
+  height: 100%;
+  background-color: $white;
 
-  &__badges {
-    position: absolute;
-    left: 16px;
-    top: 18px;
-    z-index: 10;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  &__badge {
-    margin-bottom: 8px;
-    &:nth-child(2n) {
-      transform: rotate(4deg);
-    }
-    &:nth-child(2n - 1) {
-      transform: rotate(-4deg);
-    }
+  &__img-link {
   }
 
   &__img {
-    border-radius: 10px;
     margin: 0 10px 15px;
+    border-radius: 10px;
     width: calc(100% - 20px);
     object-fit: cover;
   }
@@ -39,40 +20,43 @@
   &__info {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 222px);
     padding: 0 20px 20px;
-    color: $black25;
+    height: calc(100% - 222px);
     font-size: 15px;
     line-height: 1.5;
+    color: $black25;
   }
 
   &__label {
-    color: $grey;
     font-size: 15px;
     line-height: 1.4;
+    color: $grey;
   }
 
   &__title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.4;
     margin: 0 0 30px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
   }
 
   &__text {
     margin-bottom: 15px;
-    p {
-      margin: 0;
-    }
+    @include line-clamp(5);
+
     @include min-w($lg) {
       font-size: 16px;
+    }
+
+    p {
+      margin: 0;
     }
   }
 
   &__place-row {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
   }
 
@@ -84,25 +68,27 @@
     }
   }
 
-  &__season-row {
+  &__mt-auto {
     margin-top: auto;
+  }
+
+  &__season-row {
     display: flex;
     align-items: center;
-    width: 100%;
-    overflow: auto;
-    margin-bottom: 10px;
-    @include noScroll;
-}
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
 
   &__season {
     display: inline-block;
-    width: fit-content;
     margin-right: 10px;
-    background-color: $whitef5;
-    border-radius: 5px;
     padding: 4px 8px;
+    border-radius: 5px;
+    width: fit-content;
     white-space: nowrap;
+    background-color: $whitef5;
     transition: color 0.3s;
+    margin-bottom: 5px;
 
     &:hover {
       color: $purple;
@@ -124,23 +110,21 @@
   &__type-row {
     display: flex;
     align-items: center;
-    width: 100%;
-    overflow: auto;
-    margin-bottom: 15px;
-    @include noScroll;
+    flex-wrap: wrap;
+
   }
 
   &__bottom {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding-top: 15px;
     border-top: 1px solid $whitef2;
   }
 
   &__price {
-    font-weight: 700;
     font-size: 20px;
+    font-weight: 700;
 
     @include min-w($lg) {
       font-size: 17px;
@@ -152,17 +136,16 @@
   }
 
   &__btn {
-    background-color: $orange;
+    padding-top: 5px;
     width: 74px;
     height: 39px;
-    padding-top: 5px;
+    background-color: $orange;
 
     @include min-w($lg) {
-      background-color: transparent;
+      padding: 8px 30px;
       width: unset;
       height: unset;
-      padding: 8px 30px;
-
+      background-color: transparent;
     }
 
     svg {
@@ -170,6 +153,10 @@
       @include min-w($lg) {
         display: none;
       }
+    }
+
+    &:hover svg {
+      fill: $orange;
     }
   }
 
@@ -180,32 +167,3 @@
     }
   }
 }
-
-.badge {
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 1.4;
-  text-transform: uppercase;
-  color: $white;
-  background-color: $red;
-  padding: 5px 9px;
-  border-radius: 5px;
-
-  &--red {
-    background-color: $red;
-  }
-
-  &--blue {
-    background-color: $blue;
-  }
-
-  &--orange {
-    background-color: $orange;
-  }
-
-  &--blueb4 {
-    background-color: $blueb4;
-  }
-}
-
-

@@ -1,0 +1,83 @@
+.hard-table {
+  border-radius: 15px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 20px;
+
+  @include min-w($lg) {
+    margin-bottom: 30px;
+  }
+
+  &__caption {
+    background-color: $whiteef;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  &__item {
+  }
+
+  &__btn {
+    @include no-btn;
+    width: 100%;
+    background-color: $whiteef;
+    padding: 10px 20px;
+
+    &::after {
+      right: 20px;
+    }
+  }
+
+  &__hide-box {
+  }
+
+  &__head {
+  }
+
+  &__row {
+    display: flex;
+
+    &--4 span {
+      width: 25%;
+    }
+    &--1 span {
+      width: 100%;
+    }
+  }
+
+  &__head-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 15px;
+    width: 50%;
+    padding: 5px;
+    background-color: $white;
+    border-right: 1px solid rgba(11, 22, 37, 0.05);
+    border-bottom: 1px solid rgba(11, 22, 37, 0.05);
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  &__cell {
+    background-color: $white;
+    padding: 5px 3px;
+    border-right: 1px solid rgba(11, 22, 37, 0.05);
+    border-bottom: 1px solid rgba(11, 22, 37, 0.05);
+    width: 50%;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &--head {
+      color: $purple;
+    }
+  }
+}

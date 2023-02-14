@@ -1,0 +1,28 @@
+<section class="slider-section slider-section--card padding {{slider-section-parent-mod}} {{slider-section-mod}}" id="similar">
+  <div class="container">
+    <h2 class="slider-section__title">Похожие лагеря</h2>
+    <div class="slider-section__swiper swiper">
+      <ul class="slider-section__list swiper-wrapper reset">
+
+        {{#each tour-card}}
+
+        <li class="slider-section__item swiper-slide">
+          {{> tour-card parent-mod="tours__tour-card"}}
+        </li>
+
+        {{/each}}
+
+
+      </ul>
+
+      <div class="slider-section__nav slider-nav ">
+        {{> slider-btn parent-mod="slider-section__prev" mod="slider-btn--prev" text="назад"}}
+        <div class="slider-nav__pagination slider-section__pagination"></div>
+        {{> slider-btn parent-mod="slider-section__next" mod="slider-btn--next" text="вперед"}}
+      </div>
+    </div>
+
+  </div>
+
+</section>
+

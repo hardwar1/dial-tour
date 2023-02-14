@@ -1,27 +1,5 @@
 <div class="overlay js-active"></div>
 
-<div class="application-popap popap js-active">
-  <div class="container">
-    <div class="popap__inner">
-
-      <button class="popap__close close-btn" type="button">
-        <span class="visually-hidden">
-          закрыть окошко
-        </span>
-      </button>
-
-      <div class="application-popap__title popap__title">
-        Ваша заявка принята
-      </div>
-      <div class="application-popap__text">
-        <p>
-          Спасибо за заявку! В ближайшее время мы свяжемся с вами и обсудим детали
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="call-back popap js-active">
   <div class="container">
     <form class="popap__inner">
@@ -57,13 +35,13 @@
       </button>
 
       <label class="call-back__check-wrapper checkbox">
-        <input class="checkbox__input visually-hidden" type="checkbox" checked>
+        <input class="checkbox__input visually-hidden" type="checkbox" checked required>
         <span class="checkbox__fake">
           <svg width="9" height="6">
             <use xlink:href="#check"></use>
           </svg>
         </span>
-          Я даю согласие на обработку моих персональных данных
+          Я даю <a class="popap__link" href="">согласие на обработку</a> моих персональных данных
       </label>
     </form>
   </div>

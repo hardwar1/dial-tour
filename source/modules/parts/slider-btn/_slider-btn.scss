@@ -38,11 +38,11 @@
       opacity: 0.5;
     }
 
-    &--next {
+    &--next svg {
       transform: rotate(-90deg);
     }
 
-    &--prev {
+    &--prev svg {
       transform: rotate(90deg);
     }
   }

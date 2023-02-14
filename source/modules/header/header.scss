@@ -27,7 +27,12 @@
 
   &__btn {
     @include no-btn;
-    padding: 10px 0;
+    padding: 10px 15px 10px 0;
+  }
+
+  &__drop-radius {
+    border-radius: 15px;
+    overflow: hidden;
   }
 }
 
@@ -72,6 +77,7 @@
     margin-bottom: 5px;
     @include min-w($xxl) {
       margin-right: 8px;
+      margin-bottom: 0;
     }
   }
 
@@ -130,6 +136,7 @@
       background-image: unset;
       border: 1px solid $red79;
       transition: border-color 0.3s, color 0.3s;
+      padding: 9px 20px 9px 20px;
 
       &:hover {
         border-color: $red-hover;
@@ -180,86 +187,10 @@
 
   &__menu-btn {
   }
-}
 
-.arrow-down {
-  position: relative;
-  padding-right: 20px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 10px;
-    height: 6px;
-    transform: translateY(-50%);
-    background-image: url(../images/icons/arrow-down.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: transform 0.3s;
-  }
-
-  &.active::after {
-    transform: translateY(-50%) rotate(180deg);
-  }
-
-  &--white::after {
-    background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 1.5L5 5.5L1 1.5' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  &__drop-menu {
+    max-height: 200px;
   }
 }
 
-.drop-menu {
-  position: absolute;
-  top: 100%;
-  z-index: 40;
-  left: -20px;
-  padding: 10px 0;
-  background-color: $white;
-  box-shadow: 0 2px 10px rgba(4, 13, 39, 0.04), 0px 10px 40px rgba(4, 13, 39, 0.1);
-  border-radius: 15px;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 1.4;
-  color: $black25;
-  width: 300px;
-  overflow: hidden;
-  transform: scale(0);
-  transition: transform 0.2s;
 
-  &--active {
-    transform: scale(1);
-  }
-
-  &__item {
-  }
-
-  &__link {
-    padding: 5px 20px;
-    display: block;
-    transition: color 0.3s;
-    &:hover {
-      color: $orange;
-    }
-  }
-
-  &__button {
-    @include no-btn;
-    display: block;
-    width: 100%;
-    border-top: 1px solid $whitef2;
-    transition: background-color 0.3, color 0.3s;
-    padding: 9px 20px;
-    text-align: left;
-
-    &--right {
-      padding-left: 35px;
-    }
-
-    &:hover {
-      color: $orange;
-      background-color: rgba(255, 108, 84, 0.05);
-    }
-  }
-}

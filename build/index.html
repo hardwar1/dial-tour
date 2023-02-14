@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> | Gulp</title>
+    <title>Диал-тур | Gulp</title>
 
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -13,7 +13,7 @@
     <meta name="author" content="">
 
     <meta name="og:type" content="website">
-    <meta name="og:title" content=" | Gulp">
+    <meta name="og:title" content="Диал-тур | Gulp">
     <meta name="og:description" content="">
     <meta name="og:image" content="">
     <meta name="og:url" content="">
@@ -63,7 +63,6 @@
                     <span class="header__tel-number link">+7 812 309-94-11</span>
                 </a>
 
-
                 <ul class="header__social reset social">
                     <li class="social__item">
                         <a class="social__link" href="#" target="_blank">
@@ -95,39 +94,82 @@
                     <img class="logo__img" src="images/content/logo.png" width="170" height="46" alt="Логотип Диал-тур">
                 </a>
 
-
                 <ul class="header__menu menu reset">
 
+                    <li class="menu__item dropdown">
+                        <button class="menu__btn arrow-down link js-active" type="button">Каталог туров</button>
 
-                    <li class="menu__item">
-                        <button class="menu__btn arrow-down link" type="button">Каталог туров</button>
-                        <ul class="header__drop-menu drop-menu reset">
-                            <li class="drop-menu__item">
-                                <a class="drop-menu__link link" href="">
-                                    Зимние каникулы
-                                </a>
-                            </li>
-                            <li class="drop-menu__item">
-                                <a class="drop-menu__link link" href="">
-                                    Весенние каникулы
-                                </a>
-                            </li>
-                            <li class="drop-menu__item">
-                                <a class="drop-menu__link link" href="">
-                                    Летние каникулы
-                                </a>
-                            </li>
-                            <li class="drop-menu__item">
-                                <a class="drop-menu__link link" href="">
-                                    Спортивные сборы
-                                </a>
-                            </li>
-                            <li class="drop-menu__item">
-                                <a class="drop-menu__link link" href="">
-                                    Однодневные школьные экскурсии
-                                </a>
-                            </li>
-                        </ul>
+
+                        <div class="drop-menu  js-active">
+                            <ul class="header__drop-menu drop-menu__list reset scroll js-active">
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Зимние каникулы
+                                    </a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Весенние каникулы
+                                    </a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Летние каникулы
+                                    </a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Спортивные сборы
+                                    </a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Однодневные школьные экскурсии
+                                    </a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Весенние каникулы
+                                    </a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Летние каникулы
+                                    </a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Спортивные сборы
+                                    </a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Однодневные школьные экскурсии
+                                    </a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Весенние каникулы
+                                    </a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Летние каникулы
+                                    </a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Спортивные сборы
+                                    </a>
+                                </li>
+                                <li class="drop-menu__item">
+                                    <a class="drop-menu__link link" href="">
+                                        Однодневные школьные экскурсии
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
                     </li>
 
                     <li class="menu__item">
@@ -169,13 +211,1318 @@
         </div>
     </header>
 
+    <div class="overlay js-active"></div>
+
+    <div class="call-back popap js-active">
+        <div class="container">
+            <form class="popap__inner">
+
+                <button class="popap__close close-btn" type="button">
+                    <span class="visually-hidden">
+                        закрыть окошко
+                    </span>
+                </button>
+
+                <div class="call-back__title popap__title">
+                    Мы вам перезвоним
+                </div>
+
+                <div class="call-back__text">
+                    <p>
+                        Расскажем самое важное о лагерях за 5 минут
+                    </p>
+                </div>
+
+                <label class="call-back__label">
+                    <span class="visually-hidden"></span>
+                    <input class="call-back__input input input--border" type="text" name="name" placeholder="Ваше имя" required>
+                </label>
+
+                <label class="call-back__label">
+                    <span class="visually-hidden">Телефон</span>
+                    <input class="call-back__input input input--border" type="tel" name="tel" placeholder="Телефон" required>
+                </label>
+
+                <button class="call-back__btn btn" type="submit">
+                    Жду звонка
+                </button>
+
+                <label class="call-back__check-wrapper checkbox">
+                    <input class="checkbox__input visually-hidden" type="checkbox" checked required>
+                    <span class="checkbox__fake">
+                        <svg width="9" height="6">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </span>
+                    Я даю <a class="popap__link" href="">согласие на обработку</a> моих персональных данных
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__overlay"></div>
+        <div class="mobile-menu__inner">
+
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__list reset">
+
+                    <li class="mobile-menu__item">
+                        <button class="mobile-menu__button arrow-down" type="button">
+                            Каталог турок
+                        </button>
+
+                        <div class="mobile-menu__hide-box">
+                            <ul class="mobile-menu__hide-list reset">
+                                <li class="mobile-menu__hide-item">
+                                    <a class="mobile-menu__hide-link" href="">
+                                        Зимние каникулы
+                                    </a>
+                                </li>
+                                <li class="mobile-menu__hide-item">
+                                    <a class="mobile-menu__hide-link" href="">
+                                        Весенние каникулы
+                                    </a>
+                                </li>
+                                <li class="mobile-menu__hide-item">
+                                    <a class="mobile-menu__hide-link" href="">
+                                        Летние каникулы
+                                    </a>
+                                </li>
+                                <li class="mobile-menu__hide-item">
+                                    <a class="mobile-menu__hide-link" href="">
+                                        Спортивные сборы
+                                    </a>
+                                </li>
+                                <li class="mobile-menu__hide-item">
+                                    <a class="mobile-menu__hide-link" href="">
+                                        Однодневные школьные экскурсии
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="">
+                            О нас
+                        </a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="">
+                            Партнёрам
+                        </a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="">
+                            Родителям
+                        </a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link" href="">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__bottom">
+                <ul class="mobile-menu__social reset social">
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank">
+                            <svg width="20" height="20">
+                                <use xlink:href="../images/sprite.svg#tg"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#" target="_blank">
+                            <svg width="20" height="20">
+                                <use xlink:href="../images/sprite.svg#wa"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <button class="mobile-menu__btn btn btn--grad js-call-back" type="button">
+                    <span>Заказать звонок</span>
+                </button>
+
+                <button class="mobile-menu__enter-btn enter-btn" type="button">
+                    <span>Вход/Регистрация</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <main class=" main">
 
-        Panini: template could not be parsed <br>
-        <pre>Error: Parse error on line 8:
-    ...ton>{{> parent-mod=""}}
-    ---------------------^
-    Expecting 'CLOSE_RAW_BLOCK', 'CLOSE', 'CLOSE_UNESCAPED', 'OPEN_SEXPR', 'CLOSE_SEXPR', 'ID', 'OPEN_BLOCK_PARAMS', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', 'SEP', got 'EQUALS'</pre>
+
+        <h1 class="visually-hidden">Диал-тур туризм</h1>
+
+        <section class="hero">
+            <div class="container">
+                <h2 class="visually-hidden">Горячие предложения</h2>
+                <div class="hero__inner">
+                    <div class="hero__swiper swiper">
+                        <ul class="hero__list swiper-wrapper reset">
+                            <li class="hero__item swiper-slide" style="background-image: url(images/content/hero-bg.jpg);">
+
+                                <div class="hero__info">
+                                    <span class="hero__label">
+                                        Джуниор-клуб
+                                    </span>
+                                    <h3 class="hero__title">
+                                        Место для незабываемых впечатлений, новых открытий и встреч с друзьями
+                                    </h3>
+                                    <div class="hero__text">
+                                        <p>
+                                            Летний лагерь на море в Болгарии
+                                        </p>
+                                    </div>
+
+                                    <a class="hero__btn btn" href="">
+                                        Подробнее
+                                    </a>
+                                </div>
+
+                                <img class="hero__img" src="images/content/hero-img.png" height="360" alt="счастливые дети">
+
+                            </li>
+
+                            <li class="hero__item swiper-slide" style="background-image: url(images/content/hero-bg.jpg);">
+                                <div class="hero__info">
+                                    <span class="hero__label">
+                                        Джуниор-клуб
+                                    </span>
+                                    <h3 class="hero__title">
+                                        Место для незабываемых впечатлений, новых открытий и встреч с друзьями
+                                    </h3>
+                                    <div class="hero__text">
+                                        <p>
+                                            Летний лагерь на море в Болгарии
+                                        </p>
+                                    </div>
+
+                                    <a class="hero__btn btn" href="">
+                                        Подробнее
+                                    </a>
+                                </div>
+
+                                <img class="hero__img" src="images/content/hero-img.png" alt="счастливые дети">
+                            </li>
+
+                        </ul>
+                        <div class="swiper-pagination pagination-dots"></div>
+                    </div>
+
+                    <button class="hero__arrow hero__arrow--next slider-btn slider-btn--next" type="button">
+                        <span class="visually-hidden"></span>
+                        <svg width="15" height="9">
+                            <use xlink:href="#arrow-down"></use>
+                        </svg>
+                    </button>
+
+                    <button class="hero__arrow hero__arrow--prev slider-btn slider-btn--prev" type="button">
+                        <span class="visually-hidden"></span>
+                        <svg width="15" height="9">
+                            <use xlink:href="#arrow-down"></use>
+                        </svg>
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="tours">
+            <div class="container">
+                <h2 class="visually-hidden">туры которые мы предлгаем</h2>
+                <div class="tours__filter filter">
+                    <button class="filter__open arrow-down arrow-down--white" type="button">Фильтр по турам</button>
+                    <div class="filter__hide-box">
+                        <div class="filter__hide-inner">
+                            <div class="filter__dropdown dropdown">
+                                <button class="dropdown__btn arrow-down js-active" type="button">
+                                    Все типы лагерей
+                                </button>
+
+                                <ul class="dropdown__drop-menu drop-menu reset scroll js-active">
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link" href="">
+                                            Все типы лагерей
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link">
+                                            Оздоровительный
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link">
+                                            Спортивный
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link" href="">
+                                            Языковой
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="filter__dropdown dropdown">
+                                <button class="dropdown__btn arrow-down js-active" type="button">
+                                    Все регионы
+                                </button>
+
+                                <ul class="dropdown__drop-menu drop-menu reset scroll js-active">
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link" href="">
+                                            Все регионы
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link" href="">
+                                            Болгария
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button drop-menu__button--right link" href="">
+                                            Несебр
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button drop-menu__button--right link" href="">
+                                            Солнечный берег
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link" href="" disabled>
+                                            Болгария
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button drop-menu__button--right link" href="">
+                                            Несебр
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button drop-menu__button--right link" href="">
+                                            Солнечный берег
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link" href="">
+                                            Болгария
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button drop-menu__button--right link" href="">
+                                            Несебр
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button drop-menu__button--right link" href="">
+                                            Солнечный берег
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link" href="">
+                                            Болгария
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button drop-menu__button--right link" href="">
+                                            Несебр
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button drop-menu__button--right link" href="">
+                                            Солнечный берег
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link" href="">
+                                            Россия
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button drop-menu__button--right link" href="">
+                                            Крым
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button drop-menu__button--right link" href="">
+                                            Нижний Новгород
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button drop-menu__button--right link" href="">
+                                            Подпосковье
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="filter__dropdown dropdown">
+                                <button class="dropdown__btn arrow-down js-active" type="button">
+                                    Любой сезон
+                                </button>
+
+                                <ul class="dropdown__drop-menu drop-menu reset scroll js-active">
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link" href="">
+                                            Любой сезон
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link">
+                                            Оздоровительный
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link">
+                                            Спортивный
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link" href="">
+                                            Языковой
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="filter__dropdown dropdown">
+                                <button class="dropdown__btn arrow-down js-active" type="button">
+                                    Все возраста
+                                </button>
+
+                                <ul class="dropdown__drop-menu drop-menu reset scroll js-active">
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link" href="">
+                                            Все возраста
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link">
+                                            Оздоровительный
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link">
+                                            Спортивный
+                                        </a>
+                                    </li>
+                                    <li class="drop-menu__item">
+                                        <a class="drop-menu__button link" href="">
+                                            Языковой
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="tours__list reset">
+
+                    <li class="tours__item">
+                        <article class="tours__tour-card tour-card ">
+                            <div class="badges">
+                                <span class="badge badge--red">кэшбек</span>
+                                <span class="badge badge--blue">кэшбек</span>
+                                <span class="badge badge--orange">ек</span>
+                                <span class="badge badge--blueb4">кэшбекdsfaf</span>
+                            </div>
+
+                            <a class="tour-card__img-link" href="">
+                                <img class="tour-card__img" src="images/content/tour1.jpg" height="208" width="435" alt="Англо-русский клуб">
+                            </a>
+
+                            <div class="tour-card__info">
+                                <span class="tour-card__label">
+                                    Оздоровительная программа
+                                </span>
+
+                                <h3 class="tour-card__title">
+                                    <a href="" class="link">
+                                        «Коктебель-клуб»
+                                    </a>
+                                </h3>
+
+                                <div class="tour-card__text">
+                                    <p>В «Коктейль-клубе» ребёнок не только укрепит здоровье и зарядится энергией. Он проведёт время с пользой</p>
+                                </div>
+
+                                <div class="tour-card__mt-auto">
+                                    <div class="tour-card__place-row">
+                                        <a class="tour-card__place ico ico--marker link" href="">Крым</a>
+                                        <a class="tour-card__place ico ico--people" href="">7–15 лет</a>
+                                    </div>
+
+                                    <div class="tour-card__season-row scroll">
+                                        <a class="tour-card__season ico ico--sun" href=""> Лето </a> <a class="tour-card__season ico ico--sheet" href=""> Весна </a> <a class="tour-card__season ico ico--maple" href=""> Осень </a> <a class="tour-card__season ico ico--snow" href=""> Зима </a>
+                                    </div>
+
+                                    <div class="tour-card__type-row scroll">
+                                        <a class="tour-card__season" href="">
+                                            #Оздоровительный
+                                        </a>
+                                        <a class="tour-card__season" href="">
+                                            #Языковой
+                                        </a>
+                                        <a class="tour-card__season" href="">
+                                            #Спортивный
+                                        </a>
+                                    </div>
+
+                                    <div class="tour-card__bottom">
+                                        <a class="tour-card__price link" href="">
+                                            от 24 000<span> ₽</span>
+                                        </a>
+
+                                        <a class="tour-card__btn btn btn--white" href="">
+                                            <span class="tour-card__btn-text"> Подробнее</span>
+                                            <svg width="14" height="9">
+                                                <use xlink:href="#arrow-big"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li class="tours__item">
+                        <article class="tours__tour-card tour-card ">
+                            <div class="badges">
+                                <span class="badge badge--red">кэшбек</span>
+                                <span class="badge badge--blue">кэшбек</span>
+                                <span class="badge badge--orange">ек</span>
+                                <span class="badge badge--blueb4">кэшбекdsfaf</span>
+                            </div>
+
+                            <a class="tour-card__img-link" href="">
+                                <img class="tour-card__img" src="images/content/tour2.jpg" height="208" width="435" alt="Горнолыжный клуб с оздоровительной программой">
+                            </a>
+
+                            <div class="tour-card__info">
+                                <span class="tour-card__label">
+                                    Горнолыжный клуб с оздоровительной программой
+                                </span>
+
+                                <h3 class="tour-card__title">
+                                    <a href="" class="link">
+                                        «Панда»
+                                    </a>
+                                </h3>
+
+                                <div class="tour-card__text">
+                                    <p>Дети получат возможность насладиться живописными пейзажами Кавказского хребта прямо из окон отеля</p>
+                                </div>
+
+                                <div class="tour-card__mt-auto">
+                                    <div class="tour-card__place-row">
+                                        <a class="tour-card__place ico ico--marker link" href="">Сочи</a>
+                                        <a class="tour-card__place ico ico--people" href="">12–18 лет</a>
+                                    </div>
+
+                                    <div class="tour-card__season-row scroll">
+                                        <a class="tour-card__season ico ico--all" href=""> Все сезоны </a>
+                                    </div>
+
+                                    <div class="tour-card__type-row scroll">
+                                        <a class="tour-card__season" href="">
+                                            #Оздоровительный
+                                        </a>
+                                        <a class="tour-card__season" href="">
+                                            #Языковой
+                                        </a>
+                                        <a class="tour-card__season" href="">
+                                            #Спортивный
+                                        </a>
+                                    </div>
+
+                                    <div class="tour-card__bottom">
+                                        <a class="tour-card__price link" href="">
+                                            от 288 880<span> ₽</span>
+                                        </a>
+
+                                        <a class="tour-card__btn btn btn--white" href="">
+                                            <span class="tour-card__btn-text"> Подробнее</span>
+                                            <svg width="14" height="9">
+                                                <use xlink:href="#arrow-big"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li class="tours__item">
+                        <article class="tours__tour-card tour-card ">
+                            <div class="badges">
+                                <span class="badge badge--red">кэшбек</span>
+                                <span class="badge badge--blue">кэшбек</span>
+                                <span class="badge badge--orange">ек</span>
+                                <span class="badge badge--blueb4">кэшбекdsfaf</span>
+                            </div>
+
+                            <a class="tour-card__img-link" href="">
+                                <img class="tour-card__img" src="images/content/tour3.jpg" height="208" width="435" alt="Англо-русский клуб">
+                            </a>
+
+                            <div class="tour-card__info">
+                                <span class="tour-card__label">
+                                    Англо-русский клуб
+                                </span>
+
+                                <h3 class="tour-card__title">
+                                    <a href="" class="link">
+                                        «Объединённое королевство»
+                                    </a>
+                                </h3>
+
+                                <div class="tour-card__text">
+                                    <p>Дети изучат английский язык, отдохнут от школы, получат новые впечатления и наберутся сил</p>
+                                </div>
+
+                                <div class="tour-card__mt-auto">
+                                    <div class="tour-card__place-row">
+                                        <a class="tour-card__place ico ico--marker link" href="">Нижний Новгород</a>
+                                        <a class="tour-card__place ico ico--people" href="">6–17 лет</a>
+                                    </div>
+
+                                    <div class="tour-card__season-row scroll">
+                                        <a class="tour-card__season ico ico--sheet" href=""> Весна </a> <a class="tour-card__season ico ico--maple" href=""> Осень </a> <a class="tour-card__season ico ico--snow" href=""> Зима </a>
+                                    </div>
+
+                                    <div class="tour-card__type-row scroll">
+                                        <a class="tour-card__season" href="">
+                                            #Оздоровительный
+                                        </a>
+                                        <a class="tour-card__season" href="">
+                                            #Языковой
+                                        </a>
+                                        <a class="tour-card__season" href="">
+                                            #Спортивный
+                                        </a>
+                                    </div>
+
+                                    <div class="tour-card__bottom">
+                                        <a class="tour-card__price link" href="">
+                                            от 18 600<span> ₽</span>
+                                        </a>
+
+                                        <a class="tour-card__btn btn btn--white" href="">
+                                            <span class="tour-card__btn-text"> Подробнее</span>
+                                            <svg width="14" height="9">
+                                                <use xlink:href="#arrow-big"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li class="tours__item">
+                        <article class="tours__tour-card tour-card ">
+                            <div class="badges">
+                                <span class="badge badge--red">кэшбек</span>
+                                <span class="badge badge--blue">кэшбек</span>
+                                <span class="badge badge--orange">ек</span>
+                                <span class="badge badge--blueb4">кэшбекdsfaf</span>
+                            </div>
+
+                            <a class="tour-card__img-link" href="">
+                                <img class="tour-card__img" src="images/content/tour1.jpg" height="208" width="435" alt="Англо-русский клуб">
+                            </a>
+
+                            <div class="tour-card__info">
+                                <span class="tour-card__label">
+                                    Оздоровительная программа
+                                </span>
+
+                                <h3 class="tour-card__title">
+                                    <a href="" class="link">
+                                        «Коктебель-клуб»
+                                    </a>
+                                </h3>
+
+                                <div class="tour-card__text">
+                                    <p>В «Коктейль-клубе» ребёнок не только укрепит здоровье и зарядится энергией. Он проведёт время с пользой</p>
+                                </div>
+
+                                <div class="tour-card__mt-auto">
+                                    <div class="tour-card__place-row">
+                                        <a class="tour-card__place ico ico--marker link" href="">Крым</a>
+                                        <a class="tour-card__place ico ico--people" href="">7–15 лет</a>
+                                    </div>
+
+                                    <div class="tour-card__season-row scroll">
+                                        <a class="tour-card__season ico ico--maple" href=""> Осень </a> <a class="tour-card__season ico ico--snow" href=""> Зима </a>
+                                    </div>
+
+                                    <div class="tour-card__type-row scroll">
+                                        <a class="tour-card__season" href="">
+                                            #Оздоровительный
+                                        </a>
+                                        <a class="tour-card__season" href="">
+                                            #Языковой
+                                        </a>
+                                        <a class="tour-card__season" href="">
+                                            #Спортивный
+                                        </a>
+                                    </div>
+
+                                    <div class="tour-card__bottom">
+                                        <a class="tour-card__price link" href="">
+                                            от 24 000<span> ₽</span>
+                                        </a>
+
+                                        <a class="tour-card__btn btn btn--white" href="">
+                                            <span class="tour-card__btn-text"> Подробнее</span>
+                                            <svg width="14" height="9">
+                                                <use xlink:href="#arrow-big"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li class="tours__item">
+                        <article class="tours__tour-card tour-card ">
+                            <div class="badges">
+                                <span class="badge badge--red">кэшбек</span>
+                                <span class="badge badge--blue">кэшбек</span>
+                                <span class="badge badge--orange">ек</span>
+                                <span class="badge badge--blueb4">кэшбекdsfaf</span>
+                            </div>
+
+                            <a class="tour-card__img-link" href="">
+                                <img class="tour-card__img" src="images/content/tour2.jpg" height="208" width="435" alt="Горнолыжный клуб с оздоровительной программой">
+                            </a>
+
+                            <div class="tour-card__info">
+                                <span class="tour-card__label">
+                                    Горнолыжный клуб с оздоровительной программой
+                                </span>
+
+                                <h3 class="tour-card__title">
+                                    <a href="" class="link">
+                                        «Панда»
+                                    </a>
+                                </h3>
+
+                                <div class="tour-card__text">
+                                    <p>Дети получат возможность насладиться живописными пейзажами Кавказского хребта прямо из окон отеля</p>
+                                </div>
+
+                                <div class="tour-card__mt-auto">
+                                    <div class="tour-card__place-row">
+                                        <a class="tour-card__place ico ico--marker link" href="">Сочи</a>
+                                        <a class="tour-card__place ico ico--people" href="">12–18 лет</a>
+                                    </div>
+
+                                    <div class="tour-card__season-row scroll">
+
+                                    </div>
+
+                                    <div class="tour-card__type-row scroll">
+                                        <a class="tour-card__season" href="">
+                                            #Оздоровительный
+                                        </a>
+                                        <a class="tour-card__season" href="">
+                                            #Языковой
+                                        </a>
+                                        <a class="tour-card__season" href="">
+                                            #Спортивный
+                                        </a>
+                                    </div>
+
+                                    <div class="tour-card__bottom">
+                                        <a class="tour-card__price link" href="">
+                                            от 288 880<span> ₽</span>
+                                        </a>
+
+                                        <a class="tour-card__btn btn btn--white" href="">
+                                            <span class="tour-card__btn-text"> Подробнее</span>
+                                            <svg width="14" height="9">
+                                                <use xlink:href="#arrow-big"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+
+                    <li class="tours__item">
+                        <article class="tours__tour-card tour-card ">
+                            <div class="badges">
+                                <span class="badge badge--red">кэшбек</span>
+                                <span class="badge badge--blue">кэшбек</span>
+                                <span class="badge badge--orange">ек</span>
+                                <span class="badge badge--blueb4">кэшбекdsfaf</span>
+                            </div>
+
+                            <a class="tour-card__img-link" href="">
+                                <img class="tour-card__img" src="images/content/tour3.jpg" height="208" width="435" alt="Англо-русский клуб">
+                            </a>
+
+                            <div class="tour-card__info">
+                                <span class="tour-card__label">
+                                    Англо-русский клуб
+                                </span>
+
+                                <h3 class="tour-card__title">
+                                    <a href="" class="link">
+                                        «Объединённое королевство»
+                                    </a>
+                                </h3>
+
+                                <div class="tour-card__text">
+                                    <p>Дети изучат английский язык, отдохнут от школы, получат новые впечатления и наберутся сил</p>
+                                </div>
+
+                                <div class="tour-card__mt-auto">
+                                    <div class="tour-card__place-row">
+                                        <a class="tour-card__place ico ico--marker link" href="">Нижний Новгород</a>
+                                        <a class="tour-card__place ico ico--people" href="">6–17 лет</a>
+                                    </div>
+
+                                    <div class="tour-card__season-row scroll">
+
+                                    </div>
+
+                                    <div class="tour-card__type-row scroll">
+                                        <a class="tour-card__season" href="">
+                                            #Оздоровительный
+                                        </a>
+                                        <a class="tour-card__season" href="">
+                                            #Языковой
+                                        </a>
+                                        <a class="tour-card__season" href="">
+                                            #Спортивный
+                                        </a>
+                                    </div>
+
+                                    <div class="tour-card__bottom">
+                                        <a class="tour-card__price link" href="">
+                                            от 18 600<span> ₽</span>
+                                        </a>
+
+                                        <a class="tour-card__btn btn btn--white" href="">
+                                            <span class="tour-card__btn-text"> Подробнее</span>
+                                            <svg width="14" height="9">
+                                                <use xlink:href="#arrow-big"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+                </ul>
+
+                <button class="tours__btn ico ico--refresh link rotate-this" type="button">
+                    Показать ещё
+                </button>
+            </div>
+        </section>
+
+        <section class="application">
+            <div class="container">
+                <form class="application__inner">
+                    <h2 class="application__title ico">
+                        Оставьте заявку!
+                    </h2>
+                    <div class="application__text">
+                        <p>
+                            И мы подберём программу c учётом индивидуальности вашего ребёнка
+                        </p>
+                    </div>
+
+                    <div class="application__relative">
+                        <div class="application__row">
+                            <label class="application__label">
+                                <span class="visually-hidden">Ваше имя</span>
+                                <input class="application__input input" type="text" placeholder="Ваше имя" name="name" required>
+                            </label>
+                            <label class="application__label">
+                                <span class="visually-hidden">Телефон</span>
+                                <input class="application__input input" type="tel" placeholder="Телефон" name="tel" required>
+                            </label>
+                            <label class="application__label ">
+                                <span class="visually-hidden">Введите ваш email</span>
+                                <input class="application__input input " type="email" placeholder="Email" name="email" required>
+                            </label>
+                        </div>
+
+                        <div class="application__check-row">
+                            <label class="application__check-label checkbox">
+                                <input class="checkbox__input visually-hidden" type="checkbox" checked>
+                                <span class="checkbox__fake">
+                                    <svg width="9" height="6">
+                                        <use xlink:href="#check"></use>
+                                    </svg>
+                                </span>
+                                Я даю <a href="" class="application__text-link">согласие на обработку</a> моих персональных данных
+                            </label>
+
+                            <button class="application__btn btn" type="submit">
+                                Отправить
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="bonus padding">
+            <div class="container">
+                <h2 class="bonus__title">Наш большой опыт — ваша уверенность в отличном отдыхе ребёнка</h2>
+
+                <ul class="bonus__inner reset">
+
+                    <li class="bonus__item">
+                        <h3 class="bonus__caption ico ico--bonus1">
+                            Лицензированная работа
+                        </h3>
+
+                        <div class="bonus__text">
+                            <p>
+                                Вы выбираете туроператора, включённого в Федеральный реестр Туроператоров по международному выездному
+                                туризму и внутреннему туризму
+                            </p>
+                        </div>
+                    </li>
+
+
+
+                    <li class="bonus__item">
+                        <h3 class="bonus__caption ico ico--bonus2">
+                            Официальная поддержке
+                        </h3>
+
+                        <div class="bonus__text">
+                            <p>
+                                Состоим в Российском союзе туриндустрии и Объединении туроператоров в сфере выездного туризма «Турпомощь». Для вас это дополнительные гарантии надёжности
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="bonus__item">
+                        <h3 class="bonus__caption ico ico--bonus3">
+                            Страхование отдыха
+                        </h3>
+                        <div class="bonus__text">
+                            <p>
+                                Ваш ребёнок будет застрахован в «Альфа-страхование» - одной из лучших страховых компаний в России,
+                                специализирующихся на туризме </p>
+                        </div>
+                    </li>
+
+                    <li class="bonus__item bonus__item--img">
+                        <img class="bonus__img" src="../images/content/bonus.jpg" height="401" width="324" alt="веселые дети">
+                    </li>
+
+                    <li class="bonus__item">
+                        <h3 class="bonus__caption ico ico--bonus4">
+                            17 лет доверия родителей
+                        </h3>
+
+                        <div class="bonus__text">
+                            <p>
+                                В сфере детского отдыха мы работаем 17 лет. Дважды фирма становилась лауреатом национальной программы продвижения лучших товаров и услуг для детей в РФ «Лучшее — детям»
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="bonus__item">
+                        <h3 class="bonus__caption ico ico--bonus5">
+                            Эксклюзивные лагеря
+                        </h3>
+
+                        <div class="bonus__text">
+                            <p>
+                                Предлагаем вам собственные оздоровительные, языковые и soft skills лагеря в Подмосковье, Сочи, Крыму с
+                                выгодным соотношением цена-качество. В наших лагерях царит уютная позитивная атмосфера, которая так нравится
+                                всем детям </p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="video-section padding">
+            <div class="container">
+                <h2 class="video-section__title">
+                    Ваши дети остануться довольны!
+                </h2>
+
+                <div class="video-section__inner swiper">
+                    <ul class="video-section__list swiper-wrapper reset">
+
+                        <li class="video-section__item swiper-slide">
+                            <div class="video-section__slide">
+                                <div class="video-section__responsive">
+                                    <a class="video-section__video-wrapper video-wrapper" href="https://youtu.be/0J2QdDbelmY"
+                                        style="background-image: url(images/content/video1.jpg);" data-fancybox>
+
+                                        <span class="video-btn" type="button">
+                                            <span class="visually-hidden">смотреть/остановить видео</span>
+                                        </span>
+                                    </a>
+                                    <span class="video-section__fake-img" style="background-image: url(images/content/video1.jpg)"></span>
+                                </div>
+
+                                <div class="video-section__info">
+                                    <h3 class="video-section__caption reset">
+                                        Сейчас всё чаще звучит детский заливистый смех
+                                    </h3>
+                                    <div class="video-section__text">
+                                        <p>
+                                            Также как новая модель организационной деятельности позволяет выполнить важные задания по разработке
+                                            переосмысления внешнеэкономических политик.
+                                        </p>
+                                        <p>
+                                            Приятно, граждане, наблюдать, как акционеры крупнейших компаний формируют глобальную экономическую
+                                            сеть и при этом — обнародованы.
+                                        </p>
+                                    </div>
+
+                                    <a class="video-section__link grad-link ico ico--arrow-r" href="">Перейти к лагерю</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="video-section__item swiper-slide">
+                            <div class="video-section__slide">
+                                <div class="video-section__responsive">
+                                    <a class="video-section__video-wrapper video-wrapper" href="https://youtu.be/0J2QdDbelmY"
+                                        style="background-image: url(images/content/video1.jpg);" data-fancybox>
+
+                                        <span class="video-btn" type="button">
+                                            <span class="visually-hidden">смотреть/остановить видео</span>
+                                        </span>
+                                    </a>
+                                    <span class="video-section__fake-img" style="background-image: url(images/content/video1.jpg)"></span>
+                                </div>
+
+                                <div class="video-section__info">
+                                    <h3 class="video-section__caption reset">
+                                        Сейчас всё чаще звучит детский заливистый смех
+                                    </h3>
+                                    <div class="video-section__text">
+                                        <p>
+                                            Также как новая модель организационной деятельности позволяет в
+                                        </p>
+                                        <p>
+                                            Приятно, граждане, наблюдать, как акционеры крупнейших компаний формируют глобальную экономическую
+                                            сеть и при этом — обнародованы.
+                                        </p>
+                                    </div>
+
+                                    <a class="video-section__link grad-link ico ico--arrow-r" href="">Перейти к лагерю</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="video-section__item swiper-slide">
+                            <div class="video-section__slide">
+                                <div class="video-section__responsive">
+                                    <a class="video-section__video-wrapper video-wrapper" href="https://youtu.be/0J2QdDbelmY"
+                                        style="background-image: url(images/content/video1.jpg);" data-fancybox>
+
+                                        <span class="video-btn" type="button">
+                                            <span class="visually-hidden">смотреть/остановить видео</span>
+                                        </span>
+                                    </a>
+                                    <span class="video-section__fake-img" style="background-image: url(images/content/video1.jpg)"></span>
+                                </div>
+
+                                <div class="video-section__info">
+                                    <h3 class="video-section__caption reset">
+                                        Сейчас всё чаще
+                                    </h3>
+                                    <div class="video-section__text">
+                                        <p>
+                                            Также как новая модель организационной деятельности позволяет выполнить важные задания по разработке
+                                            переосмысления внешнеэкономических политик.
+                                        </p>
+
+                                    </div>
+
+                                    <a class="video-section__link grad-link ico ico--arrow-r" href="">Перейти к лагерю</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="video-section__nav slider-nav ">
+                        <button class="video-section__prev slider-btn slider-btn--prev" type="button">
+                            <span class="visually-hidden">назад</span>
+                            <svg width="15" height="9">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </button>
+
+                        <div class="slider-nav__pagination video-section__pagination"></div>
+                        <button class="video-section__next slider-btn slider-btn--next" type="button">
+                            <span class="visually-hidden">вперед</span>
+                            <svg width="15" height="9">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="top padding">
+            <div class="container">
+                <h2 class="top__title">
+                    ТОП 7 продаж
+                </h2>
+
+                <ul class="top__list reset">
+                    <li class="top__item">
+                        <div class="top__item-inner">
+                            <span class="top__rate top__rate--1">1</span>
+                            <span class="top__label">Лагерь</span>
+                            <h3 class="top__caption reset">
+                                «Морское братство»
+                            </h3>
+                            <div class="top__text">
+                                <p>
+                                    В частности, убеждённость некоторых оппонентов влечёт за собой процесс внедрения и модернизации укрепления
+                                    моральных ценностей.
+                                </p>
+                            </div>
+
+                            <span class="top__place">
+                                <svg width="14" height="18">
+                                    <use xlink:href="#marker-stroke"></use>
+                                </svg>
+                                Туапсе
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="top__item">
+                        <div class="top__item-inner">
+                            <span class="top__rate">2</span>
+                            <span class="top__label">Лагерь</span>
+                            <h3 class="top__caption reset">
+                                «Морская звезда»
+                            </h3>
+                            <div class="top__text">
+                                <p>
+                                    Принимая во внимание показатели успешности, высококачественный прототип будущего проекта является
+                                    качественно новой ступенью новых принципов формирования материально-технической и кадровой базы.
+                                </p>
+                            </div>
+
+                            <span class="top__place">
+                                <svg width="14" height="18">
+                                    <use xlink:href="#marker-stroke"></use>
+                                </svg>
+                                Туапсе
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="top__item">
+                        <div class="top__item-inner">
+                            <span class="top__rate">3</span>
+                            <span class="top__label">Лагерь</span>
+                            <h3 class="top__caption reset">
+                                «Заря»
+                            </h3>
+                            <div class="top__text">
+                                <p>
+                                    Внезапно, некоторые особенности внутренней политики неоднозначны и будут объединены в целые кластеры себе
+                                    подобных.
+                                </p>
+                            </div>
+
+                            <span class="top__place">
+                                <svg width="14" height="18">
+                                    <use xlink:href="#marker-stroke"></use>
+                                </svg>
+                                Дмитров
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="top__item top__item--img" aria-hidden="true">
+                        <img class="top__img" src="../images/content/top-img1.jpg" height="230" width="330"
+                            alt="дети у канатной дороги">
+                    </li>
+
+                    <li class="top__item">
+                        <div class="top__item-inner">
+                            <span class="top__rate">4</span>
+                            <span class="top__label">Образовательный центр</span>
+                            <h3 class="top__caption reset">
+                                «Новый Год на родине Деда Мороза»
+                            </h3>
+                            <div class="top__text">
+                                <p>
+                                    В частности, сложившаяся структура организации является качественно новой ступенью распределения
+                                    внутренних резервов и ресурсов.
+                                </p>
+                            </div>
+
+                            <span class="top__place">
+                                <svg width="14" height="18">
+                                    <use xlink:href="#marker-stroke"></use>
+                                </svg>
+                                Крым
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="top__item">
+                        <div class="top__item-inner">
+                            <span class="top__rate">5</span>
+                            <span class="top__label">Комплекс</span>
+                            <h3 class="top__caption reset">
+                                «Жемчужина России»
+                            </h3>
+                            <div class="top__text">
+                                <p>
+                                    С другой стороны, глубокий уровень погружения обеспечивает актуальность системы обучения кадров,
+                                    соответствующей насущным потребностям.
+                                </p>
+                            </div>
+
+                            <span class="top__place">
+                                <svg width="14" height="18">
+                                    <use xlink:href="#marker-stroke"></use>
+                                </svg>
+                                Аната
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="top__item">
+                        <div class="top__item-inner">
+                            <span class="top__rate">6</span>
+                            <span class="top__label">Оздоровительный центр</span>
+                            <h3 class="top__caption reset">
+                                «Премьера»
+                            </h3>
+                            <div class="top__text">
+                                <p>
+                                    Повседневная практика показывает, что внедрение современных методик позволяет оценить значение
+                                    своевременного выполнения сверхзадачи.
+                                </p>
+                            </div>
+
+                            <span class="top__place">
+                                <svg width="14" height="18">
+                                    <use xlink:href="#marker-stroke"></use>
+                                </svg>
+                                Анапа
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="top__item">
+                        <div class="top__item-inner">
+                            <span class="top__rate">7</span>
+                            <span class="top__label">Образовательный центр</span>
+                            <h3 class="top__caption reset">
+                                «Чайка»
+                            </h3>
+                            <div class="top__text">
+                                <p>
+                                    Каждый из нас понимает очевидную вещь: граница обучения кадров выявляет срочную потребность новых
+                                    предложений.
+                                </p>
+                            </div>
+
+                            <span class="top__place">
+                                <svg width="14" height="18">
+                                    <use xlink:href="#marker-stroke"></use>
+                                </svg>
+                                Крым
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="top__item top__item--img">
+                        <img class="top__img" src="../images/content/top-img2.jpg" height="230" width="330"
+                            alt="дети у канатной дороги">
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section class="slider-section padding  ">
+            <div class="container">
+                <h2 class="slider-section__title">Ваши отзывы — наша лучшая награда!</h2>
+                <div class="slider-section__swiper swiper">
+                    <ul class="slider-section__list swiper-wrapper reset">
+                        <li class="slider-section__item swiper-slide">
+                            <img class="slider-section__img" src="../images/content/reviews1.jpg" width="372" alt="отзыв клиента">
+                        </li>
+                        <li class="slider-section__item swiper-slide">
+                            <img class="slider-section__img" src="../images/content/reviews2.jpg" width="372" alt="отзыв клиента">
+                        </li>
+                        <li class="slider-section__item swiper-slide">
+                            <img class="slider-section__img" src="../images/content/reviews1.jpg" width="372" alt="отзыв клиента">
+                        </li>
+                        <li class="slider-section__item swiper-slide">
+                            <img class="slider-section__img" src="../images/content/reviews2.jpg" width="372" alt="отзыв клиента">
+                        </li>
+                    </ul>
+
+                    <div class="slider-section__nav slider-nav ">
+                        <button class="slider-section__prev slider-btn slider-btn--prev" type="button">
+                            <span class="visually-hidden">назад</span>
+                            <svg width="15" height="9">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </button>
+
+                        <div class="slider-nav__pagination slider-section__pagination"></div>
+                        <button class="slider-section__next slider-btn slider-btn--next" type="button">
+                            <span class="visually-hidden">вперед</span>
+                            <svg width="15" height="9">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
     </main>
 
     <footer class="footer">
@@ -245,101 +1592,105 @@
 
                 </div>
 
-                <div class="footer__item">
-                    <button class="footer__btn arrow-down" type="button">
-                        Топ направлений
-                    </button>
+                <div class="footer__list-wrapper">
+                    <div class="footer__item">
+                        <button class="footer__btn arrow-down" type="button">
+                            Топ направлений
+                        </button>
+                        <div class="footer__hide-box">
+                            <ul class="footer__list reset">
+                                <li class="footer__list-item">
+                                    <a class="footer__link link" href="">
+                                        Крым
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__link link" href="">
+                                        Москва
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__link link" href="">
+                                        Нижний Новгород
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__link link" href="">
+                                        Албена
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__link link" href="">
+                                        Солнечный берег
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
-                    <ul class="footer__list reset">
-                        <li class="footer__list-item">
-                            <a class="footer__link link" href="">
-                                Крым
+                    <div class="footer__item">
+                        <button class="footer__btn arrow-down" type="button">
+                            Тематика лагерей
+                        </button>
+                        <div class="footer__hide-box">
+                            <ul class="footer__list reset">
+                                <li class="footer__list-item">
+                                    <a class="footer__link link" href="">
+                                        Спортивный
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__link link" href="">
+                                        Образовательный
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__link link" href="">
+                                        Языковой
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a class="footer__link link" href="">
+                                        Оздоровительный
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <ul class="footer__menu reset">
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link link" href="">
+                                Каталог туров
                             </a>
                         </li>
-                        <li class="footer__list-item">
-                            <a class="footer__link link" href="">
-                                Москва
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link link" href="">
+                                Услуги
                             </a>
                         </li>
-                        <li class="footer__list-item">
-                            <a class="footer__link link" href="">
-                                Нижний Новгород
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link link" href="">
+                                О нас
                             </a>
                         </li>
-                        <li class="footer__list-item">
-                            <a class="footer__link link" href="">
-                                Албена
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link link" href="">
+                                Партнерам
                             </a>
                         </li>
-                        <li class="footer__list-item">
-                            <a class="footer__link link" href="">
-                                Солнечный берег
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link link" href="">
+                                Родителям
+                            </a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link link" href="">
+                                Контакты
                             </a>
                         </li>
                     </ul>
                 </div>
-
-                <div class="footer__item">
-                    <button class="footer__btn arrow-down" type="button">
-                        Тематика лагерей
-                    </button>
-
-                    <ul class="footer__list reset">
-                        <li class="footer__list-item">
-                            <a class="footer__link link" href="">
-                                Спортивный
-                            </a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a class="footer__link link" href="">
-                                Образовательный
-                            </a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a class="footer__link link" href="">
-                                Языковой
-                            </a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a class="footer__link link" href="">
-                                Оздоровительный
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <ul class="footer__menu reset">
-                    <li class="footer__menu-item">
-                        <a class="footer__menu-link link" href="">
-                            Каталог туров
-                        </a>
-                    </li>
-                    <li class="footer__menu-item">
-                        <a class="footer__menu-link link" href="">
-                            Услуги
-                        </a>
-                    </li>
-                    <li class="footer__menu-item">
-                        <a class="footer__menu-link link" href="">
-                            О нас
-                        </a>
-                    </li>
-                    <li class="footer__menu-item">
-                        <a class="footer__menu-link link" href="">
-                            Партнерам
-                        </a>
-                    </li>
-                    <li class="footer__menu-item">
-                        <a class="footer__menu-link link" href="">
-                            Родителям
-                        </a>
-                    </li>
-                    <li class="footer__menu-item">
-                        <a class="footer__menu-link link" href="">
-                            Контакты
-                        </a>
-                    </li>
-                </ul>
             </div>
 
             <div class="footer__copy-row">
@@ -376,110 +1727,6 @@
         </div>
     </footer>
 
-    <div class="mobile-menu">
-        <div class="mobile-menu__overlay"></div>
-        <div class="mobile-menu__inner">
-
-            <nav class="mobile-menu__nav">
-                <ul class="mobile-menu__list reset">
-                    <li class="mobile-menu__item">
-                        <button class="mobile-menu__button arrow-down" type="button">
-                            Каталог турок
-                        </button>
-
-                        <ul class="mobile-menu__hide-list reset">
-                            <li class="mobile-menu__hide-item">
-                                <a class="mobile-menu__hide-link" href="">
-                                    Зимние каникулы
-                                </a>
-                            </li>
-                            <li class="mobile-menu__hide-item">
-                                <a class="mobile-menu__hide-link" href="">
-                                    Весенние каникулы
-                                </a>
-                            </li>
-                            <li class="mobile-menu__hide-item">
-                                <a class="mobile-menu__hide-link" href="">
-                                    Летние каникулы
-                                </a>
-                            </li>
-                            <li class="mobile-menu__hide-item">
-                                <a class="mobile-menu__hide-link" href="">
-                                    Спортивные сборы
-                                </a>
-                            </li>
-                            <li class="mobile-menu__hide-item">
-                                <a class="mobile-menu__hide-link" href="">
-                                    Однодневные школьные экскурсии
-                                </a>
-                            </li>
-                        </ul>
-
-                    </li>
-
-                    <li class="mobile-menu__item">
-                        <a class="mobile-menu__link" href="">
-                            Услуги
-                        </a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a class="mobile-menu__link" href="">
-                            О нас
-                        </a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a class="mobile-menu__link" href="">
-                            Партнёрам
-                        </a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a class="mobile-menu__link" href="">
-                            Родителям
-                        </a>
-                    </li>
-                    <li class="mobile-menu__item">
-                        <a class="mobile-menu__link" href="">
-                            Контакты
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <ul class="mobile-menu__social social reset">
-                <li class="social__item">
-                    <a class="social__link" href="" target="_blank">
-                        <svg width="20" height="20">
-                            <use xlink:href="../images/sprite.svg#tg"></use>
-                        </svg>
-                        <span class="visually-hidden">
-                            телеграм
-                        </span>
-                    </a>
-                </li>
-
-                <li class="social__item">
-                    <a class="social__link" href="" target="_blank">
-                        <svg width="20" height="20">
-                            <use xlink:href="../images/sprite.svg#wa"></use>
-                        </svg>
-                        <span class="visually-hidden">
-                            ватсапп
-                        </span>
-                    </a>
-                </li>
-            </ul>
-
-            <button class="mobile-menu__btn btn btn--grad js-call-back" type="button">
-                Заказать звонок
-            </button>
-
-            <button class="mobile-menu__enter-btn enter-btn" type="button">
-                <span>Вход/Регистрация</span>
-            </button>
-        </div>
-    </div>
-
-    <div class="overlay js-active"></div>
 
     <div class="application-popap popap js-active">
         <div class="container">
@@ -503,50 +1750,35 @@
         </div>
     </div>
 
-    <div class="call-back popap js-active">
+    <div class="done popap js-active">
         <div class="container">
-            <form class="popap__inner">
-
+            <div class="popap__inner">
                 <button class="popap__close close-btn" type="button">
                     <span class="visually-hidden">
                         закрыть окошко
                     </span>
                 </button>
 
-                <div class="call-back__title popap__title">
-                    Мы вам перезвоним
+                <div class="done__title popap__title">
+                    отправка произошла успешно
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="call-back__text">
-                    <p>
-                        Расскажем самое важное о лагерях за 5 минут
-                    </p>
-                </div>
-
-                <label class="call-back__label">
-                    <span class="visually-hidden"></span>
-                    <input class="call-back__input input input--border" type="text" name="name" placeholder="Ваше имя" required>
-                </label>
-
-                <label class="call-back__label">
-                    <span class="visually-hidden">Телефон</span>
-                    <input class="call-back__input input input--border" type="tel" name="tel" placeholder="Телефон" required>
-                </label>
-
-                <button class="call-back__btn btn" type="submit">
-                    Жду звонка
+    <div class="not-done popap js-active">
+        <div class="container">
+            <div class="popap__inner">
+                <button class="popap__close close-btn" type="button">
+                    <span class="visually-hidden">
+                        закрыть окошко
+                    </span>
                 </button>
 
-                <label class="call-back__check-wrapper checkbox">
-                    <input class="checkbox__input visually-hidden" type="checkbox" checked>
-                    <span class="checkbox__fake">
-                        <svg width="9" height="6">
-                            <use xlink:href="#check"></use>
-                        </svg>
-                    </span>
-                    Я даю согласие на обработку моих персональных данных
-                </label>
-            </form>
+                <div class="not-done__title popap__title">
+                    произошла ошибка
+                </div>
+            </div>
         </div>
     </div>
 
@@ -584,8 +1816,73 @@
             <path d="M38.638 35.238a7.547 7.547 0 1 1-14.947 2.1 7.547 7.547 0 0 1 14.947-2.1Z" />
             <path d="M33.801 35.917a2.663 2.663 0 1 1-5.273.742 2.663 2.663 0 0 1 5.273-.742Z" />
         </symbol>
+        <symbol viewBox="0 0 72 71" id="bonus2" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#afa)">
+                <path d="M27.591 48.3a1.13 1.13 0 0 0-1.471.622l-6.074 15.033c-.1.25.106.515.373.48l5.273-.689a.354.354 0 0 1 .328.137l3.05 4.024a.352.352 0 0 0 .606-.08l6.068-15.017a1.13 1.13 0 0 0-.627-1.469l-7.526-3.04ZM47.736 45.47a1.13 1.13 0 0 1 1.586.191l9.982 12.776a.352.352 0 0 1-.226.565l-5.259.791a.353.353 0 0 0-.277.222l-1.822 4.708a.352.352 0 0 1-.606.091l-9.971-12.763a1.13 1.13 0 0 1 .197-1.584l6.396-4.998Z" />
+                <path d="M60.196 24.728c-.743-.453-1.865-1.139-2.04-1.552-.196-.464.086-1.74.291-2.671.398-1.805.85-3.852-.34-5.372-1.204-1.538-3.316-1.591-5.18-1.639-.888-.022-2.23-.056-2.612-.345-.382-.288-.785-1.568-1.051-2.415-.56-1.779-1.193-3.794-3.004-4.528-1.788-.725-3.63.274-5.257 1.154-.838.454-1.987 1.076-2.487 1.016-.445-.055-1.414-.944-2.055-1.533-1.387-1.274-2.96-2.72-4.932-2.442-1.972.277-3.085 2.1-4.068 3.708-.454.742-1.14 1.864-1.552 2.039-.465.196-1.74-.085-2.672-.291-1.805-.398-3.851-.85-5.371.34-1.539 1.204-1.592 3.316-1.64 5.18-.022.888-.056 2.23-.344 2.612-.288.382-1.569.785-2.416 1.051-1.779.56-3.794 1.193-4.528 3.004-.724 1.789.274 3.631 1.154 5.257.455.838 1.077 1.988 1.016 2.487-.055.446-.944 1.414-1.532 2.055-1.275 1.387-2.72 2.96-2.443 4.932.277 1.972 2.1 3.086 3.708 4.069.742.453 1.864 1.139 2.04 1.552.196.464-.086 1.74-.292 2.671-.398 1.805-.85 3.852.34 5.371 1.204 1.539 3.316 1.592 5.18 1.64.888.022 2.23.056 2.612.344.383.288.785 1.569 1.052 2.416.559 1.779 1.193 3.794 3.003 4.528 1.789.725 3.631-.274 5.257-1.154.839-.455 1.989-1.076 2.488-1.016.445.055 1.413.944 2.054 1.532 1.388 1.275 2.961 2.72 4.933 2.443 1.971-.277 3.085-2.1 4.068-3.708.453-.742 1.139-1.864 1.552-2.04.465-.195 1.74.086 2.672.292 1.805.398 3.85.85 5.37-.34 1.54-1.204 1.593-3.316 1.64-5.18.022-.888.056-2.23.345-2.612.288-.382 1.568-.785 2.415-1.051 1.78-.56 3.795-1.193 4.528-3.004.725-1.789-.273-3.631-1.154-5.257-.454-.839-1.076-1.988-1.016-2.487.055-.446.945-1.414 1.533-2.055 1.274-1.387 2.72-2.96 2.443-4.932-.278-1.972-2.1-3.086-3.709-4.069Z" />
+                <path d="M51.097 44.525c6.473-8.59 4.757-20.802-3.834-27.276-8.59-6.473-20.802-4.757-27.276 3.834-6.473 8.59-4.757 20.802 3.834 27.275 8.59 6.474 20.802 4.758 27.276-3.833Z" />
+                <path d="M36.473 38.12a2.669 2.669 0 0 1-3.738.525l-4.287-3.23a2.542 2.542 0 0 1 3.06-4.06l2.359 1.777 4.661-6.187a2.542 2.542 0 0 1 4.06 3.06l-6.115 8.114Z" />
+            </g>
+            <defs>
+                <clipPath id="afa">
+                    <path transform="rotate(-8 62.898 .803)" d="M0 0h62.727v62.727H0z" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol viewBox="0 0 64 64" id="bonus3" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#aga)">
+                <g clip-path="url(#agb)">
+                    <path d="M29.498.252c-.152.03-.296.09-.422.18 0 0-11.686 8.035-27.065 12.328a1.069 1.069 0 0 0-.765 1.184L4.368 36.16c1.913 13.61 10.498 20.635 18.475 24.092 7.977 3.457 15.46 3.507 15.46 3.507.106.001.212-.014.314-.044 0 0 7.18-2.111 13.894-7.633 6.716-5.522 13.032-14.641 11.12-28.25L60.507 5.614a1.069 1.069 0 0 0-1.062-.928C43.48 4.8 30.031.297 30.031.297a1.069 1.069 0 0 0-.533-.045Z" />
+                    <path d="M31.323 12.95c-10.508 1.477-17.845 11.213-16.368 21.721C16.43 45.18 26.169 52.526 36.677 51.05c10.508-1.476 17.843-11.223 16.367-21.731C51.567 18.81 41.83 11.473 31.323 12.95Z" />
+                    <path d="M29.233 21.88a1.07 1.07 0 0 0-.807 1.188l.744 5.297-5.287.743a1.069 1.069 0 0 0-.914 1.204l.892 6.351a1.069 1.069 0 0 0 1.211.905l5.287-.743.745 5.297a1.07 1.07 0 0 0 1.212.905l6.342-.891a1.07 1.07 0 0 0 .914-1.204l-.745-5.297 5.29-.743a1.068 1.068 0 0 0 .914-1.204l-.893-6.352a1.069 1.069 0 0 0-1.21-.904l-5.29.743-.744-5.297a1.069 1.069 0 0 0-1.21-.905l-6.342.891a1.064 1.064 0 0 0-.11.015Z" />
+                </g>
+            </g>
+            <defs>
+                <clipPath id="aga">
+                    <path d="M0 0h64v64H0z" />
+                </clipPath>
+                <clipPath id="agb">
+                    <path transform="rotate(-8 18.39 34.507)" d="M0 0h68.394v68.394H0z" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol viewBox="0 0 72 70" id="bonus4" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#aha)">
+                <path d="M19.88 29.552c-.4.228-.66.233-1.492.35-6.135.862-11.912-3.321-12.833-9.446-.906-6.022 3.174-11.918 9.672-12.831l.706.532-.113.015.364 2.589-.435.577c-3.991.561-6.91 4.133-6.538 8.13.398 4.284 4.3 7.332 8.513 6.74l.772-.108a17.22 17.22 0 0 0 1.384 3.452ZM61.257 12.627c.803 6.142-3.598 11.755-9.732 12.617-.833.117-1.085.185-1.531.075.256-1.197.386-2.436.379-3.7l.66-.092c4.074-.573 7.02-4.287 6.51-8.37-.518-4.156-4.351-7.081-8.486-6.5l-.705-.532-.348-2.476.532-.706c6.181-.868 11.91 3.484 12.721 9.684ZM36.407 37.896a22.101 22.101 0 0 1-5.67.075l1.296 9.216 11.14-1.566-1.295-9.215a22.103 22.103 0 0 1-5.471 1.49Z" />
+                <path d="m36.409 37.907 1.214 8.642 5.57-.783-1.315-9.36a21.787 21.787 0 0 1-5.47 1.502Z" />
+                <path d="m48.795 44.31-22.28 3.131a1.876 1.876 0 0 0-1.597 2.118l.87 6.19 25.995-3.654-.87-6.19a1.876 1.876 0 0 0-2.118-1.595Z" />
+                <path d="M48.672 44.327 37.53 45.893l1.13 8.046 12.998-1.827-.87-6.189a1.876 1.876 0 0 0-2.117-1.596Z" />
+                <path d="m58.853 61.89-37.135 5.218a1.875 1.875 0 0 1-2.117-1.596l-.54-3.837a5.631 5.631 0 0 1 4.788-6.353l29.708-4.175a5.631 5.631 0 0 1 6.353 4.787l.54 3.838a1.875 1.875 0 0 1-1.597 2.117Z" />
+                <path d="m53.42 51.166-14.855 2.088 1.584 11.264 18.567-2.61a1.876 1.876 0 0 0 1.596-2.117l-.54-3.837a5.632 5.632 0 0 0-6.352-4.788ZM36.54 38.837c-9.215 1.295-17.801-5.405-19.14-14.936l-2.286-16.26 33.422-4.697 2.285 16.26c1.34 9.53-5.067 18.338-14.282 19.633Z" />
+                <path d="m31.825 5.292 4.714 33.545a16.281 16.281 0 0 0 5.432-1.77c6.15-3.288 9.906-10.35 8.85-17.863l-2.285-16.26-16.711 2.348Z" />
+                <path d="M32.261 9.442c-6.304.886-10.706 6.727-9.82 13.03.886 6.305 6.728 10.713 13.032 9.827 6.304-.886 10.705-6.734 9.82-13.038-.887-6.304-6.728-10.705-13.032-9.82Z" />
+                <path d="M35.838 26.515a2.669 2.669 0 0 1-3.738.526l-4.287-3.23a2.542 2.542 0 0 1 3.06-4.06l2.358 1.777 4.662-6.187a2.542 2.542 0 0 1 4.06 3.06l-6.115 8.114Z" />
+            </g>
+            <defs>
+                <clipPath id="aha">
+                    <path transform="rotate(-8 69.752 3.899)" d="M0 0h64v60H0z" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol viewBox="0 0 74 74" id="bonus5" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#aia)">
+                <path d="M49.795 32.71 33.674 13.333 23.518 36.403 8.006 27.602l10.143 32.244 43.269-6.081.863-33.791-12.486 12.735Z" />
+                <path d="M62.016 28.183a5.75 5.75 0 1 0-1.6-11.388 5.75 5.75 0 0 0 1.6 11.388ZM34.878 21.898a6.75 6.75 0 1 0-1.88-13.368 6.75 6.75 0 0 0 1.88 13.368ZM10.522 35.42a5.75 5.75 0 1 0-1.6-11.388 5.75 5.75 0 0 0 1.6 11.388ZM35.063 34.462l-2.848 8.479a1.754 1.754 0 0 0 .218 1.55l5.075 7.366a1.748 1.748 0 0 0 3.1-.436l2.847-8.479a1.753 1.753 0 0 0-.218-1.55l-5.075-7.366a1.748 1.748 0 0 0-3.1.436ZM24.06 52.704a1.749 1.749 0 0 1-1.977-1.49l-.557-3.96a1.75 1.75 0 1 1 3.466-.488l.557 3.961a1.749 1.749 0 0 1-1.49 1.977ZM53.768 48.528a1.749 1.749 0 0 1-1.977-1.489l-.557-3.961a1.75 1.75 0 1 1 3.466-.487l.557 3.96a1.749 1.749 0 0 1-1.49 1.977ZM61.782 53.461l-44.067 6.193a4.5 4.5 0 1 0 1.253 8.913l44.067-6.194a4.5 4.5 0 1 0-1.253-8.912Z" />
+            </g>
+            <defs>
+                <clipPath id="aia">
+                    <path transform="rotate(-8 70.251 -1.252)" d="M0 0h64v64H0z" />
+                </clipPath>
+            </defs>
+        </symbol>
         <symbol viewBox="0 0 11 8" id="check" xmlns="http://www.w3.org/2000/svg">
             <path d="m1 4 3.045 3L10 1" />
+        </symbol>
+        <symbol viewBox="0 0 10 8" id="check-o" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 1 4 7 1 4" />
+        </symbol>
+        <symbol viewBox="0 0 8 8" id="dot" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="4" cy="4" r="4" />
         </symbol>
         <symbol viewBox="0 0 24 24" id="eye" xmlns="http://www.w3.org/2000/svg">
             <path d="m4.447 13.723-.367-.437a2 2 0 0 1 0-2.572l.367-.437c4.787-5.703 10.319-5.703 15.106 0l.367.437a2 2 0 0 1 0 2.572l-.367.437c-4.787 5.703-10.319 5.703-15.106 0Z" />
@@ -612,9 +1909,15 @@
             <path d="M13 26c6.904 0 12.5-5.596 12.5-12.5S19.904 1 13 1 .5 6.596.5 13.5 6.096 26 13 26Z" />
             <path d="M21.53 19.812a10.68 10.68 0 0 0-3.77-3.135 10.627 10.627 0 0 0-9.521-.003c-1.478.74-2.716 1.815-3.706 3.138.985 1.33 2.22 2.411 3.699 3.156a10.593 10.593 0 0 0 9.53.003 10.677 10.677 0 0 0 3.769-3.159ZM13 14.563a3.9 3.9 0 1 0 0-7.8 3.9 3.9 0 0 0 0 7.8Z" />
         </symbol>
+        <symbol viewBox="0 0 16 17" id="mail" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.882 4.591v7.821c0 .97-.787 1.758-1.758 1.758H1.877c-.972 0-1.759-.788-1.759-1.758v-7.82a1.757 1.757 0 0 1 1.76-1.76h12.246a1.757 1.757 0 0 1 1.758 1.76Z" />
+            <path d="m.639 13.659 5.158-5.157 1.335 1.334c.48.48 1.258.48 1.738 0l1.335-1.334 5.157 5.157c-.32.315-.755.511-1.239.511H1.877" />
+            <path opacity=".2" d="M15.669 3.749 9.226 10.19a1.73 1.73 0 0 1-2.448.002L.333 3.747a1.757 1.757 0 0 1 1.544-.917h12.247c.666 0 1.246.37 1.545.919Z" />
+            <path d="M15.365 3.341 8.87 9.835a1.227 1.227 0 0 1-1.737.001L5.798 8.501.64 3.341c.345-.332.753-.518 1.237-.511h12.247c.483 0 .92.196 1.24.511Z" />
+        </symbol>
         <symbol viewBox="0 0 20 21" id="maple" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#ama)">
-                <g clip-path="url(#amb)">
+            <g clip-path="url(#ata)">
+                <g clip-path="url(#atb)">
                     <path d="m10 4.5-.375 15h.75L10 4.5Z" />
                     <path d="M17.19 16.053c-1.306-.435-2.617.083-2.96.901-.228.55.44 1.363.753 1.546-.802 0-3.561 0-4.983-2.318 1.43-1.134 10-3.04 10-3.04-.752.361-3.466 1.787-2.81 2.91Z" />
                     <path d="M16.606 8.558c.105 1.043.897 1.184 1.48 1.21-.544.322-2.25 1.642-1.782 2.858.302.785 2.992.633 3.696.517 0 0-8.57 1.906-10 3.04C11.154 13.4 17.802 5.42 17.852 5.316c-.291.52-1.361 2.098-1.246 3.24Z" />
@@ -624,10 +1927,10 @@
                 </g>
             </g>
             <defs>
-                <clipPath id="ama">
+                <clipPath id="ata">
                     <path transform="translate(0 .5)" d="M0 0h20v20H0z" />
                 </clipPath>
-                <clipPath id="amb">
+                <clipPath id="atb">
                     <path transform="translate(0 .5)" d="M0 0h20v20H0z" />
                 </clipPath>
             </defs>
@@ -639,7 +1942,7 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M6.834 1.519a5.313 5.313 0 0 0-5.315 5.315c0 2.149.957 4.237 2.143 5.976 1.152 1.7 2.473 3.007 3.172 3.645.699-.638 2.02-1.944 3.172-3.645 1.186-1.739 2.143-3.827 2.143-5.976a5.313 5.313 0 0 0-5.315-5.315ZM0 6.834a6.834 6.834 0 0 1 13.668 0c0 2.582-1.14 4.966-2.406 6.834-1.272 1.868-2.723 3.288-3.456 3.956a1.445 1.445 0 0 1-1.944 0c-.733-.668-2.184-2.088-3.456-3.956C1.14 11.8 0 9.416 0 6.834Zm6.834-1.519c-.838 0-1.519.684-1.519 1.519 0 .835.68 1.519 1.519 1.519.838 0 1.519-.684 1.519-1.519 0-.835-.68-1.519-1.519-1.519ZM3.797 6.834a3.037 3.037 0 1 1 6.074 0 3.037 3.037 0 0 1-6.074 0Z" />
         </symbol>
         <symbol viewBox="0 0 20 21" id="people" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#apa)">
+            <g clip-path="url(#awa)">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.369 6.038c0-1.4-1.098-2.538-2.447-2.538-1.35 0-2.448 1.139-2.448 2.538 0 1.4 1.098 2.539 2.447 2.539h-.815c-1.8 0-3.263 1.518-3.263 3.384v4.693c0 .468.365.846.816.846h6.525c.451 0 .816-.378.816-.846V11.96c0-1.866-1.463-3.384-3.263-3.384h-.816c1.35 0 2.448-1.139 2.448-2.539Z" />
                 <path d="M7.526 9.885c0-1.4-1.098-2.539-2.447-2.539-1.35 0-2.448 1.139-2.448 2.539 0 1.4 1.098 2.538 2.448 2.538 1.349 0 2.447-1.139 2.447-2.538ZM5.894 12.423H4.263c-1.8 0-3.263 1.518-3.263 3.385v.846c0 .468.365.846.816.846H8.34c.451 0 .816-.378.816-.846v-.846c0-1.867-1.463-3.385-3.263-3.385Z" />
                 <g opacity=".1" fill-rule="evenodd" clip-rule="evenodd">
@@ -647,8 +1950,19 @@
                 </g>
             </g>
             <defs>
-                <clipPath id="apa">
+                <clipPath id="awa">
                     <path transform="translate(0 .5)" d="M0 0h20v20H0z" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol viewBox="0 0 16 16" id="phone" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#axa)">
+                <path d="M11.129 15.548c-.773.147-1.73-.119-2.851-.793-1.303-.783-2.762-2.08-4.12-3.653-1.384-1.607-2.486-3.287-3.095-4.736-.953-2.251-.461-3.328.12-3.83L3.07.91A.87.87 0 0 1 4.289 1l2.094 2.436a.848.848 0 0 1 .206.629.856.856 0 0 1-.29.589L4.768 5.977l4.393 5.09 1.533-1.323a.836.836 0 0 1 .393-.189.87.87 0 0 1 .818.283l2.104 2.434a.89.89 0 0 1 .205.629.906.906 0 0 1-.298.59L12.03 15.12c-.254.22-.56.364-.901.43ZM14.09 7.133c-.056.01-.028.005-.087-.003a.335.335 0 0 1-.316-.36 5.471 5.471 0 0 0-1.308-3.968A5.468 5.468 0 0 0 8.654.925a.335.335 0 0 1-.317-.36.334.334 0 0 1 .37-.318 6.046 6.046 0 0 1 4.189 2.113 6.13 6.13 0 0 1 1.478 4.461.352.352 0 0 1-.284.312Zm-3.204-.24c-.055.01-.028.005-.085.007a.345.345 0 0 1-.318-.37 2.233 2.233 0 0 0-.538-1.624c-.393-.46-.93-.73-1.531-.777a.343.343 0 0 1-.317-.36.338.338 0 0 1 .37-.318c.773.053 1.49.413 1.993 1.004.513.59.763 1.353.71 2.126a.352.352 0 0 1-.284.312Zm1.606.114c-.056.011-.036.017-.094.009a.348.348 0 0 1-.319-.37 3.783 3.783 0 0 0-.922-2.791A3.777 3.777 0 0 0 8.53 2.532a.348.348 0 0 1-.318-.369.357.357 0 0 1 .369-.318 4.559 4.559 0 0 1 3.1 1.557 4.55 4.55 0 0 1 1.086 3.296.34.34 0 0 1-.275.31Z" />
+                <path d="m2.814 1.129 3.232 3.746.253-.22a.856.856 0 0 0 .29-.59.848.848 0 0 0-.206-.628L4.288 1A.87.87 0 0 0 3.068.91l-.254.22ZM11.086 9.555a.836.836 0 0 0-.394.19l-.254.22 3.222 3.747.254-.22a.906.906 0 0 0 .298-.591.891.891 0 0 0-.205-.629l-2.104-2.434a.87.87 0 0 0-.817-.283Z" />
+            </g>
+            <defs>
+                <clipPath id="axa">
+                    <path d="M0 0h16v16H0z" />
                 </clipPath>
             </defs>
         </symbol>
@@ -656,20 +1970,30 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2a5.763 5.763 0 0 0-4.355 1.995.75.75 0 0 1-1.129-.99C4.859 1.475 6.816.5 9 .5c4.025 0 7.27 3.293 7.349 7.35l.365-.375a.75.75 0 0 1 1.072 1.05l-1.65 1.688a.757.757 0 0 1-.536.225.757.757 0 0 1-.536-.225l-1.65-1.688a.75.75 0 0 1 1.072-1.05l.362.368C14.768 4.588 12.165 2 9 2ZM2.4 5.563c.202 0 .395.082.536.225l1.65 1.687a.75.75 0 0 1-1.073 1.05l-.36-.367C3.231 11.413 5.834 14 9 14a5.763 5.763 0 0 0 4.355-1.995.75.75 0 0 1 1.129.99C13.141 14.525 11.184 15.5 9 15.5c-4.025 0-7.27-3.292-7.349-7.35l-.365.375a.75.75 0 0 1-1.072-1.05l1.65-1.687a.757.757 0 0 1 .536-.225Z" />
         </symbol>
         <symbol viewBox="0 0 20 21" id="sheet" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#ara)">
+            <g clip-path="url(#aza)">
                 <path d="M15.62 11.387c-.156 3.71-2.633 6.074-5.635 7.113L10 .5c2.066 2.968 5.776 7.168 5.62 10.887Z" />
                 <path d="M4.38 11.387c.156 3.71 2.603 6.074 5.605 7.113L10 .5C7.933 3.468 4.223 7.668 4.38 11.387Z" />
                 <path d="m7.65 4.045 2.36 3.606v-.377l-2.36-3.23ZM13.233 5.624l-3.223 4.502v-.434l3.223-4.068ZM11.633 2.99 10.01 5.327v-.313l1.623-2.022ZM6.132 7.167l3.878 5.456v-.484L6.132 7.167ZM14.627 8.558l-4.617 6.586v-.532l4.617-6.054ZM4.847 10.5l5.163 7.192v-.574L4.847 10.5Z" />
                 <path d="m10 3.5-.375 17h.75L10 3.5Z" />
             </g>
             <defs>
-                <clipPath id="ara">
+                <clipPath id="aza">
                     <path transform="translate(0 .5)" d="M0 0h20v20H0z" />
                 </clipPath>
             </defs>
         </symbol>
+        <symbol viewBox="0 0 17 17" id="skype" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#baa)">
+                <path d="M16.024 10.189c1.157-5.201-3.4-9.926-8.75-9.019C4.367-.633.5 1.405.5 4.86c0 .805.222 1.557.607 2.206-1.075 5.213 3.519 9.87 8.866 8.9 3.78 1.999 7.956-1.987 6.05-5.777Zm-5.087 3.136c-1.404.578-3.714.581-5.112-.15-1.994-1.064-2.348-3.456-.628-3.456 1.296 0 .886 1.51 2.194 2.127.601.277 1.892.306 2.643-.2.741-.496.673-1.277.27-1.65-1.067-.985-4.122-.593-5.519-2.319-.607-.748-.721-2.069.025-3.026 1.3-1.673 5.115-1.775 6.755-.512 1.514 1.172 1.106 2.728-.117 2.728-1.47 0-.697-1.923-3.07-1.923-1.72 0-2.397 1.223-1.185 1.818 1.642.816 5.828.544 5.828 3.731-.004 1.327-.817 2.316-2.084 2.832Z" />
+            </g>
+            <defs>
+                <clipPath id="baa">
+                    <path transform="translate(.5 .5)" d="M0 0h16v16H0z" />
+                </clipPath>
+            </defs>
+        </symbol>
         <symbol viewBox="0 0 20 21" id="snow" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#asa)">
+            <g clip-path="url(#bba)">
                 <path d="M10.112 6.116A.603.603 0 0 1 9.755 6L7.818 4.582a.604.604 0 1 1 .714-.974l1.58 1.157 1.58-1.157a.604.604 0 0 1 .713.974L10.468 6a.603.603 0 0 1-.356.116ZM7.688 17.262a.604.604 0 0 1 .13-.844L9.755 15a.604.604 0 0 1 .713 0l1.937 1.418a.604.604 0 1 1-.713.974l-1.58-1.157-1.58 1.157a.613.613 0 0 1-.844-.13ZM6.278 8.33a.603.603 0 0 1-.28.25l-2.196.97a.604.604 0 0 1-.487-1.106l1.792-.79-.212-1.947a.604.604 0 0 1 1.2-.13l.26 2.386a.603.603 0 0 1-.077.367ZM14.743 15.958a.604.604 0 0 1-.665-.535l-.26-2.386a.604.604 0 0 1 .357-.618l2.196-.968a.604.604 0 0 1 .487 1.104l-1.792.79.212 1.947a.613.613 0 0 1-.535.666ZM6.303 12.714a.603.603 0 0 1 .077.367l-.26 2.386a.604.604 0 1 1-1.2-.13l.212-1.947-1.792-.79a.604.604 0 0 1 .487-1.105l2.197.968c.12.053.216.142.279.25ZM17.141 9.196a.604.604 0 0 1-.795.309l-2.197-.968a.604.604 0 0 1-.356-.618l.26-2.386a.604.604 0 1 1 1.2.13L15.04 7.61l1.792.79c.41.204.39.613.308.796Z" />
                 <path d="M10.112 6.116c.125 0 .25-.038.356-.116l1.305-.955V3.56a.59.59 0 0 0-.08.049l-1.581 1.157-1.559-1.141V5.12L9.755 6a.603.603 0 0 0 .357.116ZM9.756 15l-1.254.917v1.493a.858.858 0 0 0 .03-.018l1.58-1.157 1.58 1.157.03.02v-1.495L10.469 15a.604.604 0 0 0-.713 0ZM6.277 8.33a.603.603 0 0 0 .078-.367l-.166-1.528-1.295-.747.001.02.212 1.946-1.792.79a.608.608 0 0 0-.045.023l1.293.747 1.435-.633a.603.603 0 0 0 .28-.25ZM15.278 15.293l-.212-1.947 1.753-.774-1.296-.747-1.348.594a.604.604 0 0 0-.357.618l.176 1.622 1.283.74a.755.755 0 0 0 0-.106ZM6.303 12.714a.602.602 0 0 0-.28-.25l-1.377-.608-1.296.748 1.782.786-.212 1.947a.61.61 0 0 0-.002.08l1.29-.745.172-1.591a.603.603 0 0 0-.077-.367ZM14.15 8.537l1.521.67 1.276-.736a.744.744 0 0 0-.114-.07l-1.792-.79.203-1.874-1.295.748-.156 1.434a.604.604 0 0 0 .356.618Z" />
                 <path d="m17.55 14.156-6.23-3.597 6.23-3.598a.604.604 0 1 0-.603-1.046l-6.231 3.598V2.2a.604.604 0 0 0-1.208 0v7.313L3.175 5.857a.603.603 0 1 0-.604 1.045l6.334 3.657-6.334 3.656a.604.604 0 0 0-.22.825c.111.194.425.404.824.22l6.333-3.656V18.8a.604.604 0 1 0 1.208 0v-7.196l6.231 3.598c.407.228.713-.027.825-.221a.604.604 0 0 0-.221-.825Z" />
@@ -677,7 +2001,7 @@
                 <path d="M8.242 14.489a.848.848 0 0 1-.425-.116.837.837 0 0 1-.419-.825l.176-1.614-1.486-.656a.837.837 0 0 1-.505-.775c0-.34.193-.637.505-.775l1.486-.655-.176-1.615a.837.837 0 0 1 .419-.825.837.837 0 0 1 .924.05l1.31.96 1.31-.96a.837.837 0 0 1 .925-.05c.295.17.455.487.418.825l-.175 1.615 1.486.655a.837.837 0 0 1 .505.775c0 .341-.194.638-.505.775l-1.486.656.175 1.614a.837.837 0 0 1-.418.825.837.837 0 0 1-.924-.05l-1.31-.959-1.311.96a.843.843 0 0 1-.5.165Zm.001-7.367a.257.257 0 0 0-.124.034.24.24 0 0 0-.12.237l.199 1.834a.302.302 0 0 1-.178.31l-1.689.744a.24.24 0 0 0-.145.222c0 .038.01.164.145.223l1.689.744c.12.053.192.178.178.31l-.2 1.834a.24.24 0 0 0 .12.237.24.24 0 0 0 .266-.015l1.489-1.09a.301.301 0 0 1 .357 0l1.488 1.09a.24.24 0 0 0 .266.015.24.24 0 0 0 .12-.238l-.2-1.834a.302.302 0 0 1 .179-.309l1.688-.744a.24.24 0 0 0 .145-.223.24.24 0 0 0-.145-.222l-1.688-.745a.302.302 0 0 1-.178-.309l.2-1.834a.24.24 0 0 0-.121-.237.24.24 0 0 0-.266.014L10.23 8.26a.302.302 0 0 1-.357 0L8.384 7.17a.235.235 0 0 0-.14-.048Z" />
             </g>
             <defs>
-                <clipPath id="asa">
+                <clipPath id="bba">
                     <path transform="translate(0 .5)" d="M0 0h20v20H0z" />
                 </clipPath>
             </defs>
@@ -692,14 +2016,14 @@
             <path d="M55.885 38.972c-1.776 1.066-2.238 1.137-2.238 1.67 0 .533 2.984-.178 2.238-1.67ZM34.356 57.233c-.817.106-2.274.39-2.913 1.279-.64.888 1.74 1.314 2.38 1.314.64 0 4.05.39 3.73.284-.32-.106-4.334-.959-4.618-1.208-.284-.248.142-1.634 1.421-1.67ZM52.045 64.639c2.561.339 3.023.658 4.621.836 1.6.178 3.411.64.818.604-2.594-.036-3.589.035-5.436 0-1.847-.036-3.304 0-4.085-.107-.782-.106 4.082-1.333 4.082-1.333Z" />
         </symbol>
         <symbol viewBox="0 0 20 21" id="sun" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#aua)">
+            <g clip-path="url(#bda)">
                 <path d="M1.957 11.152H.652a.652.652 0 1 1 0-1.304h1.305a.652.652 0 1 1 0 1.304ZM19.348 11.152h-1.305a.652.652 0 1 1 0-1.304h1.305a.652.652 0 0 1 0 1.304ZM1.905 15.826a.652.652 0 0 1-.327-1.217l1.13-.652a.652.652 0 1 1 .652 1.13l-1.13.652a.649.649 0 0 1-.325.087ZM16.966 7.13a.652.652 0 0 1-.326-1.216l1.13-.653a.652.652 0 1 1 .651 1.13l-1.13.652a.648.648 0 0 1-.325.088ZM5.325 19.248a.652.652 0 0 1-.564-.978l.653-1.13a.652.652 0 1 1 1.129.652l-.652 1.13a.652.652 0 0 1-.566.326ZM14.021 4.187a.652.652 0 0 1-.564-.978l.652-1.13a.652.652 0 0 1 1.13.652l-.653 1.13a.652.652 0 0 1-.565.326ZM14.675 19.248a.652.652 0 0 1-.566-.326l-.652-1.13a.652.652 0 1 1 1.13-.652l.652 1.13a.652.652 0 0 1-.564.978ZM5.979 4.187a.652.652 0 0 1-.565-.327L4.76 2.73a.652.652 0 1 1 1.13-.651l.652 1.13a.652.652 0 0 1-.564.978ZM18.095 15.826a.647.647 0 0 1-.326-.087l-1.13-.653a.652.652 0 1 1 .653-1.129l1.13.652a.652.652 0 0 1-.327 1.217ZM3.034 7.13a.647.647 0 0 1-.326-.087l-1.13-.652a.652.652 0 1 1 .653-1.13l1.13.653a.652.652 0 0 1-.327 1.217ZM10 16.587A6.094 6.094 0 0 1 3.913 10.5 6.094 6.094 0 0 1 10 4.413a6.094 6.094 0 0 1 6.087 6.087A6.094 6.094 0 0 1 10 16.587Z" />
                 <path d="M16.087 10.5A6.094 6.094 0 0 0 10 4.413v12.174a6.094 6.094 0 0 0 6.087-6.087ZM10 3.109a.652.652 0 0 1-.652-.652V1.152a.652.652 0 1 1 1.304 0v1.305c0 .36-.292.652-.652.652Z" />
                 <path d="M10.652 2.457V1.152A.652.652 0 0 0 10 .5v2.609c.36 0 .652-.292.652-.652ZM10 20.5a.652.652 0 0 1-.652-.652v-1.304a.652.652 0 1 1 1.304 0v1.304c0 .36-.292.652-.652.652Z" />
                 <path d="M10.652 19.848v-1.304A.652.652 0 0 0 10 17.89v2.61c.36 0 .652-.293.652-.653Z" />
             </g>
             <defs>
-                <clipPath id="aua">
+                <clipPath id="bda">
                     <path transform="translate(0 .5)" d="M0 0h20v20H0z" />
                 </clipPath>
             </defs>
@@ -708,24 +2032,24 @@
             <path d="m1.147 6.8 3.679 1.37 1.434 4.614c.062.312.436.375.685.188l2.058-1.684c.187-.187.499-.187.748 0l3.679 2.681c.249.187.623.063.685-.25L16.86.628c.062-.312-.25-.624-.562-.499l-15.15 5.86c-.374.125-.374.687 0 .811Zm4.926.685 7.232-4.427c.125-.062.25.125.125.187l-5.923 5.55c-.187.186-.374.436-.374.748l-.188 1.496c0 .187-.311.25-.374 0l-.748-2.743c-.187-.312-.062-.686.25-.81Z" />
         </symbol>
         <symbol viewBox="0 0 84 84" id="top-any" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#awa)">
+            <g clip-path="url(#bfa)">
                 <path d="M45.751 9.084c1.601-1.371 4.08-.707 4.781 1.281l5.955 16.886a3 3 0 0 0 1.265 1.562l15.278 9.335c1.8 1.1 1.933 3.662.26 4.943L59.07 53.97a3 3 0 0 0-1.095 1.687l-4.157 17.415c-.489 2.05-2.885 2.97-4.62 1.774l-14.743-10.16a3 3 0 0 0-1.941-.521l-17.848 1.428c-2.101.168-3.716-1.826-3.115-3.846l5.108-17.16a3 3 0 0 0-.105-2.008L9.68 26.047c-.81-1.947.588-4.099 2.696-4.151l17.899-.445a3 3 0 0 0 1.877-.72l13.6-11.647Z" />
                 <path d="m5.987 27.582 3.693-1.535-3.693 1.535 6.737 16.205-5.007 16.82c-1.403 4.714 2.365 9.367 7.268 8.975l17.493-1.4 14.45 9.959c4.05 2.79 9.64.645 10.781-4.139l4.074-17.07L75.72 46.267c3.906-2.989 3.593-8.968-.604-11.532l-14.975-9.15-5.837-16.55c-1.635-4.639-7.419-6.188-11.154-2.99L29.82 17.462l-17.544.436c-4.917.122-8.178 5.144-6.29 9.685Zm54.272-1.662Z" />
             </g>
             <defs>
-                <clipPath id="awa">
+                <clipPath id="bfa">
                     <path transform="translate(0 .001)" d="M0 0h84v84H0z" />
                 </clipPath>
             </defs>
         </symbol>
         <symbol viewBox="0 0 97 84" id="top1" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#axa)">
+            <g clip-path="url(#bga)">
                 <path d="M62.351 75.989 8.386 61.47a2 2 0 0 1-1.479-1.861L5.354 14.966c-.03-.88 1.008-1.366 1.665-.781l17.387 15.49 25.432-16.884a1 1 0 0 1 1.454.399l13.155 27.258 22.813-4.675c.862-.177 1.515.766 1.047 1.51L64.566 75.122a2 2 0 0 1-2.214.868Z" />
                 <path d="M65.09 79.801 4.105 63.394a1 1 0 0 1-.74-.953L2.69 8.091c-.011-.886 1.05-1.347 1.69-.736l19.025 18.141L51.98 4.806a1 1 0 0 1 1.504.412L67.41 37.336l25.56-6.147c.86-.207 1.546.724 1.092 1.485L66.208 79.348a1 1 0 0 1-1.118.453Z" />
                 <path d="M35.033 55.913 40.15 36.81l2.327 3.803-6.83-1.83 1.473-5.502 11.004 2.949-5.797 21.636-7.295-1.954Z" />
             </g>
             <defs>
-                <clipPath id="axa">
+                <clipPath id="bga">
                     <path transform="translate(.605)" d="M0 0h96v84H0z" />
                 </clipPath>
             </defs>

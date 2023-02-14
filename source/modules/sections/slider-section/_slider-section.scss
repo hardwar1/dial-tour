@@ -1,0 +1,132 @@
+.slider-section {
+  background-color: $white;
+
+  @include min-w($xxl) {
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__swiper {
+    margin: -30px -15px 0;
+    padding: 30px 15px 0;
+    box-sizing: border-box;
+    margin-bottom: -20px;
+  }
+
+  &__list {
+    margin-bottom: 50px;
+    box-sizing: border-box;
+  }
+
+  &__item {
+    border-radius: 16px;
+    width: 270px;
+    transition: transform 0.3s, border-color 0.3s;
+    position: relative;
+    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    border: 4px solid transparent;
+
+    @include min-w($xl) {
+      width: 376px;
+    }
+
+    &.swiper-slide-active {
+      border-color: $purple;
+      transform: scale(1.04);
+    }
+  }
+
+  &__img {
+    height: auto;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  &__slide {
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    @include min-w($lg) {
+      font-size: 17px;
+      padding: 30px;
+    }
+  }
+
+  &__caption {
+    font-weight: 900;
+    font-size: 20px;
+    color: $purple;
+    margin: 0 0 10px;
+  }
+
+  &__text {
+    margin-bottom: auto;
+    overflow: auto;
+    height: 360px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__name {
+    color: $grey;
+  }
+
+  &--text {
+
+
+    .slider-section__item {
+      height: 515px !important;
+      width: 270px;
+      @include min-w($lg) {
+        width: 370px;
+      }
+    }
+
+    .slider-section__slide {
+    }
+  }
+
+  &--card {
+    .swiper {
+      margin: -30px -15px -30px;
+      padding: 30px 0;
+
+      @include min-w($sm) {
+        margin: -30px -30px;
+        padding: 30px 0;
+      }
+
+      @include min-w($lg) {
+        padding: 30px;
+      }
+    }
+
+    .slider-section__item {
+      min-height: 650px;
+      height: unset !important;
+      width: 370px;
+      max-width: 100%;
+    }
+  }
+
+  &--pink {
+    background-color: $whiteef;
+  }
+
+  &--transparent {
+    background-color: transparent;
+  }
+}

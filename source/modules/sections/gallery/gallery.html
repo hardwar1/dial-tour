@@ -1,0 +1,28 @@
+<section class="gallery">
+  <div class="container">
+    <h1 class="gallery__h1">
+      Детский оздоровительный лагерь «МОРСКАЯ ЗВЕЗДА»
+    </h1>
+
+    <div class="gallery__slider">
+      <ul class="gallery__list reset">
+        {{#each gallery}}
+
+        <li class="gallery__item">
+          {{badges}}
+
+          <a class="gallery__link" href="images/content/gallery/{{file-name}}.jpg" data-fancybox="gallery"
+            data-preload="false" data-width="1600" data-height="800">
+            <img class="gallery__img" src="images/content/gallery/{{file-name}}.jpg" height="210" width="250"
+              alt="{{alt}}">
+          </a>
+          {{black-hover}}
+        </li>
+
+        {{/each}}
+      </ul>
+
+      <div class="gallery__pagination swiper-pagination5 pagination-dots"></div>
+    </div>
+  </div>
+</section>

@@ -20,6 +20,16 @@
 
 @font-face {
     font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 400;
+    src:
+        url("../fonts/Montserrat-Italic.woff2") format("woff2"),
+        url("../fonts/Montserrat-Italic.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     src:
@@ -57,15 +67,4 @@
         url("../fonts/Montserrat-ExtraBold.woff") format("woff");
     font-display: swap;
 }
-
-@font-face {
-    font-family: "Nunito";
-    font-style: normal;
-    font-weight: 800;
-    src:
-        url("../fonts/Nunito-ExtraBold.woff2") format("woff2"),
-        url("../fonts/Nunito-ExtraBold.woff") format("woff");
-    font-display: swap;
-}
-
 

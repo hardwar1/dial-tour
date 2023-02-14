@@ -7,6 +7,19 @@
     place: Крым
     age: 7–15 лет
     price: 24 000
+    season:         <a class="tour-card__season ico ico--sun" href="">
+          Лето
+        </a>
+        <a class="tour-card__season ico ico--sheet" href="">
+          Весна
+        </a>
+        <a class="tour-card__season ico ico--maple" href="">
+          Осень
+        </a>
+        <a class="tour-card__season ico ico--snow" href="">
+          Зима
+        </a>
+
 -
     src: tour2.jpg
     alt: Горнолыжный клуб с оздоровительной программой
@@ -16,6 +29,10 @@
     place: Сочи
     age: 12–18 лет
     price: 288 880
+    season:
+            <a class="tour-card__season ico ico--all" href="">
+          Все сезоны
+        </a>
 -
     src: tour3.jpg
     alt: Англо-русский клуб
@@ -25,6 +42,16 @@
     place: Нижний Новгород
     age: 6–17 лет
     price: 18 600
+    season:
+            <a class="tour-card__season ico ico--sheet" href="">
+          Весна
+        </a>
+        <a class="tour-card__season ico ico--maple" href="">
+          Осень
+        </a>
+        <a class="tour-card__season ico ico--snow" href="">
+          Зима
+        </a>
 -
     src: tour1.jpg
     alt: Англо-русский клуб
@@ -34,6 +61,13 @@
     place: Крым
     age: 7–15 лет
     price: 24 000
+    season:
+            <a class="tour-card__season ico ico--maple" href="">
+          Осень
+        </a>
+        <a class="tour-card__season ico ico--snow" href="">
+          Зима
+        </a>
 -
     src: tour2.jpg
     alt: Горнолыжный клуб с оздоровительной программой
@@ -43,6 +77,7 @@
     place: Сочи
     age: 12–18 лет
     price: 288 880
+
 -
     src: tour3.jpg
     alt: Англо-русский клуб
@@ -52,3 +87,4 @@
     place: Нижний Новгород
     age: 6–17 лет
     price: 18 600
+

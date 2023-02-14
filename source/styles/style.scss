@@ -5,26 +5,42 @@
 
 @import "_service/fonts";
 @import "_global/reset";
-@import "_global/content";
 
 
 /* plugins */
+@import "../plugins/fancybox3/jquery.fancybox";
+
 @import "../plugins/swiper/swiper";
-
 @import "../plugins/swiper/pagination";
-// @import "../plugins/swiper/scrollbar";
 
+
+
+@import "_global/content";
 
 /* modules */
-@import "../modules/footer/footer";
-@import "../modules/header/header";
-
+@import "../modules/parts/social/social";
+@import "../modules/parts/badges/badges";
 @import "../modules/parts/menu-btn/menu-btn.scss";
 @import "../modules/parts/btn/btn";
 @import "../modules/parts/slider-btn/slider-btn";
 @import "../modules/parts/slider-nav/slider-nav";
-@import "../modules/parts/tour-card/tour-card";
 
+@import "../modules/parts/tour-card/tour-card";
+@import "../modules/parts/to-book/to-book";
+@import "../modules/parts/consultation/consultation";
+
+@import "../modules/parts/table/simple-table";
+
+@import "../modules/parts/page-nav/page-nav";
+@import "../modules/parts/request/request";
+@import "../modules/parts/side-menu/side-menu";
+@import "../modules/parts/accordion/accordion";
+@import "../modules/parts/password/password";
+@import "../modules/parts/dropdown/dropdown";
+@import "../modules/parts/filter/filter";
+
+@import "../modules/footer/footer";
+@import "../modules/header/header";
 
 @import "../modules/sections/hero/hero";
 @import "../modules/sections/tours/tours";
@@ -33,9 +49,11 @@
 
 @import "../modules/sections/video-section/video-section";
 @import "../modules/sections/top/top";
-@import "../modules/sections/reviews/reviews";
+@import "../modules/sections/slider-section/slider-section";
 @import "../modules/sections/mobile-menu/mobile-menu";
 
+@import "../modules/sections/info-bar/info-bar";
+@import "../modules/sections/breadcrambs/breadcrambs";
+@import "../modules/sections/gallery/gallery";
+
 @import "../modules/popaps/popaps";
-
-

@@ -1,0 +1,23 @@
+.breadcrambs {
+  padding-top: 20px;
+  font-size: 14px;
+  color: $grey;
+  margin-bottom: 10px;
+  display: none;
+  @include min-w($xxl) {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    margin-right: 10px;
+  }
+}

@@ -4,39 +4,41 @@
 
     <nav class="mobile-menu__nav">
       <ul class="mobile-menu__list reset">
+
         <li class="mobile-menu__item">
           <button class="mobile-menu__button arrow-down" type="button">
             Каталог турок
           </button>
 
-          <ul class="mobile-menu__hide-list reset">
-            <li class="mobile-menu__hide-item">
-              <a class="mobile-menu__hide-link" href="">
-                Зимние каникулы
-              </a>
-            </li>
-            <li class="mobile-menu__hide-item">
-              <a class="mobile-menu__hide-link" href="">
-                Весенние каникулы
-              </a>
-            </li>
-            <li class="mobile-menu__hide-item">
-              <a class="mobile-menu__hide-link" href="">
-                Летние каникулы
-              </a>
-            </li>
-            <li class="mobile-menu__hide-item">
-              <a class="mobile-menu__hide-link" href="">
-                Спортивные сборы
-              </a>
-            </li>
-            <li class="mobile-menu__hide-item">
-              <a class="mobile-menu__hide-link" href="">
-                Однодневные школьные экскурсии
-              </a>
-            </li>
-          </ul>
-
+          <div class="mobile-menu__hide-box">
+            <ul class="mobile-menu__hide-list reset">
+              <li class="mobile-menu__hide-item">
+                <a class="mobile-menu__hide-link" href="">
+                  Зимние каникулы
+                </a>
+              </li>
+              <li class="mobile-menu__hide-item">
+                <a class="mobile-menu__hide-link" href="">
+                  Весенние каникулы
+                </a>
+              </li>
+              <li class="mobile-menu__hide-item">
+                <a class="mobile-menu__hide-link" href="">
+                  Летние каникулы
+                </a>
+              </li>
+              <li class="mobile-menu__hide-item">
+                <a class="mobile-menu__hide-link" href="">
+                  Спортивные сборы
+                </a>
+              </li>
+              <li class="mobile-menu__hide-item">
+                <a class="mobile-menu__hide-link" href="">
+                  Однодневные школьные экскурсии
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
 
         <li class="mobile-menu__item">
@@ -66,37 +68,16 @@
         </li>
       </ul>
     </nav>
+    <div class="mobile-menu__bottom">
+      {{> social parent-mod="mobile-menu__social"}}
 
-    <ul class="mobile-menu__social social reset">
-      <li class="social__item">
-        <a class="social__link" href="" target="_blank">
-          <svg width="20" height="20">
-            <use xlink:href="../images/sprite.svg#tg"></use>
-          </svg>
-          <span class="visually-hidden">
-            телеграм
-          </span>
-        </a>
-      </li>
+      <button class="mobile-menu__btn btn btn--grad js-call-back" type="button">
+        <span>Заказать звонок</span>
+      </button>
 
-      <li class="social__item">
-        <a class="social__link" href="" target="_blank">
-          <svg width="20" height="20">
-            <use xlink:href="../images/sprite.svg#wa"></use>
-          </svg>
-          <span class="visually-hidden">
-            ватсапп
-          </span>
-        </a>
-      </li>
-    </ul>
-
-    <button class="mobile-menu__btn btn btn--grad js-call-back" type="button">
-      Заказать звонок
-    </button>
-
-    <button class="mobile-menu__enter-btn enter-btn" type="button">
-      <span>Вход/Регистрация</span>
-    </button>
+      <button class="mobile-menu__enter-btn enter-btn" type="button">
+        <span>Вход/Регистрация</span>
+      </button>
+    </div>
   </div>
 </div>

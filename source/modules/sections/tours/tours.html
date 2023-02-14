@@ -1,124 +1,7 @@
 <section class="tours">
   <div class="container">
-    <div class="tours__filter filter">
-      <button class="filter__open arrow-down arrow-down--white" type="button">Фильтр по турам</button>
-
-      <div class="filter__item">
-        <button class="filter__btn arrow-down" type="button">
-          Все типы лагерей
-        </button>
-
-        <ul class="filter__drop-menu drop-menu reset">
-          <li class="drop-menu__item">
-            <button class="drop-menu__button link" type="button">
-              Оздоровительный
-            </button>
-          </li>
-          <li class="drop-menu__item">
-            <button class="drop-menu__button link" type="button">
-              Спортивный
-            </button>
-          </li>
-          <li class="drop-menu__item">
-            <button class="drop-menu__button link" type="button">
-              Языковой
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="filter__item">
-        <button class="filter__btn arrow-down" type="button">
-          Все регионы
-        </button>
-
-        <ul class="filter__drop-menu drop-menu reset">
-          <li class="drop-menu__item">
-            <button class="drop-menu__button link" type="button">
-              Болгария
-            </button>
-          </li>
-          <li class="drop-menu__item">
-            <button class="drop-menu__button drop-menu__button--right link" type="button">
-              Несебр
-            </button>
-          </li>
-          <li class="drop-menu__item">
-            <button class="drop-menu__button drop-menu__button--right link" type="button">
-              Солнечный берег
-            </button>
-          </li>
-          <li class="drop-menu__item">
-            <button class="drop-menu__button link" type="button">
-              Россия
-            </button>
-          </li>
-          <li class="drop-menu__item">
-            <button class="drop-menu__button drop-menu__button--right link" type="button">
-              Крым
-            </button>
-          </li>
-          <li class="drop-menu__item">
-            <button class="drop-menu__button drop-menu__button--right link" type="button">
-              Нижний Новгород
-            </button>
-          </li>
-          <li class="drop-menu__item">
-            <button class="drop-menu__button drop-menu__button--right link" type="button">
-              Подпосковье
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="filter__item">
-        <button class="filter__btn arrow-down" type="button">
-          Любой сезон
-        </button>
-
-        <ul class="filter__drop-menu drop-menu  reset">
-          <li class="drop-menu__item">
-            <button class="drop-menu__button link" type="button">
-              Оздоровительный
-            </button>
-          </li>
-          <li class="drop-menu__item">
-            <button class="drop-menu__button link" type="button">
-              Спортивный
-            </button>
-          </li>
-          <li class="drop-menu__item">
-            <button class="drop-menu__button link" type="button">
-              Языковой
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="filter__item ">
-        <button class="filter__btn arrow-down" type="button">
-          Все возраста
-        </button>
-
-        <ul class="filter__drop-menu drop-menu reset">
-          <li class="drop-menu__item">
-            <button class="drop-menu__button link" type="button">
-              Оздоровительный
-            </button>
-          </li>
-          <li class="drop-menu__item">
-            <button class="drop-menu__button link" type="button">
-              Спортивный
-            </button>
-          </li>
-          <li class="drop-menu__item">
-            <button class="drop-menu__button link" type="button">
-              Языковой
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <h2 class="visually-hidden">туры которые мы предлгаем</h2>
+    {{> filter parent-mod="tours__filter"}}
 
     <ul class="tours__list reset">
       {{#each tour-card}}
@@ -130,7 +13,7 @@
       {{/each}}
     </ul>
 
-    <button class="tours__btn ico ico--refresh link" type="button">
+    <button class="tours__btn ico ico--refresh link rotate-this" type="button">
       Показать ещё
     </button>
   </div>

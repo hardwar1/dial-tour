@@ -1,7 +1,7 @@
 <section class="application">
   <div class="container">
     <form class="application__inner">
-      <h2 class="application__title title ico">
+      <h2 class="application__title ico">
         Оставьте заявку!
       </h2>
       <div class="application__text">
@@ -20,12 +20,9 @@
             <span class="visually-hidden">Телефон</span>
             <input class="application__input input" type="tel" placeholder="Телефон" name="tel" required>
           </label>
-          <label class="application__label">
+          <label class="application__label ">
             <span class="visually-hidden">Введите ваш email</span>
-            <input class="application__input input invalid" type="email" placeholder="Email" name="email" required>
-            <div class="invalid-hover">
-              <span class="invalid-hover__text">Хм, здесь допущена ошибка!</span>
-            </div>
+            <input class="application__input input " type="email" placeholder="Email" name="email" required>
           </label>
         </div>
 
@@ -37,7 +34,7 @@
                 <use xlink:href="#check"></use>
               </svg>
             </span>
-            Я даю согласие на обработку моих персональных данных
+            Я даю <a href="" class="application__text-link">согласие на обработку</a> моих персональных данных
           </label>
 
           <button class="application__btn btn" type="submit">

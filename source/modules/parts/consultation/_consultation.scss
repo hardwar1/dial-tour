@@ -1,0 +1,50 @@
+.consultation {
+  @include min-w($xxl) {
+    padding: 0 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  &__body {
+    @include min-w($xxl) {
+      display: flex;
+    }
+  }
+
+  &__img {
+    margin: 0 auto 20px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    @include min-w($xxl) {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &__info {
+    text-align: center;
+    @include min-w($xxl) {
+      text-align: left;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  &__social-string a {
+    margin: 0 auto;
+    @include min-w($xxl) {
+      margin: 0;
+    }
+  }
+}

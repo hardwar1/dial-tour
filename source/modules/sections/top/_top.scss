@@ -1,6 +1,13 @@
 .top {
+  // display: none;
   color: $black25;
   background-color: $whiteef;
+
+  &__title {
+    @media (min-width: $lg) {
+      margin-bottom: 50px;
+    }
+  }
 
   @include min-w($lg) {
     font-size: 17px;
@@ -12,35 +19,113 @@
     margin-top: -30px;
     padding-top: 30px;
     overflow: auto;
+    @include noScroll;
 
     @include min-w($lg) {
-      display: block;
+      display: grid;
       padding-top: 0;
-      overflow: unset;
-      column-count: 2;
+      overflow: visible;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.4fr 1fr 1fr 0.6fr 1fr 1fr 1fr 0.5fr 1fr 0.3fr 1fr 1fr 0.4fr;
+      gap: 0px 30px;
+      grid-template-areas:
+        "item1 item2"
+        "item1 item2"
+        "item1 item2"
+        "item3 item2"
+        "item3 item4"
+        "item3 item4"
+        "item5 item6"
+        "item5 item6"
+        "item5 item6"
+        "item7 item6"
+        "item7 item8"
+        "item7 item8"
+        "item7 item8";
     }
 
     @include min-w($xxl) {
-      column-count: 3;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 0.3fr 1fr 0.3fr 0.6fr 0.5fr 0.3fr 0.8fr 0.42fr;
+      grid-template-areas:
+        "item1 item2 item3"
+        "item1 item2 item3"
+        "item4 item2 item6"
+        "item4 item5 item6"
+        "item4 item5 item6"
+        "item7 item5 item9"
+        "item7 item8 item9"
+        "item7 item8 item9";
     }
   }
 
   &__item {
     position: relative;
     margin-right: 20px;
+
+    &:first-child {
+      grid-area: item1;
+    }
+
+    &:nth-child(2) {
+      grid-area: item2;
+    }
+
+    &:nth-child(3) {
+      grid-area: item3;
+    }
+
+    &:nth-child(4) {
+      grid-area: item4;
+      display: none;
+      @include min-w($lg) {
+        display: block;
+      }
+    }
+
+    &:nth-child(5) {
+      grid-area: item5;
+    }
+
+    &:nth-child(6) {
+      grid-area: item6;
+    }
+
+    &:nth-child(7) {
+      grid-area: item7;
+    }
+
+    &:nth-child(8) {
+      grid-area: item8;
+    }
+
+    &:nth-child(9) {
+      grid-area: item9;
+      display: none !important;
+      @include min-w($xxl) {
+        display: block !important;
+      }
+    }
+
     @include min-w($lg) {
       margin-right: 0;
-      padding-top: 30px;
       page-break-inside: avoid;
       break-inside: avoid;
+      height: 100%;
+      padding-top: 30px;
     }
 
     &--img {
       display: none;
 
       @include min-w($lg) {
-        display: block;
+        display: flex;
+        width: 100%;
+        height: 100%;
         background-color: transparent;
+      }
+
+      @include min-w($xxl) {
       }
 
       &:last-child {
@@ -48,6 +133,7 @@
 
         @include min-w($xxl) {
           display: block;
+
           img {
             transform: rotate(3deg);
           }
@@ -64,8 +150,8 @@
       background-image: linear-gradient(88.58deg, #aa429e -2.24%, #8c2380 97.28%);
 
       &::after {
-        top: -18px;
-        right: -28px;
+        top: -14px;
+        right: -14px;
         width: 116px;
         height: 81px;
         background-image: url("data:image/svg+xml,%3Csvg width='97' height='84' viewBox='0 0 97 84' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_635_7634)'%3E%3Cpath d='M62.3511 75.989L8.38631 61.4704C7.5378 61.2421 6.93767 60.4867 6.90713 59.6086L5.35448 14.9663C5.32389 14.0869 6.36208 13.5995 7.01908 14.1848L24.4062 29.6752L49.8381 12.7915C50.3432 12.4561 51.0282 12.6439 51.2918 13.1899L64.4474 40.4479L87.2597 35.7727C88.1217 35.5961 88.7752 36.5386 88.3075 37.2839L64.5648 75.1208C64.0977 75.865 63.1996 76.2173 62.3511 75.989Z' fill='%23FFBF5E'/%3E%3Cpath d='M65.0895 79.8013L4.10552 63.3942C3.67328 63.278 3.37096 62.8886 3.3654 62.441L2.68986 8.09083C2.67886 7.20545 3.73907 6.74364 4.37988 7.35468L23.4054 25.4964L51.9798 4.80599C52.4976 4.43105 53.2294 4.63159 53.4837 5.21812L67.4106 37.3356L92.9706 31.1891C93.8315 30.982 94.5169 31.9135 94.0631 32.6738L66.2081 79.3481C65.9787 79.7325 65.5218 79.9176 65.0895 79.8013Z' stroke='%23FFBF5E' stroke-dasharray='5 5'/%3E%3Cpath d='M35.0329 55.9127L40.1513 36.8106L42.4781 40.6144L35.6471 38.784L37.1213 33.2821L48.1252 36.2306L42.3276 57.8673L35.0329 55.9127Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_635_7634'%3E%3Crect width='96' height='84' fill='white' transform='translate(0.605469)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
@@ -80,13 +166,17 @@
   &__item-inner {
     position: relative;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     border-radius: 15px;
     max-width: calc(100% - 20px);
     min-width: 265px;
     background-color: $white;
+    height: 100%;
 
     @include min-w($lg) {
       padding: 25px;
+      max-width: unset;
     }
 
     svg {
@@ -96,8 +186,8 @@
     &::after {
       content: "";
       position: absolute;
-      top: -22px;
-      right: -17px;
+      top: -20px;
+      right: -3px;
       z-index: 5;
       width: 95px;
       height: 90px;
@@ -123,13 +213,13 @@
 
   &__rate {
     position: absolute;
-    top: 0;
-    right: 24px;
+    top: 3px;
+    right: 37px;
     z-index: 10;
     font-size: 32px;
     font-weight: 900;
-    color: $white;
-    transform: rotate(13deg);
+    color: #fff;
+    transform: rotate(15deg);
 
     &--1 {
       font-size: 0;
@@ -152,11 +242,14 @@
 
   &__text {
     margin-bottom: 10px;
+    line-height: 1.4;
+
     p {
       margin: 0;
     }
   }
 
   &__place {
+    margin-top: auto;
   }
 }

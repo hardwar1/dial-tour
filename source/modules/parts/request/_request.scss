@@ -1,0 +1,31 @@
+.request {
+  padding: 30px 20px;
+  background-color: $white;
+  border-radius: 15px;
+  max-width: 420px;
+  text-align: center;
+
+  @include min-w($xxl) {
+    padding: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 17px;
+    margin-bottom: 20px;
+    p {
+      margin: 0;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 13px 15px;
+  }
+}

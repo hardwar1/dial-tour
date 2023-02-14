@@ -1,0 +1,47 @@
+.badges {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .badge {
+    margin-bottom: 8px;
+    &:nth-child(2n) {
+      transform: rotate(4deg);
+    }
+    &:nth-child(2n - 1) {
+      transform: rotate(-4deg);
+    }
+  }
+}
+
+.badge {
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: $white;
+  text-transform: uppercase;
+  background-color: $red;
+
+  &--red {
+    background-color: $red;
+  }
+
+  &--blue {
+    background-color: $blue;
+  }
+
+  &--orange {
+    background-color: $orange;
+  }
+
+  &--blueb4 {
+    background-color: $blueb4;
+  }
+}

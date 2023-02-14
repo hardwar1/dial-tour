@@ -1,0 +1,82 @@
+.filter {
+  padding: 0 30px 0;
+  border-radius: 10px;
+  background-image: url(../images/content/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+
+  @include min-w($xl) {
+    padding: 20px 30px;
+  }
+
+  &__hide-box {
+    overflow: hidden;
+    transition: height 0.3s;
+    height: 0;
+
+    @include min-w($xl) {
+      height: unset !important;
+      overflow: unset;
+    }
+
+    &.active {
+      animation: overflow-visible 0.3s forwards;
+    }
+  }
+
+  &__hide-inner {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+
+    @include min-w($xl) {
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 0;
+    }
+  }
+
+  &__open {
+    @include no-btn;
+    margin: 0 -30px;
+    padding: 14px 12px;
+    width: calc(100% + 60px);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 21px;
+    color: $white;
+
+    @include min-w($xl) {
+      display: none;
+    }
+
+    &::after {
+      right: unset;
+      left: 50%;
+      transform: translate(90px, -50%);
+    }
+
+    &.active::after {
+      transform: translate(90px, -50%) rotate(180deg);
+    }
+  }
+
+  &__dropdown {
+    position: relative;
+    margin-bottom: 20px;
+
+    @include min-w($xl) {
+      margin: 0 30px 0 0;
+      width: calc(25% - 22.5px);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

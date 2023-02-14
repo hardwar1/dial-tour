@@ -1,0 +1,53 @@
+<div class="hard-table">
+  <div class="hard-table__caption">
+    Граждане РФ
+  </div>
+
+  <div class="hard-table__item">
+    <button class="hard-table__btn arrow-down" type="button">
+      1-90 дней (1 или 2 въезда)
+    </button>
+
+    <div class="hard-table__hide-box">
+
+      {{> hard-table-head}}
+
+      <div class="hard-table__row hard-table__row--4">
+        <span class="hard-table__cell">7 500 ₽</span>
+        <span class="hard-table__cell">14 500 ₽</span>
+        <span class="hard-table__cell">1 000 ₽</span>
+        <span class="hard-table__cell">2 500 ₽</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hard-table__item">
+    <button class="hard-table__btn arrow-down" type="button">
+      Многократная
+    </button>
+
+    {{> hard-table-head mod="hard-table__head--none"}}
+
+    <div class="hard-table__row hard-table__row--4">
+      <span class="hard-table__cell">7 500 ₽</span>
+      <span class="hard-table__cell">14 500 ₽</span>
+      <span class="hard-table__cell">1 000 ₽</span>
+      <span class="hard-table__cell">2 500 ₽</span>
+    </div>
+  </div>
+
+  <div class="hard-table__item">
+    <button class="hard-table__btn arrow-down" type="button">
+      Виза с оформлением тура
+    </button>
+
+    {{> hard-table-head mod="hard-table__head--none"}}
+
+    <div class="hard-table__row hard-table__row--4">
+      <span class="hard-table__cell">7 500 ₽</span>
+      <span class="hard-table__cell">-</span>
+      <span class="hard-table__cell">1 000 ₽</span>
+      <span class="hard-table__cell">-</span>
+    </div>
+  </div>
+</div>

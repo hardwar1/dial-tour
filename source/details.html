@@ -1,0 +1,38 @@
+---
+layout: default
+title: Диал-тур подробности о туре
+---
+
+{{> breadcrambs}}
+
+{{> gallery}}
+
+<div class="container">
+  <div class="column-content">
+    <div class="column-content__main">
+
+      {{> info-bar}}
+
+      {{> to-book parent-mod="column-content__main-to-book"}}
+
+      {{> content}}
+
+    </div>
+
+    <div class="column-content__side">
+      <div class="column-content__sticky">
+
+        {{> to-book parent-mod="column-content__to-book"}}
+
+        {{> consultation parent-mod="column-content__consultation"}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{> slider-section slider-section-parent-mod="" slider-section-mod="slider-section--pink"}}
+
+{{> slider-section3 slider-section-mod="slider-section--transparent"}}
+
+{{> page-nav mod="page-nav--fixed"}}

@@ -1,70 +1,59 @@
 <article class="{{parent-mod}} tour-card {{mod}}">
-  <div class="tour-card__badges">
-    <span class="tour-card__badge badge badge--red">кэшбек</span>
-    <span class="tour-card__badge badge badge--blue">кэшбек</span>
-    <span class="tour-card__badge badge badge--orange">ек</span>
-    <span class="tour-card__badge badge badge--blueb4">кэшбекdsfaf</span>
-  </div>
+  {{> badges}}
 
-  <img class="tour-card__img" src="images/content/{{src}}" height="208" width="435" alt="{{alt}}">
+  <a class="tour-card__img-link" href="">
+    <img class="tour-card__img" src="images/content/{{src}}" height="208" width="435" alt="{{alt}}">
+  </a>
 
   <div class="tour-card__info">
     <span class="tour-card__label">
       {{label}}
     </span>
+
     <h3 class="tour-card__title">
-      {{title}}
+      <a href="" class="link">
+        {{title}}
+      </a>
     </h3>
+
     <div class="tour-card__text">
       {{text}}
     </div>
 
-    <div class="tour-card__place-row">
-      <span class="tour-card__place ico ico--marker">{{place}}</span>
-      <span class="tour-card__place ico ico--people">{{age}}</span>
-    </div>
+    <div class="tour-card__mt-auto">
+      <div class="tour-card__place-row">
+        <a class="tour-card__place ico ico--marker link" href="">{{place}}</a>
+        <a class="tour-card__place ico ico--people" href="">{{age}}</a>
+      </div>
 
-    <div class="tour-card__season-row">
-      <a class="tour-card__season ico ico--sun" href="#">
-        Лето
-      </a>
-      <a class="tour-card__season ico ico--sheet" href="#">
-        Весна
-      </a>
-      <a class="tour-card__season ico ico--maple" href="#">
-        Осень
-      </a>
-      <a class="tour-card__season ico ico--snow" href="#">
-        Зима
-      </a>
-      <a class="tour-card__season ico ico--all" href="#">
-        Все сезоны
-      </a>
-    </div>
+      <div class="tour-card__season-row scroll">
+        {{season}}
+      </div>
 
-    <div class="tour-card__type-row">
-      <a class="tour-card__season" href="#">
-        #Оздоровительный
-      </a>
-      <a class="tour-card__season" href="#">
-        #Языковой
-      </a>
-      <a class="tour-card__season" href="#">
-        #Спортивный
-      </a>
-    </div>
+      <div class="tour-card__type-row scroll">
+        <a class="tour-card__season" href="">
+          #Оздоровительный
+        </a>
+        <a class="tour-card__season" href="">
+          #Языковой
+        </a>
+        <a class="tour-card__season" href="">
+          #Спортивный
+        </a>
+      </div>
 
-    <div class="tour-card__bottom">
-      <span class="tour-card__price">
-        от {{price}}<span> ₽</span>
-      </span>
+      <div class="tour-card__bottom">
+        <a class="tour-card__price link" href="">
+          от {{price}}<span> ₽</span>
+        </a>
 
-      <button class="tour-card__btn btn btn--white" type="button">
-        <span class="tour-card__btn-text"> Подробнее</span>
-        <svg width="14" height="9">
-          <use xlink:href="#arrow-big"></use>
-        </svg>
-      </button>
+        <a class="tour-card__btn btn btn--white" href="">
+          <span class="tour-card__btn-text"> Подробнее</span>
+          <svg width="14" height="9">
+            <use xlink:href="#arrow-big"></use>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 </article>

@@ -35,7 +35,7 @@
     flex-grow: 0;
     flex-direction: column;
     align-items: center;
-    padding: 170px 30px 20px;
+    padding: 170px 25px 20px;
     width: 100%;
     max-width: 360px;
     height: 100%;
@@ -45,24 +45,30 @@
   }
 
   &__nav {
+    width: 100%;
   }
 
   &__list {
-    margin-bottom: 55px;
+    margin-bottom: 45px;
   }
 
-  &__item:first-child {
-    height: 30px;
+  &__item:not(:last-child) {
+    border-bottom: 1px solid $whitef2;
+  }
+
+  &__hide-box {
+    height: 0;
     overflow: hidden;
     transition: height 0.2s;
   }
 
   &__button {
+    @include no-btn;
     padding: 10px 0;
     width: 100%;
     font-size: 20px;
     text-align: left;
-    @include no-btn;
+
   }
 
   &__hide-list {
@@ -82,9 +88,16 @@
     font-size: 20px;
   }
 
-  &__social {
+  &__bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     margin-top: auto;
-    margin-bottom: 25px;
+  }
+
+  &__social {
+    margin: auto 0 25px;
+    justify-content: center;
     @include min-w($lg) {
       display: none;
     }
@@ -92,6 +105,7 @@
 
   &__btn {
     margin-bottom: 20px;
+    width: 100%;
     @include min-w($lg) {
       display: none;
     }
@@ -99,7 +113,9 @@
 
   &__enter-btn {
     padding-left: 35px;
+    padding-right: 0;
     border: 0;
+
     @include min-w($lg) {
       display: none;
     }

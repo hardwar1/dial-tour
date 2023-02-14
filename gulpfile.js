@@ -13,7 +13,7 @@ global.app = {
     dev: dev,
     plugins: plugins,
 }
-
+gulp
 // Tasks
 import { clean } from './gulp/tasks/clean.js';
 import { copy, copyFonts } from './gulp/tasks/copy.js';

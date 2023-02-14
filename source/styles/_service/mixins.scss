@@ -22,7 +22,7 @@
 }
 
 @mixin responsive-ratio($x, $y) {
-  $padding: calc(($y / $x) * 100);
+  // $padding: calc(($y / $x) * 100);
 
   padding-top: calc(($y / $x) * 100) + "%";
 }

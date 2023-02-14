@@ -1,0 +1,98 @@
+.to-book {
+  max-width: 420px;
+  margin-bottom: 40px;
+
+  @media (min-width: $xxl) {
+    margin-bottom: 49px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &__body {
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: $white;
+
+    @include min-w($md) {
+      padding: 20px 30px;
+    }
+  }
+
+  &__badges {
+    right: 5px;
+    left: unset;
+  }
+
+  &__top-text {
+    color: $grey;
+    font-size: 15px;
+  }
+
+  &__price {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.4;
+
+    @include min-w($xxl) {
+      font-size: 32px;
+    }
+  }
+
+  &__dropdown {
+    margin-bottom: 29px;
+  }
+
+  .dropdown__btn {
+    border: 1px solid $whitef2;
+    color: $grey;
+
+    &:hover {
+      border-color: $purple;
+    }
+  }
+
+  &__drop-menu {
+    left: 0;
+    padding: 0;
+    width: 100%;
+
+    &--active {
+      border-radius: 0 0 8px 8px;
+    }
+  }
+
+  &__hide-box {
+    height: 0;
+    overflow: hidden;
+    margin: -5px;
+    padding: 0;
+    transition: height 0.2s;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__check-label {
+    margin: 20px 0;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 14px 30px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 13px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,69 @@
+.accordion {
+  list-style: none;
+  padding-left: 0;
+
+  @include min-w($lg) {
+    font-size: 17px;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  & li > h1,
+  & li > h2,
+  & li > h3,
+  & li > h4,
+  & li > h5,
+  & li > h6 {
+    margin: 0 0 10px;
+    padding: 0;
+  }
+
+  a {
+    height: 63px;
+    background-color: $white;
+    border-radius: 15px;
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 40px 10px 25px;
+    transition: border-radius 0.3s;
+    font-weight: 700;
+    display: block;
+    display: flex;
+    align-items: center;
+
+    @extend .arrow-down;
+
+    @include min-w($lg) {
+      font-size: 17px;
+      height: 66px;
+      padding: 10px 40px 10px 30px;
+    }
+
+    &::after {
+      right: 26px;
+    }
+
+    &.active {
+      border-radius: 15px 15px 0 0;
+    }
+  }
+
+  li > div {
+    overflow: hidden;
+    transition: height 0.4s, padding-top 0.3s;
+    background-color: $white;
+    padding: 20px 30px 30px 23px;
+    border-radius: 15px;
+    margin: 0;
+  }
+
+  li > div.active {
+    transition: height 0.4s, padding-top 0.3s;
+  }
+
+  &__list {
+  }
+}

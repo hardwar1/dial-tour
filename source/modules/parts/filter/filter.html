@@ -1,0 +1,14 @@
+<div class="{{parent-mod}} filter">
+  <button class="filter__open arrow-down arrow-down--white" type="button">Фильтр по турам</button>
+  <div class="filter__hide-box">
+    <div class="filter__hide-inner">
+      {{> dropdown parent-mod="filter__dropdown" text-btn="Все типы лагерей"}}
+
+      {{> dropdown2 parent-mod="filter__dropdown"}}
+
+      {{> dropdown parent-mod="filter__dropdown" text-btn="Любой сезон"}}
+
+      {{> dropdown parent-mod="filter__dropdown" text-btn="Все возраста"}}
+    </div>
+  </div>
+</div>
