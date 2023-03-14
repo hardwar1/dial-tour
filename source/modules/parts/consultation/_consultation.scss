@@ -22,6 +22,8 @@
     object-position: center;
     border-radius: 10px;
     overflow: hidden;
+    flex-shrink: 0;
+    
     @include min-w($xxl) {
       margin: 0 20px 0 0;
     }

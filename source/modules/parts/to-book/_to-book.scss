@@ -26,6 +26,17 @@
     left: unset;
   }
 
+  &__badges > * {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &__badges .show {
+    display: block;
+    opacity: 1;
+  }
+
   &__top-text {
     color: $grey;
     font-size: 15px;

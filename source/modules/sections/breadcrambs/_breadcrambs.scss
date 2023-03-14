@@ -3,14 +3,30 @@
   font-size: 14px;
   color: $grey;
   margin-bottom: 10px;
-  display: none;
-  @include min-w($xxl) {
-    display: block;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  @media (min-width: $lg) {
+    overflow-x: unset;
+    padding-bottom: 0;
   }
 
   &__list {
-    display: flex;
-    align-items: center;
+    width: fit-content;
+    white-space: nowrap;
+
+    @media (min-width: $lg) {
+      white-space: unset;
+    }
+  }
+
+  &__item {
+      display: inline;
   }
 
   &__item:not(:last-child) {
@@ -19,5 +35,6 @@
 
   &__link {
     margin-right: 10px;
+    padding: 5px 0;
   }
 }

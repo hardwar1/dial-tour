@@ -10,7 +10,7 @@
     width: fit-content;
 
     &::after {
-      top: 6px;
+      top: 2px;
       left: 0;
       transform: translateY(0);
     }
@@ -31,7 +31,6 @@
     align-items: center;
     min-width: 32px;
     min-height: 32px;
-
     transition: transform 0.3s;
 
     &:hover {

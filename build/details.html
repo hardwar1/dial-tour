@@ -67,14 +67,14 @@
                     <li class="social__item">
                         <a class="social__link" href="#" target="_blank">
                             <svg width="20" height="20">
-                                <use xlink:href="../images/sprite.svg#tg"></use>
+                                <use xlink:href="images/sprite.svg#tg"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="social__item">
                         <a class="social__link" href="#" target="_blank">
                             <svg width="20" height="20">
-                                <use xlink:href="../images/sprite.svg#wa"></use>
+                                <use xlink:href="images/sprite.svg#wa"></use>
                             </svg>
                         </a>
                     </li>
@@ -335,14 +335,14 @@
                     <li class="social__item">
                         <a class="social__link" href="#" target="_blank">
                             <svg width="20" height="20">
-                                <use xlink:href="../images/sprite.svg#tg"></use>
+                                <use xlink:href="images/sprite.svg#tg"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="social__item">
                         <a class="social__link" href="#" target="_blank">
                             <svg width="20" height="20">
-                                <use xlink:href="../images/sprite.svg#wa"></use>
+                                <use xlink:href="images/sprite.svg#wa"></use>
                             </svg>
                         </a>
                     </li>
@@ -364,23 +364,26 @@
 
         <div class="breadcrambs">
             <div class="container">
-                <ul class="breadcrambs__list reset">
-                    <li class="breadcrambs__item">
-                        <a class="breadcrambs__link" href="">
-                            Главная
-                        </a>>
-                    </li>
-                    <li class="breadcrambs__item">
-                        <a class="breadcrambs__link" href="">
-                            Оздоровительные туры
-                        </a>>
-                    </li>
-                    <li class="breadcrambs__item">
-                        <a class="breadcrambs__link" href="">
-                            Детский оздоровительный лагерь «МОРСКАЯ ЗВЕЗДА»
-                        </a>
-                    </li>
-                </ul>
+                <div class="breadcrambs__inner">
+                    <ul class="breadcrambs__list reset">
+                        <li class="breadcrambs__item">
+                            <a class="breadcrambs__link" href="">
+                                Главная
+                            </a>>
+                        </li>
+                        <li class="breadcrambs__item">
+                            <a class="breadcrambs__link" href="">
+                                Оздоровительные туры
+                            </a>>
+                        </li>
+                        <li class="breadcrambs__item">
+                            <a class="breadcrambs__link" href="">
+                                Детский оздоровительный лагерь «МОРСКАЯ ЗВЕЗДА»
+                                Детский оздоровительный лагерь «МОРСКАЯ ЗВЕЗДА»
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -530,8 +533,7 @@
                                 <span class="info-bar__text">
                                     Россия, Переславль-Залесский
                                 </span>
-                                <a class="info-bar__link ico ico--marker" href="https://yandex.ru/maps/-/CCUz6BXcpD" data-fancybox
-                                    data-type="iframe" data-preload="false" data-width="1600" data-height="800">
+                                <a class="info-bar__link ico ico--marker" href="">
                                     Отель «Азимут Переславль»
                                     <span class="info-bar__orange">на карте</span>
                                 </a>
@@ -570,11 +572,20 @@
                         </div>
                     </div>
 
+                    <div class="map-popup popap js-active">
+                        <div class="popap__inner">
+                            <script type="text/javascript" charset="utf-8" async
+                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa406b82d5f8306562c47fd2595721943ab530cf5ba6137e9d758426abfb7bf7a&width=100%25&height=714&lang=ru_RU&scroll=true"></script>
+                        </div>
+                    </div>
+
                     <form class="column-content__main-to-book to-book">
                         <div class="to-book__body">
 
                             <div class="to-book__badges badges">
-                                <span class="to-book__badge badge badge--blue">Компенсация <br> за путёвку!</span>
+                                <span class="to-book__badge badge badge--blue" id="badge-shift-1">Компенсация <br> за путёвку!</span>
+                                <span class="to-book__badge badge badge--blue" id="badge-shift-2">смена 2</span>
+                                <span class="to-book__badge badge badge--blue" id="badge-shift-3">смена 3</span>
                             </div>
 
                             <span class="to-book__top-text">
@@ -594,7 +605,7 @@
 
                                 <ul class=" dropdown__drop-menu drop-menu reset scroll js-active">
                                     <li class="drop-menu__item">
-                                        <a class="drop-menu__button link" href="">
+                                        <a class="drop-menu__button link" id="shift-1" href="">
                                             Первая смена
                                         </a>
                                         <div class="visually-hidden" aria-hidden="true"> от <span class="cost-js">27 880</span> <span>₽</span>
@@ -602,7 +613,7 @@
                                     </li>
 
                                     <li class="drop-menu__item">
-                                        <a class="drop-menu__button link">
+                                        <a class="drop-menu__button link" id="shift-2">
                                             Вторая смена
                                         </a>
                                         <div class="visually-hidden" aria-hidden="true">
@@ -611,11 +622,11 @@
                                     </li>
 
                                     <li class="drop-menu__item">
-                                        <a class="drop-menu__button link" href="">
+                                        <a class="drop-menu__button link" href="" id="shift-3">
                                             Третья смена (авиабилеты включены)
                                         </a>
                                         <div class="visually-hidden" aria-hidden="true">
-                                            от <span class="cost-js">28 880</span> <span>₽</span>
+                                            от <span class="cost-js">28 88</span> <span>₽</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -624,17 +635,17 @@
                             <div class="to-book__hide-box">
 
                                 <label class=" to-book__label">
-                                    <span class="visually-hidden"></span>
+                                    <span class="visually-hidden">Ваше имя</span>
                                     <input class="input input--corner" type="text" name="name" placeholder="Ваше имя" required>
                                 </label>
 
                                 <label class=" to-book__label">
-                                    <span class="visually-hidden"></span>
+                                    <span class="visually-hidden">Телефон</span>
                                     <input class="input input--corner" type="tel" name="tel" placeholder="Телефон" required>
                                 </label>
 
                                 <label class=" to-book__label">
-                                    <span class="visually-hidden"></span>
+                                    <span class="visually-hidden">Email</span>
                                     <input class="input input--corner" type="email" name="email" placeholder="Email" required>
                                 </label>
 
@@ -660,6 +671,7 @@
                             </div>
                         </div>
                     </form>
+
 
                     <div class="content">
                         <div id="description">
@@ -903,7 +915,9 @@
                             <div class="to-book__body">
 
                                 <div class="to-book__badges badges">
-                                    <span class="to-book__badge badge badge--blue">Компенсация <br> за путёвку!</span>
+                                    <span class="to-book__badge badge badge--blue" id="badge-shift-1">Компенсация <br> за путёвку!</span>
+                                    <span class="to-book__badge badge badge--blue" id="badge-shift-2">смена 2</span>
+                                    <span class="to-book__badge badge badge--blue" id="badge-shift-3">смена 3</span>
                                 </div>
 
                                 <span class="to-book__top-text">
@@ -923,7 +937,7 @@
 
                                     <ul class=" dropdown__drop-menu drop-menu reset scroll js-active">
                                         <li class="drop-menu__item">
-                                            <a class="drop-menu__button link" href="">
+                                            <a class="drop-menu__button link" id="shift-1" href="">
                                                 Первая смена
                                             </a>
                                             <div class="visually-hidden" aria-hidden="true"> от <span class="cost-js">27 880</span> <span>₽</span>
@@ -931,7 +945,7 @@
                                         </li>
 
                                         <li class="drop-menu__item">
-                                            <a class="drop-menu__button link">
+                                            <a class="drop-menu__button link" id="shift-2">
                                                 Вторая смена
                                             </a>
                                             <div class="visually-hidden" aria-hidden="true">
@@ -940,11 +954,11 @@
                                         </li>
 
                                         <li class="drop-menu__item">
-                                            <a class="drop-menu__button link" href="">
+                                            <a class="drop-menu__button link" href="" id="shift-3">
                                                 Третья смена (авиабилеты включены)
                                             </a>
                                             <div class="visually-hidden" aria-hidden="true">
-                                                от <span class="cost-js">28 880</span> <span>₽</span>
+                                                от <span class="cost-js">28 88</span> <span>₽</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -953,17 +967,17 @@
                                 <div class="to-book__hide-box">
 
                                     <label class=" to-book__label">
-                                        <span class="visually-hidden"></span>
+                                        <span class="visually-hidden">Ваше имя</span>
                                         <input class="input input--corner" type="text" name="name" placeholder="Ваше имя" required>
                                     </label>
 
                                     <label class=" to-book__label">
-                                        <span class="visually-hidden"></span>
+                                        <span class="visually-hidden">Телефон</span>
                                         <input class="input input--corner" type="tel" name="tel" placeholder="Телефон" required>
                                     </label>
 
                                     <label class=" to-book__label">
-                                        <span class="visually-hidden"></span>
+                                        <span class="visually-hidden">Email</span>
                                         <input class="input input--corner" type="email" name="email" placeholder="Email" required>
                                     </label>
 
