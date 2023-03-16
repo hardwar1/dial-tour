@@ -17,15 +17,18 @@ window.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         let href = this.getAttribute('href').substring(1);
         const scrollTarget = document.getElementById(href);
-        // const topOffset = document.querySelector('.scrollto').offsetHeight; // если нужен отступ сверху
-        const topOffset = 0;
-        const elementPosition = scrollTarget.getBoundingClientRect().top;
-        const offsetPosition = elementPosition - topOffset - 70;
+        if (scrollTarget) {
+          // const topOffset = document.querySelector('.scrollto').offsetHeight; // если нужен отступ сверху
+          const topOffset = 0;
+          const elementPosition = scrollTarget.getBoundingClientRect().top;
+          const offsetPosition = elementPosition - topOffset - 70;
 
-        window.scrollBy({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+          window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+
       });
     }
   });
