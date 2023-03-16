@@ -1,20 +1,15 @@
 .hero {
   color: $white;
 
+  &__container {
+    padding: 0;
+  }
+
   &__inner {
     position: relative;
   }
 
   &__swiper {
-    margin: 0 -15px;
-
-    @include min-w($sm) {
-      margin: 0 -30px;
-    }
-
-    @include min-w($lg) {
-      margin: 0;
-    }
   }
 
   &__list {
@@ -22,156 +17,109 @@
 
   &__item {
     box-sizing: border-box;
-    height: 430px;
-    overflow: hidden;
-    background-color: $grey;
-
-    @include min-w($lg) {
-      height: 400px;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-
-    @include min-w($xxl) {
-      height: 440px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      background-color: rgba(0, 0, 0, 0.15);
-      backdrop-filter: blur(5px);
-    }
+    padding-top: 25px;
+    padding-bottom: 30px;
   }
 
-  &__info {
-    padding: 30px;
+  &__link {
     position: relative;
-    text-align: center;
-    z-index: 3;
+    display: block;
+    padding: 0 30px;
 
-    @include min-w($lg) {
-      padding-top: 85px;
-      text-align-last: left;
-    }
-
-    @include min-w($xl) {
-      padding-top: 60px;
-    }
-
-    @include min-w($xl) {
-      padding-top: 70px;
-      padding-left: 105px;
+    @media (min-width: $lg) {
+      padding-left: 60px;
+      padding-right: 60px;
     }
   }
 
-  &__label {
-    display: none;
-    @include min-w($xl) {
-      display: block;
-      width: fit-content;
-      padding: 5px 20px 6px;
-      background-color: $white;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 14px;
-      color: $grey;
-      margin-bottom: 5px;
-      text-transform: uppercase;
-    }
-  }
-
-  &__title {
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 1.2;
-    margin: 0 0 10px;
-
-    @include min-w($md) {
-      font-size: 24px;
-    }
-
-    @include min-w($lg) {
-      text-align: left;
-      font-size: 28px;
-      margin-bottom: 15px;
-      max-width: 500px;
-    }
-
-    @include min-w($xl) {
-      font-size: 32px;
-    }
-
-    @include min-w($xxl) {
-      font-size: 36px;
-      max-width: 650px;
-    }
-  }
-
-  &__text {
-    font-weight: 500;
-    font-size: 16px;
-    margin-bottom: 20px;
-
-    @include min-w($md) {
-      font-size: 18px;
-    }
-
-    @include min-w($lg) {
-      margin-bottom: 30px;
-      max-width: 500px;
-    }
-
-    @include min-w($xl) {
-      font-size: 20px;
-    }
-
-    @include min-w($xl) {
-      font-size: 24px;
-    }
-
-    p {
-      margin: 0;
-    }
-  }
-
-  &__btn {
+  &__picture {
   }
 
   &__img {
     position: absolute;
-    z-index: 5;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
     width: 100%;
-    max-width: 358px;
-    object-fit: contain;
-    object-position: bottom center;
-    height: 225px;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+    object-position: center left;
+    border-radius: 8px;
+  }
 
-    @include min-w($lg) {
-      right: 0;
-      left: unset;
-      transform: translateX(0);
-      max-width: 423px;
-      height: 270px;
-    }
+  &__icon {
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 5;
+  }
 
-    @include min-w($xxl) {
-      max-width: 552px;
-      height: 340px;
+  &__icon--top {
+    top: -25px;
+    left: 253px;
+    height: 85px;
+    width: 160px;
+
+    @media (min-width: $lg) {
+      left: 470px;
     }
   }
 
-  .swiper-pagination {
-    @include min-w($xxl) {
-      display: none;
+  &__icon--bottom {
+    display: none;
+    @media (min-width: $lg) {
+      display: block;
+      right: 40px;
+      bottom: -25px;
+      height: 60px;
+      width: 90px;
+      background-position: right center;
+    }
+  }
+
+  &__info {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+
+  &__label,
+  &__label > * {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #151515;
+    margin-bottom: 0;
+  }
+
+  &__label {
+    padding: 6px 16px;
+    background-color: #fed941;
+    border-radius: 8px;
+    width: fit-content;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $white;
+
+    @media (min-width: $lg) {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    p {
+      margin: 0;
     }
   }
 

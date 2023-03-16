@@ -42,10 +42,6 @@ window.addEventListener('DOMContentLoaded', () => {
       nextEl: '.hero__arrow--next',
       prevEl: '.hero__arrow--prev',
     },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-    },
   });
 
   const swiper1 = new Swiper('.video-section__inner', {
