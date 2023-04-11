@@ -4,19 +4,20 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(170, 66, 158, 0.3);
-  backdrop-filter: blur(69px);
-  z-index: 75;
+  background-color: rgb(161 144 159 / 0%);
+  backdrop-filter: blur(4px);
   transition: transform 0.3s, background-color 2.3s, backdrop-filter 2.3s;
   transform: scale(0);
+  z-index: -1;
 
   &.active {
     transform: scale(1);
+    z-index: 75;
   }
 
   &.black-active {
-    background-color: rgba(0,0,0, 0.5);
-    backdrop-filter: unset;
+    background-color: rgb(161 144 159 / 0%);
+    backdrop-filter: blur(4px);
     transform: scale(1);
     transition: transform 0.3s;
   }
@@ -52,12 +53,9 @@
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 
-  &:hover {
+  &:hover::after,
+  &:hover::before {
     background-color: $orange-hover;
-  }
-
-  &:active {
-    background-color: $orange-active;
   }
 }
 
@@ -65,22 +63,31 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 80;
+  z-index: -1;
+
   width: 100%;
   max-width: 700px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   transition: transform 0.2s;
   transform: scale(0) translate(-50%, -50%);
 
   &.active {
+    z-index: 80;
     transform: scale(1) translate(-50%, -50%);
+  }
+  &__hidden {
+    overflow: hidden;
+    border-radius: 20px;
   }
 
   &__inner {
     position: relative;
+    z-index: 5;
+    box-shadow: 0 0 13px 2px rgb(0 0 0 / 40%);
     background-color: $white;
-    border-radius: 20px;
     text-align: center;
-    max-height: 100vh;
+    max-height: calc(100vh - 20px);
     overflow: auto;
     padding: 40px 15px;
     font-size: 20px;
@@ -107,7 +114,7 @@
     }
   }
 
-  p {
+  p:last-child {
     margin: 0;
   }
 
@@ -151,5 +158,64 @@
   }
 
   &__check-wrapper {
+  }
+}
+
+.agreement-popap {
+  max-width: unset;
+  height: 100%;
+  width: 100%;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(0);
+    transition: transform 0.4s;
+  }
+
+  &.active {
+    z-index: 199;
+  }
+
+  &.active &__overlay {
+    z-index: 1;
+    transform: scale(1);
+  }
+
+  .content {
+    text-align: left;
+  }
+}
+
+.map-popup {
+  &.popap {
+    max-width: 90vw;
+    width: 90vw;
+    height: 90vh;
+  }
+
+  &.active .popap__close {
+    z-index: 100;
+    top: -40px;
+    right: -15px;
+  }
+
+  &.active .popap__close::after,
+  &.active .popap__close::before {
+    background-color: $white;
+  }
+
+  .popap__inner {
+    padding: 0;
+    overflow: unset;
+  }
+
+  .popap__inner > iframe {
+    max-width: 90vw !important;
+    height: 90vh !important;
   }
 }

@@ -16,17 +16,28 @@
     }
   }
 
-  &__img {
-    margin: 0 auto 20px;
-    object-fit: cover;
-    object-position: center;
+  &__img-box {
+    background-image: url(../images/nophoto_2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 120px;
+    height: 120px;
     border-radius: 10px;
-    overflow: hidden;
+    margin: 0 auto 20px;
     flex-shrink: 0;
-    
+
     @include min-w($xxl) {
       margin: 0 20px 0 0;
     }
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 60px;
+    overflow: hidden;
+
   }
 
   &__info {

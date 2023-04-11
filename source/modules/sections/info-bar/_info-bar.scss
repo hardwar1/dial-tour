@@ -16,7 +16,6 @@
     background-color: $white;
 
     @include min-w($sm) {
-      margin: 0 -30px 20px;
       padding: 0 30px;
     }
 
@@ -64,22 +63,16 @@
   }
 
   &__orange {
-
-    display: none;
-
-    @include min-w($lg) {
-      color: $orange;
-      display: inline;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
+    color: $orange;
+    display: inline;
+    margin-left: 5px;
   }
 
   &__season-wrapper {
     display: flex;
     justify-content: space-between;
     padding: 10px 0 20px;
+
     @include min-w($lg) {
       max-width: 230px;
       width: 100%;

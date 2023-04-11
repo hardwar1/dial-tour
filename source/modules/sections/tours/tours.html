@@ -4,9 +4,9 @@
     {{> filter parent-mod="tours__filter"}}
 
     <ul class="tours__list reset">
-      {{#each tour-card}}
+      {{#each tour-card.tour-card1}}
 
-      <li class="tours__item">
+      <li class="tours__item wow animate__fadeInUp" {{#if data}}data-wow-offset="{{data}}{{/if}}">
         {{> tour-card parent-mod="tours__tour-card"}}
       </li>
 

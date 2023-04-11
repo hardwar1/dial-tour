@@ -1,10 +1,5 @@
 .tours {
-  padding-top: 20px;
   padding-bottom: 90px;
-
-  @include min-w($md) {
-    padding-top: 30px;
-  }
 
   &__filter {
     margin-bottom: 20px;

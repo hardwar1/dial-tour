@@ -1,90 +1,192 @@
--
-    src: tour1.jpg
-    alt: Англо-русский клуб
-    label: Оздоровительная программа
-    title: «Коктебель-клуб»
-    text: <p>В «Коктейль-клубе» ребёнок не только укрепит здоровье и зарядится энергией. Он проведёт время с пользой</p>
-    place: Крым
-    age: 7–15 лет
-    price: 24 000
-    season:         <a class="tour-card__season ico ico--sun" href="">
-          Лето
-        </a>
-        <a class="tour-card__season ico ico--sheet" href="">
-          Весна
-        </a>
-        <a class="tour-card__season ico ico--maple" href="">
-          Осень
-        </a>
-        <a class="tour-card__season ico ico--snow" href="">
-          Зима
-        </a>
+tour-card1:
+  -
+      src: tour1.jpg
+      alt: Англо-русский клуб
+      data: 80
+      label: Оздоровительная программа
+      title: «Коктебель-клуб»
+      text: <p>В «Коктейль-клубе» ребёнок не только укрепит здоровье и зарядится энергией. Он проведёт время с пользой</p>
+      place: Крым
+      age: 7–15 лет
+      price: 24 000
+      season: <a class="tour-card__season ico ico--sun" href="">
+            Лето
+          </a>
+          <a class="tour-card__season ico ico--sheet" href="">
+            Весна
+          </a>
+          <a class="tour-card__season ico ico--maple" href="">
+            Осень
+          </a>
+          <a class="tour-card__season ico ico--snow" href="">
+            Зима
+          </a>
 
--
-    src: tour2.jpg
-    alt: Горнолыжный клуб с оздоровительной программой
-    label: Горнолыжный клуб с оздоровительной программой
-    title: «Панда»
-    text: <p>Дети получат возможность насладиться живописными пейзажами Кавказского хребта прямо из окон отеля</p>
-    place: Сочи
-    age: 12–18 лет
-    price: 288 880
-    season:
-            <a class="tour-card__season ico ico--all" href="">
-          Все сезоны
-        </a>
--
+  -
+      src: tour2.jpg
+      alt: Горнолыжный клуб с оздоровительной программой
+      label: Горнолыжный клуб с оздоровительной программой
+      title: «Панда»
+      data: 220
+      text: <p>Дети получат возможность насладиться живописными пейзажами Кавказского хребта прямо из окон отеля</p>
+      place: Сочи
+      age: 12–18 лет
+      price: 288 880
+      season:
+              <a class="tour-card__season ico ico--all" href="">
+            Все сезоны
+          </a>
+  -
+      src: tour3.jpg
+      alt: Англо-русский клуб
+      label: Англо-русский клуб
+      data: 360
+      title: «Объединённое королевство»
+      text: <p>Дети изучат английский язык, отдохнут от школы, получат новые впечатления и наберутся сил</p>
+      place: Нижний Новгород
+      age: 6–17 лет
+      price: 18 600
+      season:
+              <a class="tour-card__season ico ico--sheet" href="">
+            Весна
+          </a>
+          <a class="tour-card__season ico ico--maple" href="">
+            Осень
+          </a>
+          <a class="tour-card__season ico ico--snow" href="">
+            Зима
+          </a>
+  -
+      src: tour1.jpg
+      alt: Англо-русский клуб
+      label: Оздоровительная программа
+      data: 80
+      title: «Коктебель-клуб»
+      text: <p>В «Коктейль-клубе» ребёнок не только укрепит здоровье и зарядится энергией. Он проведёт время с пользой</p>
+      place: Крым
+      age: 7–15 лет
+      price: 24 000
+      season:
+              <a class="tour-card__season ico ico--maple" href="">
+            Осень
+          </a>
+          <a class="tour-card__season ico ico--snow" href="">
+            Зима
+          </a>
+  -
+      src: tour2.jpg
+      alt: Горнолыжный клуб с оздоровительной программой
+      data: 220
+      label: Горнолыжный клуб с оздоровительной программой
+      title: «Панда»
+      text: <p>Дети получат возможность насладиться живописными пейзажами Кавказского хребта прямо из окон отеля</p>
+      place: Сочи
+      age: 12–18 лет
+      price: 288 880
+  -
     src: tour3.jpg
+    mod:
     alt: Англо-русский клуб
+    data: 360
     label: Англо-русский клуб
     title: «Объединённое королевство»
     text: <p>Дети изучат английский язык, отдохнут от школы, получат новые впечатления и наберутся сил</p>
     place: Нижний Новгород
     age: 6–17 лет
     price: 18 600
-    season:
-            <a class="tour-card__season ico ico--sheet" href="">
-          Весна
-        </a>
-        <a class="tour-card__season ico ico--maple" href="">
-          Осень
-        </a>
-        <a class="tour-card__season ico ico--snow" href="">
-          Зима
-        </a>
--
-    src: tour1.jpg
-    alt: Англо-русский клуб
-    label: Оздоровительная программа
-    title: «Коктебель-клуб»
-    text: <p>В «Коктейль-клубе» ребёнок не только укрепит здоровье и зарядится энергией. Он проведёт время с пользой</p>
-    place: Крым
-    age: 7–15 лет
-    price: 24 000
-    season:
-            <a class="tour-card__season ico ico--maple" href="">
-          Осень
-        </a>
-        <a class="tour-card__season ico ico--snow" href="">
-          Зима
-        </a>
--
-    src: tour2.jpg
-    alt: Горнолыжный клуб с оздоровительной программой
-    label: Горнолыжный клуб с оздоровительной программой
-    title: «Панда»
-    text: <p>Дети получат возможность насладиться живописными пейзажами Кавказского хребта прямо из окон отеля</p>
-    place: Сочи
-    age: 12–18 лет
-    price: 288 880
+tour-card2:
+  -
+      src: tour1.jpg
+      alt: Англо-русский клуб
+      label: Оздоровительная программа
+      slide-data: 80
+      title: «Коктебель-клуб»
+      text: <p>В «Коктейль-клубе» ребёнок не только укрепит здоровье и зарядится энергией. Он проведёт время с пользой</p>
+      place: Крым
+      age: 7–15 лет
+      price: 24 000
+      season: <a class="tour-card__season ico ico--sun" href="">
+            Лето
+          </a>
+          <a class="tour-card__season ico ico--sheet" href="">
+            Весна
+          </a>
+          <a class="tour-card__season ico ico--maple" href="">
+            Осень
+          </a>
+          <a class="tour-card__season ico ico--snow" href="">
+            Зима
+          </a>
 
--
-    src: tour3.jpg
-    alt: Англо-русский клуб
-    label: Англо-русский клуб
-    title: «Объединённое королевство»
-    text: <p>Дети изучат английский язык, отдохнут от школы, получат новые впечатления и наберутся сил</p>
-    place: Нижний Новгород
-    age: 6–17 лет
-    price: 18 600
-
+  -
+      src: tour2.jpg
+      alt: Горнолыжный клуб с оздоровительной программой
+      label: Горнолыжный клуб с оздоровительной программой
+      slide-data: 220
+      title: «Панда»
+      text: <p>Дети получат возможность насладиться живописными пейзажами Кавказского хребта прямо из окон отеля</p>
+      place: Сочи
+      age: 12–18 лет
+      price: 288 880
+      season:
+              <a class="tour-card__season ico ico--all" href="">
+            Все сезоны
+          </a>
+  -
+      src: tour3.jpg
+      alt: Англо-русский клуб
+      label: Англо-русский клуб
+      slide-data: 360
+      title: «Объединённое королевство»
+      text: <p>Дети изучат английский язык, отдохнут от школы, получат новые впечатления и наберутся сил</p>
+      place: Нижний Новгород
+      age: 6–17 лет
+      price: 18 600
+      season:
+              <a class="tour-card__season ico ico--sheet" href="">
+            Весна
+          </a>
+          <a class="tour-card__season ico ico--maple" href="">
+            Осень
+          </a>
+          <a class="tour-card__season ico ico--snow" href="">
+            Зима
+          </a>
+  -
+      src: tour1.jpg
+      alt: Англо-русский клуб
+      label: Оздоровительная программа
+      slide-data: 80
+      title: «Коктебель-клуб»
+      text: <p>В «Коктейль-клубе» ребёнок не только укрепит здоровье и зарядится энергией. Он проведёт время с пользой</p>
+      place: Крым
+      age: 7–15 лет
+      price: 24 000
+      season:
+              <a class="tour-card__season ico ico--maple" href="">
+            Осень
+          </a>
+          <a class="tour-card__season ico ico--snow" href="">
+            Зима
+          </a>
+  -
+      src: tour2.jpg
+      alt: Горнолыжный клуб с оздоровительной программой
+      label: Горнолыжный клуб с оздоровительной программой
+      slide-data: 220
+      title: «Панда»
+      text: <p>Дети получат возможность насладиться живописными пейзажами Кавказского хребта прямо из окон отеля</p>
+      place: Сочи
+      age: 12–18 лет
+      price: 288 880
+  -
+      src: tour3.jpg
+      mod:
+      alt: Англо-русский клуб
+      slide-data: 360
+      label: Англо-русский клуб
+      title: «Объединённое королевство»
+      text: <p>Дети изучат английский язык, отдохнут от школы, получат новые впечатления и наберутся сил</p>
+      place: Нижний Новгород
+      age: 6–17 лет
+      price: 18 600

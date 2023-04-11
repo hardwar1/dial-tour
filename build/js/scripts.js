@@ -1,14 +1,70 @@
 'use strict';
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
 
   let x;
-  // y = window.innerHeight ||  document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
   function widthDevice() {
-    x = document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+    x = document.documentElement.clientWidth;
   }
 
+  const wow = new WOW(
+    {
+      offset: 100,
+      mobile: false,
+    }
+  );
+  wow.init();
+
   widthDevice();
+
+  window.addEventListener('resize', function () {
+    widthDevice();
+    gallerySLideON(x);
+    slideToRight();
+  }, true);
+
+  // первый слайд влево
+  let slide2 = x >= 768 ? true : false;
+  let slideRightNow = false;
+
+  const sliderSections = $('.slider-section');
+  slideToRight();
+
+  function slideToRight() {
+    if (sliderSections.length > 0) {
+      if (x >= 768 && slide2) {
+        slide2 = false;
+        $.each(sliderSections, function (index, section) {
+          const list = $(section).find('.slider-section__list');
+          $(section).find('.slider-section__list > li:first').remove().appendTo(list);
+        });
+      }
+    }
+  }
+
+  let swiper2 = new Swiper('.slider-section__swiper', {
+    speed: 400,
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+
+    pagination: {
+      el: '.slider-section__pagination',
+      type: "fraction",
+    },
+
+    navigation: {
+      nextEl: '.slider-section__next',
+      prevEl: '.slider-section__prev',
+    },
+
+    breakpoints: {
+      1200: {
+        spaceBetween: 60,
+      },
+    },
+  });
 
   /* Плавный скролл к элементу */
   document.querySelectorAll('a[href^="#"').forEach(link => {
@@ -47,7 +103,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const swiper1 = new Swiper('.video-section__inner', {
     speed: 1000,
     spaceBetween: 30,
-    effect: 'fade',
     loop: true,
     autoHeight: true,
 
@@ -58,31 +113,6 @@ window.addEventListener('DOMContentLoaded', () => {
     navigation: {
       nextEl: '.video-section__next',
       prevEl: '.video-section__prev',
-    },
-
-  });
-
-  const swiper2 = new Swiper('.slider-section__swiper', {
-    speed: 400,
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    centeredSlides: true,
-    loop: true,
-    autoHeight: true,
-    pagination: {
-      el: '.slider-section__pagination',
-      type: "fraction",
-    },
-
-    navigation: {
-      nextEl: '.slider-section__next',
-      prevEl: '.slider-section__prev',
-    },
-
-    breakpoints: {
-      1200: {
-        spaceBetween: 60,
-      }
     },
   });
 
@@ -187,19 +217,24 @@ window.addEventListener('DOMContentLoaded', () => {
         const newPrice = this.closest('li').querySelector('span');
 
         if (newPrice) {
+          dropMenuButtons
           const price = this.closest('form').querySelector('.to-book__price');
           price.innerHTML = newPrice.innerHTML;
         }
 
-        const label = this.closest('.to-book').querySelector(`#badge-${this.getAttribute('id')}`);
+        const labels = this.closest('.to-book').querySelectorAll(`#badge-${this.getAttribute('id')}`);
+        const allLabels = this.closest('.to-book').querySelectorAll('.badge');
 
-        if (label) {
-          const badges = document.querySelectorAll('.to-book__badge');
-          for (const badge of badges) {
-            badge.classList.remove('show');
+        if (allLabels.length > 0) {
+          for (const label of allLabels) {
+            label.classList.remove('show');
           }
+        }
 
-          label.classList.add('show');
+        if (labels.length > 0) {
+          for (const label of labels) {
+            label.classList.add('show');
+          }
         }
       }
     });
@@ -241,20 +276,17 @@ window.addEventListener('DOMContentLoaded', () => {
       } else if (gallerySliderItems.length > 0 && x >= 1000 && windowGallery != 'big') {
         windowGallery = 'big';
         swiper5.destroy();
-        let pagination = document.querySelector('.gallery__pagination');
-        pagination.innerHTML = '';
         gallerySliderWrapper.removeAttribute('style');
         gallerySliderItems.forEach(item => item.removeAttribute('style'));
+        let pagination = document.querySelector('.gallery__pagination');
+        pagination.innerHTML = '';
       }
     }
   }
 
   gallerySLideON(x);
 
-  window.addEventListener('resize', function () {
-    widthDevice();
-    gallerySLideON(x);
-  }, true);
+
 
 
   function disabledBtn(x) {
@@ -275,13 +307,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // отключение сролла
   function lockScroll() {
-    document.querySelector('html').setAttribute('style', `overflow: hidden`);
-    document.querySelector('body').setAttribute('style', `overflow: hidden`);
+    document.querySelector('body').classList.add('lock');
   }
 
   function unLockScroll() {
-    document.querySelector('html').setAttribute('style', `overflow: unset`);
-    document.querySelector('body').setAttribute('style', `overflow: unset`);
+    document.querySelector('body').classList.remove('lock');
   }
 
   // вызов мобильного меню
@@ -319,7 +349,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // закрытие/открытие попапов
   const overlay = document.querySelector('.overlay'),
     overlays = document.querySelectorAll('.overlay'),
-    popapCloseBtns = document.querySelectorAll('.popap__close');
+    popapCloseBtns = document.querySelectorAll('.popap__close:not(.agreement-popap__close)');
 
   for (const overlay of overlays) {
     overlay.addEventListener('click', () => closePopaps());
@@ -343,7 +373,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // ПОКАЗ ПОПАПА А НАЖАТИИ НА ОТПРАВКУ ФОРМЫ, ОТПРАВКУ ФОРМЫ ОТМЕНИЛ
 
-  function afterFormBtnPush(formBtn, popap, active = 'black-active') {
+  function afterFormBtnPush(formBtn, popap) {
     const formBtns = document.querySelectorAll(formBtn);
 
     if (formBtns != null) {
@@ -352,8 +382,7 @@ window.addEventListener('DOMContentLoaded', () => {
           e.preventDefault();
           lockScroll();
           showPopaps(popap);
-          overlay.classList.add(active);
-          unLockScroll();
+          overlay.classList.add('active');
         });
       }
     }
@@ -363,20 +392,21 @@ window.addEventListener('DOMContentLoaded', () => {
   afterFormBtnPush('.request__btn ', '.done')
 
   function closePopaps() {
-    let jsActive = document.querySelectorAll('.js-active');
+    let jsActive = document.querySelectorAll('.js-active.active');
     for (const i of jsActive) {
       i.classList.remove('active');
-      overlay.classList.remove('black-active');
-      hideMobileMenu();
     }
+    hideMobileMenu();
     unLockScroll();
+    const iframe = document.querySelector('.map-popup iframe');
+    iframe.setAttribute('style', 'display: none');
   }
 
   function showPopaps(el, active = 'active') {
+    lockScroll();
     const item = document.querySelector(el);
     item.classList.add('active');
     overlay.classList.add(active);
-    lockScroll();
   }
 
   // показывать/скрывать текст пароля
@@ -571,45 +601,54 @@ window.addEventListener('DOMContentLoaded', () => {
     galleryShadow.innerHTML = `Ещё ${galleryItems.length - 6} фото`;
   }
 
-  //
-  const costJs = document.querySelectorAll('.cost-js');
-  if (costJs.length > 0) {
-    let arrayCosts = [];
+  const toBooks = document.querySelectorAll('.to-book');
+  if (toBooks.length > 0) {
+    for (const toBook of toBooks) {
+      const costJs = toBook.querySelectorAll('.cost-js');
+      let arrayCosts = [];
 
-    for (const cost of costJs) {
-      let temp = cost.innerHTML.replace(/\s/g, '');
+      for (const cost of costJs) {
+        let temp = cost.innerHTML.replace(/\s/g, '');
 
-      if (temp !== '' && cost.closest('li').querySelector('a').hasAttribute('href')) {
-        arrayCosts.push(Number(temp));
-      } else {
-        arrayCosts.push(99999999999);
+        if (temp !== '' && cost.closest('li').querySelector('a').hasAttribute('href')) {
+          arrayCosts.push(Number(temp));
+        } else {
+          arrayCosts.push(99999999999);
+        }
       }
-    }
 
-    let minCost = Math.min(...arrayCosts);
+      let minCost = Math.min(...arrayCosts);
 
-    for (let i = 0; i < arrayCosts.length; i++) {
-      if (arrayCosts[i] == minCost) {
+      for (let i = 0; i < arrayCosts.length; i++) {
+        if (arrayCosts[i] == minCost) {
 
-        const value = costJs[i].closest('li').querySelector('a');
-        const thisBtn = costJs[i].closest('.dropdown').querySelector('.dropdown__btn');
-        const thisInput = costJs[i].closest('.dropdown').querySelector('input');
-        const showPrice = costJs[i].closest('.to-book').querySelector('.to-book__price');
-        const dropMenuButtons = costJs[i].closest('.to-book').querySelectorAll('.drop-menu__button');
-        let labels
-        if (dropMenuButtons[i]) {
-          labels = document.querySelectorAll(`#badge-${dropMenuButtons[i].getAttribute('id')}`);
-        }
+          const value = costJs[i].closest('li').querySelector('a');
+          const thisBtn = costJs[i].closest('.dropdown').querySelector('.dropdown__btn');
+          const thisInput = costJs[i].closest('.dropdown').querySelector('input');
+          const showPrice = costJs[i].closest('.to-book').querySelector('.to-book__price');
+          const dropMenuButtons = costJs[i].closest('.to-book').querySelectorAll('.drop-menu__button');
+          let labels;
 
-        if (labels) {
-          for (const label of labels) {
-            label.classList.add('show');
+          if (dropMenuButtons[i]) {
+            labels = document.querySelectorAll(`#badge-${dropMenuButtons[i].getAttribute('id')}`);
           }
-        }
 
-        showPrice.innerHTML = costJs[i].closest('.visually-hidden').innerHTML;
-        thisBtn.textContent = value.textContent;
-        thisInput.value = value.textContent;
+          if (labels) {
+            for (const label of labels) {
+              label.classList.add('show');
+            }
+            if (labels.length > 0) {
+              for (const label of labels) {
+                label.classList.add('show');
+              }
+            }
+          }
+
+          showPrice.innerHTML = costJs[i].closest('.visually-hidden').innerHTML;
+          thisBtn.textContent = value.textContent;
+          thisInput.value = value.textContent;
+          break;
+        }
       }
     }
   }
@@ -618,31 +657,45 @@ window.addEventListener('DOMContentLoaded', () => {
     ymaps.ready(init);
   };
 
-  const infobarlink = document.querySelector('.info-bar__link');
+  const infobarlink = document.querySelector('.info-bar__orange');
   if (infobarlink) {
     infobarlink.addEventListener('click', (e) => {
       e.preventDefault();
 
       showPopaps('.map-popup');
-      overlay.classList.add('black-active');
+      overlay.classList.add('active');
+      const iframe = document.querySelector('.map-popup iframe');
+      iframe.setAttribute('style', 'display: block');
     });
   }
 
-  chengeVideoBg();
+  const agreementBnts = $('.agreement');
 
-  function chengeVideoBg() {
-    const fakeBgs = document.querySelectorAll('.video-section__fake-img');
-    const videoWrappers = document.querySelectorAll('.video-wrapper');
-
-    if (fakeBgs.length > 0 && videoWrappers.length > 0) {
-      for (let i = 0; i < fakeBgs.length; i++) {
-        if (videoWrappers[i + 1]) {
-          fakeBgs[i].setAttribute('style', videoWrappers[i + 1].getAttribute('style'));
-        } else {
-          fakeBgs[i].setAttribute('style', videoWrappers[0].getAttribute('style'));
-        }
-      }
-    }
+  if (agreementBnts.length > 0) {
+    $.each(agreementBnts, function (index, value) {
+      $(value).click(function (e) {
+        e.preventDefault();
+        $('.agreement-popap').addClass('active');
+        lockScroll();
+      })
+    });
   }
 
+  $('.agreement-popap__close').click(function () {
+    $('.agreement-popap').removeClass('active');
+    unLockScroll();
+  })
+
+  $('.agreement-popap__overlay').click(function () {
+    $('.agreement-popap').removeClass('active');
+    const overlays = $('.overlay');
+    let overlayOn = false;
+    $.each(overlays, function (index, value) {
+      if (value.hasClass('active')) overlayOn = true;
+    });
+
+    if (!overlayOn) {
+      unLockScroll();
+    }
+  })
 });

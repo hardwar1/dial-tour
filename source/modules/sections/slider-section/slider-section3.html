@@ -4,12 +4,11 @@
     <div class="slider-section__swiper swiper">
       <ul class="slider-section__list swiper-wrapper reset">
 
-        {{#each tour-card}}
+        {{#each tour-card.tour-card2}}
 
-        <li class="slider-section__item swiper-slide">
+        <li class="slider-section__item swiper-slide wow animate__fadeInUp" data-wow-offset="{{slide-data}}">
           {{> tour-card parent-mod="tours__tour-card"}}
         </li>
-
         {{/each}}
 
 

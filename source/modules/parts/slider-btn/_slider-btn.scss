@@ -1,49 +1,47 @@
 .slider-btn {
   display: none;
 
-  @include min-w($xxl) {
-    z-index: 10;
-    display: block;
-    border: 0;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    background-color: $white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 10px rgba(4, 13, 39, 0.04), 0px 10px 40px rgba(4, 13, 39, 0.1);
-    box-shadow: 0 2px 10px rgba(4, 13, 39, 0.04), 0 10px 40px rgba(4, 13, 39, 0.1);
-    transition: background-color 0.3s, opacity 0.3s;
+  z-index: 10;
+  display: block;
+  border: 0;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(4, 13, 39, 0.04), 0px 10px 40px rgba(4, 13, 39, 0.1);
+  box-shadow: 0 2px 10px rgba(4, 13, 39, 0.04), 0 10px 40px rgba(4, 13, 39, 0.1);
+  transition: background-color 0.3s, opacity 0.3s;
+
+  svg {
+    fill: none;
+    stroke: $orange;
+    transition: stroke 0.3s;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: $orange;
 
     svg {
-      fill: none;
-      stroke: $orange;
-      transition: stroke  0.3s;
+      stroke: $white;
     }
+  }
 
-    &:hover:not(:disabled) {
-      background-color: $orange;
+  &:active {
+    background-color: $orange-active;
+  }
 
-      svg {
-        stroke: $white;
-      }
-    }
+  &.swiper-button-disabled {
+    opacity: 0.5;
+  }
 
-    &:active {
-      background-color: $orange-active;
-    }
+  &--next svg {
+    transform: rotate(-90deg);
+  }
 
-    &.swiper-button-disabled {
-      opacity: 0.5;
-    }
-
-    &--next svg {
-      transform: rotate(-90deg);
-    }
-
-    &--prev svg {
-      transform: rotate(90deg);
-    }
+  &--prev svg {
+    transform: rotate(90deg);
   }
 }

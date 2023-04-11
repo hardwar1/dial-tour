@@ -1,10 +1,6 @@
 .hero {
   color: $white;
 
-  &__container {
-    padding: 0;
-  }
-
   &__inner {
     position: relative;
   }
@@ -25,6 +21,11 @@
     position: relative;
     display: block;
     padding: 0 30px;
+    background-image: url(../images/nophoto_2.png);
+    background-color: $purple;
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+    background-position: center;
 
     @media (min-width: $lg) {
       padding-left: 60px;
@@ -54,9 +55,6 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: 5;
-  }
-
-  &__icon--top {
     top: -25px;
     left: 253px;
     height: 85px;
@@ -65,20 +63,12 @@
     @media (min-width: $lg) {
       left: 470px;
     }
-  }
 
-  &__icon--bottom {
-    display: none;
-    @media (min-width: $lg) {
-      display: block;
-      right: 40px;
-      bottom: -25px;
-      height: 60px;
-      width: 90px;
-      background-position: right center;
+    @include max-w($lg) {
+      display: none;
     }
   }
-
+  
   &__info {
     position: relative;
     z-index: 2;

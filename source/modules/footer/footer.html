@@ -2,7 +2,7 @@
   <div class="footer__top">
     <div class="container">
       <address class="footer__tel-row">
-        <a class="footer__tel-item" href="">
+        <a class="footer__tel-item " href="">
           Москва
           <span class="footer__tel-text">+7 (495) 108-35-85</span>
         </a>
@@ -33,36 +33,7 @@
             публичной офертой, определяемой положениями Статьи 437 (2) ГК РФ.
           </p>
         </div>
-
-        <ul class="footer__social social reset">
-          <li class="social__item">
-            <a class="social__link" href="" target="_blank">
-              <svg width="40" height="40">
-                <use xlink:href="images/sprite.svg#instagramm"></use>
-              </svg>
-              <span class="visually-hidden">инстаграм</span>
-            </a>
-          </li>
-
-          <li class="social__item">
-            <a class="social__link" href="" target="_blank">
-              <svg width="40" height="40">
-                <use xlink:href="images/sprite.svg#vk"></use>
-              </svg>
-              <span class="visually-hidden">в контакте</span>
-            </a>
-          </li>
-
-          <li class="social__item">
-            <a class="social__link" href="" target="_blank">
-              <svg width="40" height="40">
-                <use xlink:href="images/sprite.svg#youtube"></use>
-              </svg>
-              <span class="visually-hidden">ютуб</span>
-            </a>
-          </li>
-        </ul>
-
+        {{> social2 social-parent-mod="footer__social" social-mod=""}}
       </div>
 
       <div class="footer__list-wrapper">
@@ -167,9 +138,9 @@
     </div>
 
     <div class="footer__copy-row">
-      <a class="footer__copy link" href="">
+      <span class="footer__copy">
         © 2016-2022 Правообладатель контента
-      </a>
+      </span>
 
       <div class="footer__registry-wrapper">
         Реестры туроператора

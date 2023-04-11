@@ -24,11 +24,17 @@
   &__item {
     border-radius: 16px;
     width: 270px;
+    max-width: calc(100vw - 30px);
     transition: transform 0.3s, border-color 0.3s;
     position: relative;
     box-shadow: 0 8px 4px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     border: 4px solid transparent;
+    min-height: 250px;
+    background-image: url(../images/nophoto_2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     @include min-w($xl) {
       width: 376px;
@@ -85,11 +91,10 @@
   }
 
   &--text {
-
-
     .slider-section__item {
       height: 515px !important;
       width: 270px;
+      max-width: calc(100vw - 30px);
       @include min-w($lg) {
         width: 370px;
       }
@@ -101,11 +106,10 @@
 
   &--card {
     .swiper {
-      margin: -30px -15px -30px;
+      margin: -30px -15px;
       padding: 30px 0;
 
       @include min-w($sm) {
-        margin: -30px -30px;
         padding: 30px 0;
       }
 
@@ -117,7 +121,8 @@
     .slider-section__item {
       height: unset !important;
       width: 370px;
-      max-width: 100%;
+      max-width: calc(100vw - 30px);
+      background-image: unset;
     }
   }
 

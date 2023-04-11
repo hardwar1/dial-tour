@@ -189,10 +189,6 @@ table.row-3 tr:nth-child(-n + 3) td {
   text-align: center;
 }
 
-.simple-table {
-  text-align: left;
-}
-
 .check > li::after {
   top: 2px;
   left: 0;
@@ -302,6 +298,10 @@ h6 {
     padding-bottom: 100px;
   }
 
+  a {
+    color: $purple;
+  }
+
   h1,
   .h1,
   h2,
@@ -404,7 +404,6 @@ h6 {
   img {
     width: 100%;
     height: auto;
-    max-height: 350px;
     margin-bottom: 20px;
     border-radius: 15px;
     overflow: hidden;
@@ -431,7 +430,7 @@ h6 {
   width: 100%;
   max-width: 1280px;
 
-  @include min-w($sm) {
+  @include min-w($lg) {
     padding: 0 30px;
   }
 }
@@ -507,17 +506,20 @@ center,
 }
 
 .video-btn {
+  @include no-btn;
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: 10;
   border-radius: 50%;
-  width: 140px;
-  height: 140px;
-  background-color: rgba($white, 0.25);
+  width: 70px;
+  height: 70px;
   transition: transform 0.3s;
   transform: translate(-50%, -50%);
-  @include no-btn;
+  outline: 14px solid rgba(255, 255, 255, 0);
+  background-color: $white;
+  border-radius: 50%;
+  transition: outline 0.7s;
 
   &.hide {
     transform: scale(0);
@@ -529,11 +531,13 @@ center,
     top: 50%;
     left: 50%;
     border-radius: 50%;
-    outline: 14px solid rgba(255, 255, 255, 0.3);
-    width: 70px;
-    height: 70px;
-    background-color: $white;
+    outline: 0px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba($white, 0.65);
+    width: 140px;
+    height: 140px;
     transform: translate(-50%, -50%);
+    outline: 14px solid rgba(255, 255, 255, 0.3);
+    animation: ring 2.5s infinite;
   }
 
   &::before {
@@ -541,13 +545,46 @@ center,
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 5;
+    z-index: 15;
     border-style: solid;
     border-color: transparent transparent transparent $orange;
     width: 0;
     height: 0;
+
     transform: translate(-50%, -50%);
     border-width: 7px 0 7px 14px;
+    transition: border-width 0.3s, transform 0.3s, border-color;
+  }
+}
+
+.video-wrapper:hover .video-btn,
+.video-wrapper:focus .video-btn {
+  outline: 14px solid rgba(255, 255, 255, 0.3);
+}
+
+.video-wrapper:hover .video-btn::before,
+.video-wrapper:focus .video-btn::before {
+  transform: translate(-38%, -50%) scale(1.3);
+}
+
+.video-wrapper:hover .video-btn::after,
+.video-wrapper:focus .video-btn::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    width: 180px;
+    height: 180px;
+    opacity: 0;
   }
 }
 
@@ -1143,17 +1180,26 @@ center,
   }
 }
 
-.map-popup.popap {
-  max-width: 90vw;
-  width: 90vw;
-  height: 90vh;
+.animated {
+  animation-duration: 0.8s;
 }
 
-.map-popup .popap__inner {
-  padding: 0;
+.animate__jackInTheBox {
+  animation-duration: 2s;
 }
 
-.map-popup .popap__inner > iframe {
-  max-width: 90vw !important;
-  height: 90vh !important;
+.animate__zoomInLeft {
+  animation-duration: 0.8s;
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: 0;
+}
+
+.fancybox-container {
+  backdrop-filter: blur(4px);
+}
+
+.lock {
+  overflow: hidden;
 }

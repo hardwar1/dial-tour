@@ -20,7 +20,8 @@
     padding: 0;
   }
 
-  a {
+  & > li > *:first-child a {
+    color: inherit;
     height: 63px;
     background-color: $white;
     border-radius: 15px;

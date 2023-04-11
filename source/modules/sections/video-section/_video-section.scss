@@ -1,6 +1,10 @@
 .video-section {
   color: $black25;
 
+  &__container {
+    padding: 0;
+  }
+
   &__title {
     @media (min-width: $lg) {
       margin-bottom: 50px;
@@ -8,31 +12,19 @@
   }
 
   &__inner {
-    margin: 0 -15px -30px;
+    margin: 0 0 -30px;
     @include min-w($sm) {
-      margin: 0 -30px -30px;
+      margin: 0 0 -30px;
     }
   }
-
-
-
 
   &__list {
   }
 
   &__item {
-    opacity: 0 !important;
-    transition: opacity 0.3s;
-
     &.swiper-slide-active {
-      .video-section__fake-img {
-        transform: translateY(-50%);
-        height: 80%;
-      }
       position: relative;
       z-index: 50;
-      opacity: 1 !important;
-      transition: opacity 0.2s 0.3s;
     }
   }
 
@@ -40,13 +32,9 @@
     padding: 30px 15px 0;
     margin-top: -30px;
 
-    @include min-w($sm) {
-      padding: 30px 30px 0;
-    }
-
     @include min-w($xxl) {
       display: flex;
-      padding: 50px 30px 60px 60px;
+      padding: 50px 30px 60px 30px;
       margin-top: -50px;
     }
   }
@@ -89,17 +77,17 @@
     background-position: center;
     border-radius: 35px;
     overflow: hidden;
-    height: 90%;
-    transition: height 0.2s, transform 0.2s;
+    height: 80%;
+    transition: transform 0.2s;
 
     @include min-w($sm) {
       right: -30px;
-      transform: translate(-20px, -50%);
+      transform: translate(0, -50%);
     }
 
     @include min-w($xxl) {
       left: -30px;
-      transform: translate(20px, -50%);
+      transform: translate(0, -50%);
     }
 
     &::after {
@@ -161,20 +149,20 @@
   }
 
   &__pagination {
-
-    display: none;
-    @include min-w($xxl) {
-      display: block;
-
-      margin-right: 25px;
-      width: fit-content;
-    }
+    display: block;
+    margin-right: 25px;
+    width: fit-content;
   }
 
   &__nav {
-    margin-top: 0;
+    display: flex;
+    @include max-w($xl) {
+      margin-top: 30px;
+    }
+  }
+
+  &__prev,
+  &__next {
+    display: block;
   }
 }
-
-
-

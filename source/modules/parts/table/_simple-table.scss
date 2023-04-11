@@ -1,5 +1,6 @@
 .simple-table {
   font-size: 15px;
+  text-align: left;
 
   @include min-w($lg) {
     font-size: 16px;
@@ -12,7 +13,6 @@
     background-color: $whiteef;
     background-color: $white;
     min-width: 100px;
-
 
     @include min-w($lg) {
       padding: 11px 20px;
@@ -28,6 +28,37 @@
     @include min-w($lg) {
       padding: 14px 20px;
       width: calc(100% - 210px);
+    }
+  }
+
+  @include max-w($lg) {
+    td {
+      min-width: unset !important;
+    }
+
+    tr {
+      display: flex;
+      flex-direction: column;
+    }
+
+    tr:first-child > *:first-child {
+      border-radius: 15px 15px 0 0;
+    }
+
+    tr:first-child > *:last-child {
+      border-radius: 0;
+    }
+
+    tr:last-child > *:last-child {
+      border-radius: 0 0 15px 15px;
+    }
+
+    tr:last-child > *:first-child {
+      border-radius: 0;
+    }
+
+    th {
+      background-color: $whiteef;
     }
   }
 }
