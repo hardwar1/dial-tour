@@ -1,5 +1,6 @@
 .video-section {
   color: $black25;
+  padding-bottom: 0;
 
   &__container {
     padding: 0;
@@ -12,13 +13,10 @@
   }
 
   &__inner {
-    margin: 0 0 -30px;
-    @include min-w($sm) {
-      margin: 0 0 -30px;
+    padding-bottom: 50px;
+    @include min-w($lg) {
+      padding-bottom: 70px;
     }
-  }
-
-  &__list {
   }
 
   &__item {

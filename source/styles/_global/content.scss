@@ -433,6 +433,10 @@ h6 {
   @include min-w($lg) {
     padding: 0 30px;
   }
+
+  .container {
+    padding: 0;
+  }
 }
 
 [id^="medium-"],

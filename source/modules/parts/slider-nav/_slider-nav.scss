@@ -1,13 +1,9 @@
 .slider-nav {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
   padding: 0 0 20px;
-
-  @include min-w($xxl) {
-    display: flex;
-  }
 
   &__pagination {
     width: fit-content;
